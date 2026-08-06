@@ -1,158 +1,170 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    z-index: 1;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
 }
 
 body::-webkit-scrollbar{
-    display: none;
+    display:none;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
+.headerMain{
+    position:relative;
+    height:100vh;
 }
 
-header div{
-    width: 20%;
+.heroVideo{
+    position:absolute;
+    width:100%;
+    height:100%;
 }
 
-.btnMenu{
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    width: 25px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
+.heroVideo video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.btnMenu span{
-    background: rgb(126, 126, 126);
-    width: 100%;
-    height: 3px;
-    border-radius: 5px;
+.overlay{
+    position:relative;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    color:white;
 }
 
-.piclogo{
-    width: 20%;
+.navInterno{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.boxMenu, .boxReserva{
+    width:180px;
+}
+
+.picLogo{
+    display:flex;
+    justify-content:center;
 }
 
 .logo{
-    width: 100px;
+    width:110px;
 }
 
-nav{
-    color: white;
-    background-color: black;
-    padding: 25px;
+.btnMenu{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    background:transparent;
+    border:none;
+    cursor:pointer;
 }
 
-ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    gap: 0px;
+.btnMenu span{
+    width:28px;
+    height:3px;
+    background:white;
+    border-radius:5px;
 }
 
-li{
-    list-style: none;
+.btnReserva{
+    padding:10px 20px;
+    cursor:pointer;
 }
 
-li{
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.contMenu{
+    position:absolute;
+    top:70px;
+    background:black;
+    padding:20px;
 }
 
-a{
-    font-size: 16px;
-    text-decoration: none;
-    color: white;
+.contMenu ul{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    list-style:none;
 }
 
-a:hover{
-    font-size: 19px;
-    text-decoration: underline;
+.contMenu a{
+    color:white;
+    text-decoration:none;
 }
 
-video{
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
+.contMenu a:hover{
+    text-decoration:underline;
+}
+
+.heroTexto{
+    height:80%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:15px;
+}
+
+.heroTexto h1{
+    font-size:4rem;
+}
+
+.heroTexto p{
+    font-size:1.2rem;
 }
 
 main{
-    width: 90%;
-    margin: auto;
-}
-
-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1%;  
-    font-size: 3rem;
-}
-
-h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1%;
+    width:90%;
+    margin:auto;
 }
 
 .sobre{
-    background-color: whitesmoke;
-    border-radius: 10px;
-    border: 1px solid whitesmoke;
-    padding: 10px;
-    margin: 1%;
+    padding:50px 0;
 }
 
-.ofertasInicial{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 1%;
+.sobre h2{
+    margin-bottom:20px;
+}
+
+.ofertas{
+    padding-bottom:50px;
+}
+
+.ofertas h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.containerOfertas{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
 }
 
 .boxInicio{
-    width: 20%;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 1%;
-    padding: 10px;
+    flex:1;
+    min-width:220px;
+    max-width:260px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    padding:20px;
+    background:white;
 }
 
 footer{
-    background-color: black;
-    padding-top: 20px;
-    margin-top: 1%;
-    color: white;
+    background:black;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
-
-footer p{
-    margin: 1%;
-}
-
-/* Gerais */
 
 .hidden{
-    display: none;
+    display:none;
 }
