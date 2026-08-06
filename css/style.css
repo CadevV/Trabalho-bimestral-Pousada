@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+header div{
+    width: 20%;
+}
+
+.btnMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 25px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btnMenu span{
+    background: rgb(126, 126, 126);
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+}
+
+.piclogo{
+    width: 20%;
+}
+
+.logo{
+    width: 100px;
+}
+
+nav{
+    color: white;
+    background-color: black;
+    padding: 25px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    gap: 0px;
+}
+
+li{
+    list-style: none;
+}
+
+li{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+a{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    font-size: 19px;
+    text-decoration: underline;
+}
+
+video{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;  
+    font-size: 3rem;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+}
+
+.sobre{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    margin: 1%;
+}
+
+.ofertasInicial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 1%;
+}
+
+.boxInicio{
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 1%;
+    padding: 10px;
+}
+
+footer{
+    background-color: black;
+    padding-top: 20px;
+    margin-top: 1%;
+    color: white;
+}
+
+footer p{
+    margin: 1%;
+}
+
+/* Gerais */
+
+.hidden{
+    display: none;
+}
