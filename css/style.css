@@ -106,6 +106,8 @@ body::-webkit-scrollbar{
     height: 100vh;
     background:rgba(255, 251, 234, .95);
     padding:20px;
+    color: #726231;
+    font-size: 2.5rem;
 }
 
 .contMenuBtns{
@@ -126,23 +128,27 @@ body::-webkit-scrollbar{
 }
 
 .btnRedes:hover{
-    color:#ffb400;
+    color:#143525;
 }
 
 .contMenu ul{
+    height: 80vh;
     display:flex;
     flex-direction:column;
+    justify-content: center;
     gap:20px;
     list-style:none;
 }
 
 .contMenu a{
-    color:black;
+    font-size: 2rem;
+    color:#143525;
     text-decoration:none;
 }
 
 .contMenu a:hover{
     text-decoration:underline;
+    color: #CFA836;
 }
 
 .heroTexto{
@@ -182,6 +188,7 @@ body::-webkit-scrollbar{
     color:white;
     cursor:pointer;
     text-decoration:none;
+    transition: 1s;
 }
 
 .btnRoll a:hover{
@@ -195,13 +202,85 @@ section{
 .sobre{
     background: #314622;
     width:100%;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
     color: white;
+    position: relative;
+}
+
+.picSobre{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.picSobre img{
+    width: 20%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.pic1{
+    top: 10%;
+    left: 4%;
+}
+
+.pic1 img{
+    transform: rotate(15deg);
+}
+
+.pic2{
+    top: 40%;
+    left: 75%;
+}
+
+.pic2 img{
+    transform: rotate(-10deg);
+}
+
+.contSobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    font-size: 1.2rem;
+    gap: 30px;
+    text-align: center;
+    color: #fcfcfc;
+    z-index: 1;
+}
+
+.subtitulo{
+    font-size: 0.9rem;
+}
+
+.contSobre div{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.linkSobre{
+    z-index: 1;
+}
+
+.linkSobre a{
+    color:#ffb400;
+    cursor:pointer;
+    text-decoration:none;
+    border-bottom: 1px solid;
+    transition: 1s;
+}
+
+.linkSobre a:hover{
+    color:#fff;
 }
 
 .ofertas{

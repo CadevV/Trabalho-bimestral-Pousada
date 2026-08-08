@@ -1,137 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Por do Sol alojamentos</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/8bf2916310.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
-   <header class="headerMain">
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/8bf2916310.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="headerMain">
+      <div class="heroVideo">
+        <video autoplay muted loop>
+          <source src="videos/backgroundVideo.mp4" />
+        </video>
+      </div>
 
-        <div class="heroVideo">
-            <video autoplay muted loop>
-                <source src="videos/backgroundVideo.mp4">
-            </video>
-        </div>
+      <div class="overlay">
+        <nav class="navInterno">
+          <div class="boxMenu">
+            <button class="btnMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
 
-        <div class="overlay">
+            <nav class="contMenu hidden">
+              <ul>
+                <li><p>Principais</p></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Acomodações</a></li>
+                <li><a href="#">Atrações</a></li>
+                <li><a href="#">Fale conosco</a></li>
+              </ul>
 
-            <nav class="navInterno">
+              <div class="contMenuBtns">
+                <button class="btnRedes">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </button>
 
-                <div class="boxMenu">
-                    <button class="btnMenu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                <button class="btnRedes">
+                  <i class="fa-brands fa-instagram"></i>
+                </button>
 
-                    <nav class="contMenu hidden">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Acomodações</a></li>
-                            <li><a href="#">Atrações</a></li>
-                            <li><a href="#">Fale conosco</a></li>
-                        </ul>
+                <button class="btnRedes">
+                  <i class="fa-brands fa-facebook"></i>
+                </button>
 
-                        <div class="contMenuBtns">
-                            <button class="btnRedes"><i class="fa-brands fa-whatsapp"></i></button>
-                    
-                            <button class="btnRedes"><i class="fa-brands fa-instagram"></i></button>
-
-                            <button class="btnRedes"><i class="fa-brands fa-facebook"></i></button>
-
-                            <button class="btnMenuClose"><i class="fa-solid fa-xmark"></i></button>
-                        </div>
-                    </nav>
-                </div>
-
-                <picture class="picLogo">
-                    <img src="images/Posada_por_do_Sol.png" class="logo">
-                </picture>
-
-                <div class="boxReserva">
-                    <button class="btnReserva">
-                        Reserve Já <i class="fa-solid fa-angles-right"></i>
-                    </button>
-                </div>
-
+                <button class="btnMenuClose">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
             </nav>
+          </div>
 
-            <div class="heroTexto">
-                <h1>Pousada Pôr do <span>Sol</span></h1>
-                <p>Conforto, natureza e experiências inesquecíveis.</p>
-            
-                <div class="btnRoll">
-                    <a href="#main">Rolar pra baixo <i class="fa-solid fa-angles-down"></i></a>
-                </div>
-            </div>
+          <picture class="picLogo">
+            <img src="images/Posada_por_do_Sol.png" class="logo" />
+          </picture>
 
+          <div class="boxReserva">
+            <button class="btnReserva">
+              Reserve Já <i class="fa-solid fa-angles-right"></i>
+            </button>
+          </div>
+        </nav>
+
+        <div class="heroTexto">
+          <h1>Pousada Pôr do <span>Sol</span></h1>
+          <p>Conforto, natureza e experiências inesquecíveis.</p>
+
+          <div class="btnRoll">
+            <a href="#main"
+              >Rolar pra baixo <i class="fa-solid fa-angles-down"></i
+            ></a>
+          </div>
         </div>
-
+      </div>
     </header>
 
     <main id="main">
-        <section class="sobre">
+      <section class="sobre">
 
-            <h2>Quem Somos</h2>
+            <picture class="picSobre pic1">
+                <img src="images/fotoLençol1.webp" alt="fotoLençol">
+            </picture>
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias voluptate cupiditate ipsam nesciunt corrupti
-                perferendis dicta incidunt nobis quisquam obcaecati.
-            </p>
+            <picture class="picSobre pic2">
+                <img src="images/fotoPousada1.jpg" alt="">
+            </picture>
+        
 
-            <div class="btnRoll">
-                <a href="#main">Vamos Conversar</a>
-            </div>
-        </section>
+        <div class="contSobre">
+            <span class="subtitulo">-- QUEM SOMOS --</span>
 
-        <section class="ofertas">
+          <div>
+            <h2>Viva a experiência única dos Lençóis Maranhenses</h2>
+            <h2>com conforto e tranquilidade.</h2>
+          </div>
 
-            <h2>Nossas Melhores Ofertas</h2>
+          <p>
+            Descubra o paraíso dos Lençóis Maranhenses com todo o conforto que
+            você merece. Nossa pousada foi criada para oferecer uma estadia
+            acolhedora, cercada por paisagens de tirar o fôlego e experiências
+            inesquecíveis.
+          </p>
 
-            <div class="containerOfertas">
+          <p>
+            Aqui você encontra acomodações confortáveis, atendimento de
+            qualidade, sabores da culinária regional e fácil acesso às
+            principais atrações da região, tornando cada dia da sua viagem uma
+            nova aventura.
+          </p>
+        </div>
 
-                <article class="boxInicio">
-                    <h3>rtaOfe</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </article>
+        <div class="linkSobre">
+          <a href="#main"
+            >Vamos Conversar <i class="fa-solid fa-angles-right"></i
+          ></a>
+        </div>
+      </section>
 
-                <article class="boxInicio">
-                    <h3>Oferta</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </article>
+      <section class="ofertas">
+        <h2>Nossas Melhores Ofertas</h2>
 
-                <article class="boxInicio">
-                    <h3>Oferta</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </article>
+        <div class="containerOfertas">
+          <article class="boxInicio">
+            <h3>rtaOfe</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </article>
 
-                <article class="boxInicio">
-                    <h3>Oferta</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </article>
+          <article class="boxInicio">
+            <h3>Oferta</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </article>
 
-            </div>
+          <article class="boxInicio">
+            <h3>Oferta</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </article>
 
-        </section>
-
+          <article class="boxInicio">
+            <h3>Oferta</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer>
-
-        <p>
-            Desenvolvido por Arthur e Cauê ©
-        </p>
-        <p>
-            Refs <a href="https://pousadabelaaurora.com.br" target="_blank">https://pousadabelaaurora.com.br</a>
-        </p>
-
+      <p>Desenvolvido por Arthur e Cauê ©</p>
+      <p>
+        Refs
+        <a href="https://pousadabelaaurora.com.br" target="_blank"
+          >https://pousadabelaaurora.com.br</a
+        >
+      </p>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
