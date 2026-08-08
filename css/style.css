@@ -313,6 +313,7 @@ section{
     justify-content: space-between;
     margin: auto;
     width: 90%;
+    height: 100vh;
 }
 
 .boxContInfo{
@@ -341,13 +342,13 @@ section{
 
 .containerInfos picture{
     width: 45%;
-    height: 90%;
+    height:70%;
 }
 
 .containerInfos picture img{
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .linkInfo a{
@@ -359,34 +360,6 @@ section{
 .linkInfo a:hover{
     text-decoration: underline;
     color: #000;
-}
-
-.ofertas{
-    padding-bottom:50px;
-}
-
-.ofertas h2{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.containerOfertas{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-}
-
-.boxInicio{
-    flex:1;
-    min-width:220px;
-    max-width:260px;
-    max-height: 100px;
-    overflow: hidden;
-    border:1px solid #ccc;
-    border-radius:10px;
-    padding:20px;
-    background:white;
 }
 
 footer{
