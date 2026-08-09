@@ -3,9 +3,9 @@ const btnMenuClose = document.querySelector('.btnMenuClose')
 const contMenu = document.querySelector('.contMenu')
 
 btnMenu.addEventListener('click', ()=>{
-    contMenu.classList.remove('hidden')
+    contMenu.classList.add('active')
 })
 
 btnMenuClose.addEventListener('click', ()=>{
-    contMenu.classList.add('hidden')
+    contMenu.classList.remove('active')
 })
