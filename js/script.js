@@ -1,6 +1,9 @@
 const btnMenu = document.querySelector('.btnMenu')
 const btnMenuClose = document.querySelector('.btnMenuClose')
 const contMenu = document.querySelector('.contMenu')
+const questionsFaq = document.querySelectorAll('.questions')
+const respostaFaq = document.querySelectorAll('.respostaFaq')
+const iconeFaq = document.querySelectorAll('.iconeFaq')
 const carroselDesta = document.querySelector('.carroselDestaque')
 const btnLeftCard = document.querySelector('.btnPrevDestaque')
 const btnRightCard = document.querySelector('.btnNextDestaque')
@@ -40,3 +43,11 @@ btnLeftCard.addEventListener('click', () => {
             `translateX(${-indiceCarrosel * 370}px)`
 
 })
+
+questionsFaq.forEach((question, index) => {
+    question.addEventListener('click', () =>{
+        respostaFaq[index].classList.toggle('activo')
+
+        iconeFaq[index].classList.toggle('activo')
+    })
+});
