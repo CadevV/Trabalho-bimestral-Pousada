@@ -7,6 +7,8 @@ const iconeFaq = document.querySelectorAll('.iconeFaq')
 const carroselDesta = document.querySelector('.carroselDestaque')
 const btnLeftCard = document.querySelector('.btnPrevDestaque')
 const btnRightCard = document.querySelector('.btnNextDestaque')
+const navInterno = document.querySelector('.navInterno')
+const limitePixels = 600;
 
 let indiceCarrosel = 0
 
@@ -51,3 +53,11 @@ questionsFaq.forEach((question, index) => {
         iconeFaq[index].classList.toggle('activo')
     })
 });
+
+window.addEventListener('scroll', ()=>{
+    if (window.scrollY > limitePixels){
+        navInterno.classList.add('mudancaCor')
+    }else{
+        navInterno.classList.remove('mudancaCor')
+    }
+})
