@@ -56,17 +56,6 @@ body::-webkit-scrollbar{
     transition: 1s;
 }
 
-.mudancaCor{
-    background-color: #000;
-    transition: 1s;
-}
-
-.mudancaCor img{
-    transition: 1s;
-    background-color: #fcfcfc;
-    border-radius: 10px;
-}
-
 .boxMenu, .boxReserva{
     width:180px;
     display:flex;
@@ -81,9 +70,21 @@ body::-webkit-scrollbar{
 }
 
 .logo{
-    width:140px;
+    width:150px;
     margin: 3%;
     transition: 1s;
+}
+
+.mudancaCor{
+    background-color: rgba(0,0,0,.5);
+    transition: 1s;
+}
+
+.mudancaCor img{
+    width: 70px;
+    transition: 1s;
+    background-color: rgba(255, 255, 255, .70);
+    border-radius: 10px;
 }
 
 .btnMenu{
@@ -168,8 +169,6 @@ body::-webkit-scrollbar{
     gap:20px;
     list-style:none;
 }
-
-
 
 .contMenu a{
     display: inline-block;
