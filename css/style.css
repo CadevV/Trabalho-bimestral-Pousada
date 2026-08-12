@@ -46,7 +46,6 @@ body::-webkit-scrollbar{
 }
 
 .navInterno{
-    position: fixed;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -65,24 +64,23 @@ body::-webkit-scrollbar{
 .picLogo{
     display:flex;
     justify-content:center;
-    transition: 1s;
     border-radius: 10px;
 }
 
 .logo{
     width:150px;
     margin: 3%;
-    transition: 1s;
 }
 
 .mudancaCor{
+    position: fixed;
     background-color: rgba(0,0,0,.5);
-    transition: 1s;
+    transition: .3s;
 }
 
 .mudancaCor img{
     width: 70px;
-    transition: 1s;
+    transition: .3s;
     background-color: rgba(255, 255, 255, .70);
     border-radius: 10px;
 }

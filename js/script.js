@@ -8,7 +8,7 @@ const carroselDesta = document.querySelector('.carroselDestaque')
 const btnLeftCard = document.querySelector('.btnPrevDestaque')
 const btnRightCard = document.querySelector('.btnNextDestaque')
 const navInterno = document.querySelector('.navInterno')
-const limitePixels = 400;
+const limitePixels = 600;
 
 let indiceCarrosel = 0
 
