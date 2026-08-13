@@ -4,50 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pousada Por Do Sol | Acomodações</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ac.css" />
     <script
       src="https://kit.fontawesome.com/8bf2916310.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <header>
-      <div class="boxMenu">
-        <button class="btnMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="contMenu">
-          <ul>
-            <li><span class="rotuloMenu">Principais</span></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="acomodacoes.html">Acomodações</a></li>
-            <li><a href="#">Atrações</a></li>
-            <li><a href="#">Fale conosco</a></li>
-          </ul>
-
-          <div class="contMenuBtns">
-            <button class="btnRedes">
-              <i class="fa-brands fa-whatsapp"></i>
+    <header class="headerMain" id="inicio">
+      <div class="overlay">
+        <nav class="navInterno">
+          <div class="boxMenu">
+            <button class="btnMenu">
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
 
-            <button class="btnRedes">
-              <i class="fa-brands fa-instagram"></i>
-            </button>
+            <nav class="contMenu">
+              <ul>
+                <li><span class="rotuloMenu">Principais</span></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="acomodacoes.html">Acomodações</a></li>
+                <li><a href="#">Atrações</a></li>
+                <li><a href="#">Fale conosco</a></li>
+              </ul>
 
-            <button class="btnRedes">
-              <i class="fa-brands fa-facebook"></i>
-            </button>
+              <div class="contMenuBtns">
+                <button class="btnRedes">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </button>
 
-            <button class="btnMenuClose">
-              <i class="fa-solid fa-xmark"></i>
+                <button class="btnRedes">
+                  <i class="fa-brands fa-instagram"></i>
+                </button>
+
+                <button class="btnRedes">
+                  <i class="fa-brands fa-facebook"></i>
+                </button>
+
+                <button class="btnMenuClose">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </nav>
+          </div>
+
+          <picture class="picLogo">
+            <img src="images/Posada_por_do_Sol.png" class="logo" />
+          </picture>
+
+          <div class="boxReserva">
+            <button class="btnReserva">
+              Reserve Já <i class="fa-solid fa-angles-right"></i>
             </button>
           </div>
         </nav>
-      </div>
     </header>
+
+    <main>
+      <section class="titulo">
+        <h1>Veja nossos chalés!</h1>
+        <p>Cada momento é inesquecivel!</p>
+      </section>
+
+      <section class="box-nav">
+        <div class="navegacao">
+          <h2>Categoria</h2>
+          <a href="" class="pesquisa">Todos os chalés</a>
+          <a href="" class="pesquisa">Para casais</a>
+          <a href="" class="pesquisa">Para família</a>
+        </div>
+
+        <div class="quartos">
+          <div class="box-quarto">
+            <img src="images/quartoCompartilhado.webp" alt="">
+            <h3>Quarto compartilhado</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="box-quarto">
+            <img src="images/quartoCompartilhado.webp" alt="">
+            <h3>Quarto compartilhado</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="box-quarto">
+            <img src="images/quartoCompartilhado.webp" alt="">
+            <h3>Quarto compartilhado</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="box-quarto">
+            <img src="images/quartoCompartilhado.webp" alt="">
+            <h3>Quarto compartilhado</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>  
+      </section>
+    </main>
 
     <script src="js/script.js"></script>
   </body>
