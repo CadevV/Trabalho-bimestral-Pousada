@@ -40,7 +40,7 @@ body::-webkit-scrollbar {
 
 .overlay {
   position: relative;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.45);
   color: white;
@@ -138,12 +138,6 @@ body::-webkit-scrollbar {
 
 .contMenu.active {
   transform: translateY(0);
-}
-
-.contMenuBtns {
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 
 .contMenuBtns button {
@@ -253,7 +247,7 @@ body::-webkit-scrollbar {
 }
 
 section {
-  width: 100%;
+  min-width: 100%;
 }
 
 .sobre {
@@ -270,6 +264,7 @@ section {
 }
 
 .picSobre {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -652,6 +647,12 @@ footer {
     width: 180px;
   }
 
+  .contMenuBtns {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
   .logo {
     width: 150px;
   }
@@ -666,6 +667,10 @@ footer {
 
   .btnRoll {
     width: 20%;
+  }
+
+  .picSobre {
+    display: block;
   }
 
   .contSobre {

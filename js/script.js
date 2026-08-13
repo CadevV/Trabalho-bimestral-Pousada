@@ -61,3 +61,4 @@ window.addEventListener('scroll', ()=>{
         navInterno.classList.remove('mudancaCor')
     }
 })
+

@@ -1,29 +1,33 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 body{
     display: flex;
     flex-direction: column;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#FFFAEB;
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FFFAEB;
+}
+
+body.modalOpen{
+    overflow: hidden;
 }
 
 body::-webkit-scrollbar{
-    display:none;
+    display: none;
 }
 
 .headerMain{
-    position:relative;
-    height:50vh;
-    min-width: 100%;
+    position: relative;
+    width: 100%;
+    height: 50vh;
     background-image: url(../images/suite.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,99 +35,98 @@ body::-webkit-scrollbar{
 }
 
 .overlay{
-    position:relative;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.45);
-    color:white;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .45);
+    color: white;
 }
 
 .navInterno{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding: 0px 40px;
     width: 100%;
-    z-index: 999;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transition: 1s;
 }
 
-.boxMenu, .boxReserva{
-    width:180px;
-    display:flex;
-    justify-content:center;
+.boxMenu,
+.boxReserva{
+    width: 180px;
+    display: flex;
+    justify-content: center;
 }
 
 .picLogo{
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
     border-radius: 10px;
 }
 
 .logo{
-    width:150px;
+    width: 150px;
     margin: 3%;
 }
 
 .mudancaCor{
     position: fixed;
-    background-color: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     transition: .3s;
 }
 
 .mudancaCor img{
     width: 70px;
-    transition: .3s;
-    background-color: rgba(255, 255, 255, .70);
+    background: rgba(255, 255, 255, .7);
     border-radius: 10px;
+    transition: .3s;
 }
 
 .btnMenu{
-    display:flex;
-    flex-direction:column;
-    gap:5px;
-    background:transparent;
-    border:none;
-    cursor:pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .btnMenu span{
-    width:28px;
-    height:3px;
-    background:white;
-    border-radius:5px;
+    width: 28px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
 }
 
 .btnReserva{
-    padding:10px 20px;
-    background:transparent;
-    border:1px solid white;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
-    transition:.3s;
-    display:flex;
-    align-items:center;
-    gap:5px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
 }
 
 .btnReserva:hover{
-    background:white;
-    color:black;
+    background: white;
+    color: black;
 }
 
 .contMenu{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    transform: translateY(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     min-height: 100vh;
-    background:rgba(255, 251, 234, .70);
-    padding:20px;
+    padding: 20px;
+    transform: translateY(-100%);
+    background: rgba(255, 251, 234, .70);
     color: #726231;
     font-size: 2.5rem;
-    transition: transform 0.3s ease-in-out;
+    transition: transform .3s ease-in-out;
     z-index: 999;
 }
 
@@ -132,79 +135,82 @@ body::-webkit-scrollbar{
 }
 
 .contMenuBtns{
-    position:absolute;
-    top:20px;
-    right:20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .contMenuBtns button{
-    background:transparent;
-    border:none;
-    font-size:2rem;
-    cursor:pointer;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 .btnMenuClose:hover{
-    color:#ce2c03;
+    color: #ce2c03;
 }
 
 .btnRedes:hover{
-    color:#143525;
+    color: #143525;
 }
 
 .contMenu ul{
     min-height: 80vh;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap:20px;
-    list-style:none;
+    gap: 20px;
+    list-style: none;
 }
 
 .contMenu a{
     display: inline-block;
     font-size: 2rem;
-    color:#143525;
-    text-decoration:none;
+    color: #143525;
+    text-decoration: none;
     transition: transform .3s ease-in-out;
 }
 
 .contMenu a:hover{
-    text-decoration:underline;
     color: #CFA836;
+    text-decoration: underline;
     transform: translateX(50px);
 }
 
 .titulo{
+    margin: 2%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin: 1%;
 }
 
-.box-nav{
+.titulo h1{
+    color: #143525;
+}
+
+.titulo p{
+    color: #726231;
+}
+
+.boxNav{
     display: flex;
-    justify-content: space-between;
     gap: 50px;
+    justify-content: space-between;
     margin: 1%;
-}
-
-.quartos{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
 .navegacao{
+    width: 40%;
+    height: 30vh;
+    padding: 10px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    width: 30%;
-    height: 20vh;
+    justify-content: center;
+    padding: 40px 20px;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 5px;
 }
 
 .navegacao h2{
@@ -213,27 +219,84 @@ body::-webkit-scrollbar{
 }
 
 .navegacao a{
+    margin: 1%;
     border: 1px solid #143525;
     border-radius: 5px;
-    text-decoration: none;
     color: #143525;
-    margin:1%;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .pesquisa:hover{
-    color: #CFA836;
     border: 2px solid #CFA836;
+    color: #CFA836;
 }
 
-.box-quarto{
+.quartos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.boxQuarto{
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid black;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    overflow: hidden;
 }
 
-.box-quarto img{
+.boxQuarto img{
     width: 100%;
+}
+
+.boxQuarto h3{
+    margin-top: 10px;
+}
+
+.boxQuarto p{
+    padding: 10px;
+    text-align: center;
+}
+
+.btnInfo{
+    margin: 10px;
+    padding: 10px 20px;
+    background: #143525;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btnInfo:hover{
+    background: #CFA836;
+}
+
+.modalQuarto{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .6);
+    z-index: 700;
+}
+
+.modalQuarto.active{
+    display: flex;
+}
+
+.modalCont{
+    background: #CFA836;
+    width: 40%;
+    height: 60vh;
+    border-radius: 20px;
 }
