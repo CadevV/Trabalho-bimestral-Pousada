@@ -203,7 +203,7 @@ body::-webkit-scrollbar{
 
 .navegacao{
     width: 40%;
-    height: 30vh;
+    height: 40vh;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -218,16 +218,36 @@ body::-webkit-scrollbar{
     font-size: 20px;
 }
 
-.navegacao a{
+.btnPesquisa{
     margin: 1%;
     border: 1px solid #143525;
     border-radius: 5px;
     color: #143525;
     padding: 10px;
-    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
 }
 
-.pesquisa:hover{
+.btnPesquisa span{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #143525;
+    color: white;
+}
+
+.btnPesquisa:hover{
+    border: 1px solid #CFA836;
+    color: #CFA836;
+}
+
+.btnPesquisa.active{
     border: 2px solid #CFA836;
     color: #CFA836;
 }
@@ -235,6 +255,7 @@ body::-webkit-scrollbar{
 .quartos{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     gap: 15px;
     justify-content: center;
 }
@@ -249,8 +270,10 @@ body::-webkit-scrollbar{
     overflow: hidden;
 }
 
-.boxQuarto img{
-    width: 100%;
+.boxQuarto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
 .boxQuarto h3{
@@ -299,4 +322,12 @@ body::-webkit-scrollbar{
     width: 40%;
     height: 60vh;
     border-radius: 20px;
+}
+
+.casal, .familia{
+    display: flex;
+}
+
+.familia.off, .casal.off{
+    display: none;
 }
