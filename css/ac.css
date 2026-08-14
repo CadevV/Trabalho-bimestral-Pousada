@@ -300,30 +300,91 @@ body::-webkit-scrollbar{
     background: #CFA836;
 }
 
-.modalQuarto{
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, .6);
-    z-index: 700;
+.modalQuarto {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-.modalQuarto.active{
+.modalQuarto.active {
+  display: flex;
+}
+
+.modalCont {
+  background: #fffaeb;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modalCont div{
     display: flex;
+    justify-content: space-between;
 }
 
-.modalCont{
-    background: #CFA836;
-    width: 40%;
-    height: 60vh;
-    border-radius: 20px;
+.modalCont div button{
+  background-color: #143525;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.modalCont div button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btnCloseModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #314622;
+}
+
+.modalImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.modalTitulo {
+  font-size: 1.3rem;
+  color: #314622;
+}
+
+.modalDescricao {
+  font-size: 0.95rem;
+  color: #726231;
+  line-height: 1.4;
+}
+
+.modalPreco {
+  font-weight: bold;
+  color: #ffb400;
+  font-size: 1.1rem;
+}
 .casal, .familia{
     display: flex;
 }
