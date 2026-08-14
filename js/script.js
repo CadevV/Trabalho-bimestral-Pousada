@@ -1,4 +1,5 @@
 const btnMenu = document.querySelector('.btnMenu')
+const btnReserva = document.querySelector('.btnReserva')
 const btnMenuClose = document.querySelector('.btnMenuClose')
 const contMenu = document.querySelector('.contMenu')
 const questionsFaq = document.querySelectorAll('.questions')
@@ -11,6 +12,10 @@ const navInterno = document.querySelector('.navInterno')
 const limitePixels = 600;
 
 let indiceCarrosel = 0
+
+btnReserva.addEventListener('click', ()=>{
+    window.location.href = 'acomodacoes.html'
+})
 
 btnMenu.addEventListener('click', ()=>{
     contMenu.classList.add('active')

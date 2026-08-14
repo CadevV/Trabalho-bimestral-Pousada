@@ -248,6 +248,7 @@ body::-webkit-scrollbar {
 
 section {
   min-width: 100%;
+  padding: 50px;
 }
 
 .sobre {
@@ -569,11 +570,16 @@ section {
 .respostaFaq {
   max-height: 0;
   overflow: hidden;
+  width: 100%;
   transition: max-height 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .respostaFaq.activo {
   max-height: 500px;
+  width: 100%;
 }
 
 .containerFeedback {
