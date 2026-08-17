@@ -1,273 +1,268 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #FFFAEB;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fffaeb;
 }
 
-body.modalOpen{
-    overflow: hidden;
+body.modalOpen {
+  overflow: hidden;
 }
 
-body::-webkit-scrollbar{
-    display: none;
+body::-webkit-scrollbar {
+  display: none;
 }
 
-.headerMain{
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    background-image: url(../images/suite.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.headerMain {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-image: url(../images/suite.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.overlay{
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .45);
-    color: white;
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
 }
 
-.navInterno{
-    width: 100%;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 1s;
+.navInterno {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1s;
 }
 
 .boxMenu,
-.boxReserva{
-    width: 180px;
-    display: flex;
-    justify-content: center;
+.boxReserva {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  width: 150px;
 }
 
-.picLogo{
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
+.picLogo {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
 }
 
-.logo{
-    width: 150px;
-    margin: 3%;
+.logo {
+  width: 90px;
+  margin: 3%;
 }
 
-.mudancaCor{
-    position: fixed;
-    background: rgba(0, 0, 0, .5);
-    transition: .3s;
+.mudancaCor {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
 }
 
-.mudancaCor img{
-    width: 70px;
-    background: rgba(255, 255, 255, .7);
-    border-radius: 10px;
-    transition: .3s;
+.mudancaCor img {
+  width: 70px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.btnMenu{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+.btnMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.btnMenu span{
-    width: 28px;
-    height: 3px;
-    background: white;
-    border-radius: 5px;
+.btnMenu span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
 }
 
-.btnReserva{
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background: transparent;
-    border: 1px solid white;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: .3s;
+.btnReserva {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.btnReserva:hover{
-    background: white;
-    color: black;
+.btnReserva:hover {
+  background: white;
+  color: black;
 }
 
-.contMenu{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    padding: 20px;
-    transform: translateY(-100%);
-    background: rgba(255, 251, 234, .70);
-    color: #726231;
-    font-size: 2.5rem;
-    transition: transform .3s ease-in-out;
-    z-index: 999;
+.contMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  transform: translateY(-100%);
+  background: rgba(255, 251, 234, 0.7);
+  color: #726231;
+  font-size: 2.5rem;
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
 }
 
-.contMenu.active{
-    transform: translateY(0);
+.contMenu.active {
+  transform: translateY(0);
 }
 
-.contMenuBtns{
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.contMenuBtns button {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.contMenuBtns button{
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
+.btnMenuClose:hover {
+  color: #ce2c03;
 }
 
-.btnMenuClose:hover{
-    color: #ce2c03;
+.btnRedes:hover {
+  color: #143525;
 }
 
-.btnRedes:hover{
-    color: #143525;
+.contMenu ul {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
 }
 
-.contMenu ul{
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
+.contMenu a {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  color: #143525;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
 }
 
-.contMenu a{
-    display: inline-block;
-    font-size: 2rem;
-    color: #143525;
-    text-decoration: none;
-    transition: transform .3s ease-in-out;
+.contMenu a:hover {
+  color: #cfa836;
+  text-decoration: underline;
+  transform: translateX(50px);
 }
 
-.contMenu a:hover{
-    color: #CFA836;
-    text-decoration: underline;
-    transform: translateX(50px);
+.titulo {
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.titulo{
-    margin: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.titulo h1 {
+  color: #143525;
 }
 
-.titulo h1{
-    color: #143525;
+.titulo p {
+  color: #726231;
 }
 
-.titulo p{
-    color: #726231;
+.boxNav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 1%;
 }
 
-.boxNav{
-    display: flex;
-    gap: 50px;
-    justify-content: space-between;
-    margin: 1%;
+.navegacao {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
-.navegacao{
-    width: 40%;
-    height: 40vh;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px 20px;
-    border: 1px solid black;
-    border-radius: 10px;
+.navegacao h2 {
+  color: #cfa836;
+  font-size: 20px;
 }
 
-.navegacao h2{
-    color: #CFA836;
-    font-size: 20px;
+.btnPesquisa {
+  border: 1px solid #143525;
+  border-radius: 5px;
+  color: #143525;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
 }
 
-.btnPesquisa{
-    margin: 1%;
-    border: 1px solid #143525;
-    border-radius: 5px;
-    color: #143525;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
-    background: transparent;
+.btnPesquisa span {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #143525;
+  color: white;
 }
 
-.btnPesquisa span{
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #143525;
-    color: white;
+.btnPesquisa:hover {
+  border: 1px solid #cfa836;
+  color: #cfa836;
 }
 
-.btnPesquisa:hover{
-    border: 1px solid #CFA836;
-    color: #CFA836;
+.btnPesquisa.active {
+  border: 2px solid #cfa836;
+  color: #cfa836;
 }
 
-.btnPesquisa.active{
-    border: 2px solid #CFA836;
-    color: #CFA836;
+.quartos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 15px;
+  justify-content: center;
 }
 
-.quartos{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 15px;
-    justify-content: center;
-}
-
-.boxQuarto{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    overflow: hidden;
+.boxQuarto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .boxQuarto img {
@@ -276,28 +271,28 @@ body::-webkit-scrollbar{
   object-fit: cover;
 }
 
-.boxQuarto h3{
-    margin-top: 10px;
+.boxQuarto h3 {
+  margin-top: 10px;
 }
 
-.boxQuarto p{
-    padding: 10px;
-    text-align: center;
+.boxQuarto p {
+  padding: 10px;
+  text-align: center;
 }
 
-.btnInfo{
-    margin: 10px;
-    padding: 10px 20px;
-    background: #143525;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: .3s;
+.btnInfo {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #143525;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.btnInfo:hover{
-    background: #CFA836;
+.btnInfo:hover {
+  background: #cfa836;
 }
 
 .modalQuarto {
@@ -329,12 +324,12 @@ body::-webkit-scrollbar{
   gap: 10px;
 }
 
-.modalCont div{
-    display: flex;
-    justify-content: space-between;
+.modalCont div {
+  display: flex;
+  justify-content: space-between;
 }
 
-.modalCont div button{
+.modalCont div button {
   background-color: #143525;
   color: #ffffff;
   padding: 12px 24px;
@@ -343,12 +338,14 @@ body::-webkit-scrollbar{
   border-radius: 30px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.modalCont div button:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.modalCont div button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btnCloseModal {
@@ -385,10 +382,48 @@ body::-webkit-scrollbar{
   color: #ffb400;
   font-size: 1.1rem;
 }
-.casal, .familia{
-    display: flex;
+.casal,
+.familia {
+  display: flex;
 }
 
-.familia.off, .casal.off{
-    display: none;
+.familia.off,
+.casal.off {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navInterno {
+    padding: 0 40px;
+  }
+
+  .boxMenu,
+  .boxReserva {
+    width: 180px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .contMenuBtns {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .boxNav {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .navegacao {
+    width: 40%;
+    height: 40vh;
+  }
+
+  .boxQuarto {
+    width: 40%;
+  }
 }

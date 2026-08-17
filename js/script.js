@@ -2,6 +2,7 @@ const btnMenu = document.querySelector('.btnMenu')
 const btnReserva = document.querySelector('.btnReserva')
 const btnMenuClose = document.querySelector('.btnMenuClose')
 const contMenu = document.querySelector('.contMenu')
+const btnRedes = document.querySelectorAll('.btnRedes')
 const questionsFaq = document.querySelectorAll('.questions')
 const respostaFaq = document.querySelectorAll('.respostaFaq')
 const iconeFaq = document.querySelectorAll('.iconeFaq')
@@ -12,6 +13,12 @@ const navInterno = document.querySelector('.navInterno')
 const limitePixels = 600;
 
 let indiceCarrosel = 0
+
+btnRedes.forEach(element => {
+    element.addEventListener('click', () => {
+        window.location.href = element.dataset.url
+    })
+})
 
 btnReserva.addEventListener('click', ()=>{
     window.location.href = 'acomodacoes.html'

@@ -107,6 +107,7 @@ const quartosModal = [
 const btnMenu = document.querySelector('.btnMenu')
 const btnMenuClose = document.querySelector('.btnMenuClose')
 const contMenu = document.querySelector('.contMenu')
+const btnRedes = document.querySelectorAll('.btnRedes')
 const btnOpenModal = document.querySelectorAll(".btnInfo");
 const btnCloseModal = document.querySelector(".btnCloseModal");
 const modalAc = document.querySelector(".modalQuarto");
@@ -128,6 +129,12 @@ function atualizarQuartos() {
   numCasal.textContent = quartosCasal.length;
   numFamilia.textContent = quartosFamilia.length;
 }
+
+btnRedes.forEach(element => {
+    element.addEventListener('click', () => {
+        window.location.href = element.dataset.url
+    })
+})
 
 btnMenu.addEventListener('click', ()=>{
     contMenu.classList.add('active')
