@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pousada Por do Sol | Acomodações</title>
+    <link rel="stylesheet" href="css/ac.css" />
+    <script
+      src="https://kit.fontawesome.com/8bf2916310.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="headerMain" id="inicio">
+      <div class="overlay">
+        <nav class="navInterno">
+          <div class="boxMenu">
+            <button class="btnMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="contMenu">
+              <ul>
+                <li>
+                  <span class="rotuloMenu">Principais</span>
+                </li>
+
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                  <a href="acomodacoes.html">Acomodações</a>
+                </li>
+
+                <li>
+                  <a href="atracao.html">Atrações</a>
+                </li>
+
+                <li>
+                  <a href="#">Fale conosco</a>
+                </li>
+              </ul>
+
+              <div class="contMenuBtns">
+                <button class="btnRedes" data-url="https://github.com/CadevV/Trabalho-bimestral-Pousada">
+                  <i class="fa-brands fa-github"></i>
+                </button>
+
+                <button class="btnRedes" data-url="https://www.instagram.com/">
+                  <i class="fa-brands fa-instagram"></i>
+                </button>
+
+                <button class="btnRedes" data-url="https://www.facebook.com/?locale=pt_BR">
+                  <i class="fa-brands fa-facebook"></i>
+                </button> 
+
+                <button class="btnMenuClose">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <picture class="picLogo">
+            <img
+              src="images/Posada_por_do_Sol.png"
+              class="logo"
+              alt="Logo da Pousada Por do Sol"
+            />
+          </picture>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="titulo">
+        <h1>Veja nossos chalés!</h1>
+        <p>Cada momento é inesquecível!</p>
+      </section>
+
+      <section class="boxNav">
+        <div class="navegacao">
+          <h2>Categoria</h2>
+
+          <button class="btnPesquisa active" id="btnTotal">
+            Todos os chalés <span class="numTotal"></span>
+          </button>
+
+          <button class="btnPesquisa" id="btnCasal">
+            Para casais <span class="numCasal"></span>
+          </button>
+
+          <button class="btnPesquisa" id="btnFamilia">
+            Para família <span class="numFamilia"></span>
+          </button>
+        </div>
+
+        <div class="quartos">
+          <div class="boxQuarto casal">
+            <img
+              src="images/quartoCasal.jfif"
+              alt="Quarto de casal econômico"
+            />
+            <h3>Quarto de Casal Econômico</h3>
+            <p>
+              Opção mais em conta pra casais, com o essencial pra uma estadia
+              confortável.
+            </p>
+            <button class="btnInfo" data-id="1">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto familia">
+            <img
+              src="images/quartoFamilia.webp"
+              alt="Quarto família com varanda"
+            />
+            <h3>Quarto Família com Varanda</h3>
+            <p>
+              Varanda privativa com vista pro jardim, ótimo pra relaxar em
+              família.
+            </p>
+            <button class="btnInfo" data-id="2">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto casal">
+            <img
+              src="images/quartoSuite.webp"
+              alt="Quarto de casal vista pôr do sol"
+            />
+            <h3>Quarto de Casal Vista Pôr do Sol</h3>
+            <p>Posição privilegiada pra ver o pôr do sol direto da cama.</p>
+            <button class="btnInfo" data-id="3">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto familia">
+            <img src="images/quartoFamilia.webp" alt="Quarto família térreo" />
+            <h3>Quarto Família Térreo</h3>
+            <p>
+              Acesso fácil sem escadas, ideal pra famílias com crianças pequenas
+              ou idosos.
+            </p>
+            <button class="btnInfo" data-id="4">Ver informações</button>
+          </div>
+          <div class="boxQuarto casal">
+            <img src="images/quartoCasal.jfif" alt="Quarto de casal standard" />
+            <h3>Quarto de Casal Standard</h3>
+            <p>Conforto e privacidade pra dois, com cama de casal e varanda.</p>
+            <button class="btnInfo" data-id="5">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto casal">
+            <img
+              src="images/quartoCasal.jfif"
+              alt="Quarto de casal vista lagoa"
+            />
+            <h3>Quarto de Casal Vista Lagoa</h3>
+            <p>Mesmo conforto do standard, com vista privilegiada pra lagoa.</p>
+            <button class="btnInfo" data-id="6">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto casal">
+            <img src="images/quartoSuite.webp" alt="Suíte de casal luxo" />
+            <h3>Suíte de Casal Luxo</h3>
+            <p>Banheira, varanda duplex e vista para as dunas ao amanhecer.</p>
+            <button class="btnInfo" data-id="7">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto casal">
+            <img
+              src="images/quartoCasal.jfif"
+              alt="Quarto de casal romântico"
+            />
+            <h3>Quarto de Casal Romântico</h3>
+            <p>Ambiente intimista, perfeito pra lua de mel ou aniversário.</p>
+            <button class="btnInfo" data-id="8">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto casal">
+            <img
+              src="images/quartoSuite.webp"
+              alt="Suíte de casal vista dunas"
+            />
+            <h3>Suíte de Casal Vista Dunas</h3>
+            <p>Janelas amplas de frente pras dunas, ideal ao nascer do sol.</p>
+            <button class="btnInfo" data-id="9">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto familia">
+            <img
+              src="images/quartoFamilia.webp"
+              alt="Quarto família standard"
+            />
+            <h3>Quarto Família Standard</h3>
+            <p>Espaço amplo com duas camas de casal, perfeito pra famílias.</p>
+            <button class="btnInfo" data-id="10">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto familia">
+            <img src="images/quartoFamilia.webp" alt="Quarto família premium" />
+            <h3>Quarto Família Premium</h3>
+            <p>
+              Área de estar extra e frigobar, pra quem viaja em grupo maior.
+            </p>
+            <button class="btnInfo" data-id="11">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto familia">
+            <img
+              src="images/quartoFamilia.webp"
+              alt="Quarto família vista dunas"
+            />
+            <h3>Quarto Família Vista Dunas</h3>
+            <p>Mesmo espaço do standard, com janelas voltadas pras dunas.</p>
+            <button class="btnInfo" data-id="12">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto familia">
+            <img
+              src="images/quartoCompartilhado.webp"
+              alt="Quarto família econômico"
+            />
+            <h3>Quarto Família Econômico</h3>
+            <p>
+              Opção mais em conta, com o essencial pra receber toda a família.
+            </p>
+            <button class="btnInfo" data-id="13">Ver informações</button>
+          </div>
+
+          <div class="boxQuarto familia">
+            <img
+              src="images/quartoCompartilhado.webp"
+              alt="Quarto família ampliado"
+            />
+            <h3>Quarto Família Ampliado</h3>
+            <p>
+              Camas extras disponíveis, ideal pra grupos maiores de parentes.
+            </p>
+            <button class="btnInfo" data-id="14">Ver informações</button>
+          </div>
+
+          <div class="modalQuarto">
+            <div class="modalCont">
+              <button class="btnCloseModal">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <img class="modalImg" src="" alt="" />
+              <h3 class="modalTitulo"></h3>
+              <p class="modalDescricao"></p>
+              <div>
+                <span class="modalPreco"></span>
+                <button>Alugar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <footer class="rodape">
+
+          <div class="coluna-rodape">
+            <p>A pousada Por do Sol oferce passeios inesqueciveis, otimos quartos e uma grande facilidade na sua hospedagem.</p>
+            <a href="#">Fale conosco!</a>
+          </div>
+
+          <div class="coluna-rodape">
+            <h2>Principais</h2>
+              <a href="index.html" class="menu-rodape">Home</a>
+              <a href="acomodacoes.html" class="menu-rodape">Acomodações</a>
+              <a href="atracao.html" class="menu-rodape">Atrações</a>
+              <a href="#" class="menu-rodape">Fale conosco</a>
+          </div>
+
+          <div class="coluna-rodape">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="coluna-rodape">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <script src="js/ac.js"></script>
+  </body>
+</html>

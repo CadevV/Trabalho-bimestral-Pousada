@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fffaeb;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.headerMain {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-image: url(../images/backatra.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+}
+
+.navInterno {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1s;
+}
+
+.boxMenu,
+.boxReserva {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+}
+
+.picLogo {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.logo {
+  width: 90px;
+  margin: 3%;
+}
+
+.mudancaCor {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.mudancaCor img {
+  width: 70px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btnMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btnMenu span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+}
+
+.btnReserva {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnReserva:hover {
+  background: white;
+  color: black;
+}
+
+.contMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  transform: translateY(-100%);
+  background: rgba(255, 251, 234, 0.7);
+  color: #726231;
+  font-size: 2.5rem;
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.contMenu.active {
+  transform: translateY(0);
+}
+
+.contMenuBtns button {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.btnMenuClose:hover {
+  color: #ce2c03;
+}
+
+.btnRedes:hover {
+  color: #143525;
+}
+
+.contMenu ul {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.contMenu a {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  color: #143525;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contMenu a:hover {
+  color: #cfa836;
+  text-decoration: underline;
+  transform: translateX(50px);
+}
+
+.titulo-atracoes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.sub-atracoes{
+  color: #cfa836;
+  font-size: 1.5rem;
+}
+
+.veja-atracao{
+  color: #143525;
+  font-size: 2.5rem;
+}
+
+.descricao-atracoes{
+  color: #726231;
+  font-size: 0.7rem;
+}
+
+.atracoes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.conteudo-atracoes{
+  width: 25%;
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.conteudo-atracoes video{
+  width: 90%;
+  border-radius: 10px;
+}
+
+.conteudo-atracoes h3{
+  color: #143525;
+  font-size: 1.5rem;
+}
+
+.conteudo-atracoes p{
+  width: 80%;
+  color: #726231;
+  font-size: 0.9rem;
+}
+
+.display-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid #143525;
+  border-radius: 10px;
+  margin: 5%;
+}
+
+.display-info img{
+  width: 45%;
+  border-top-right-radius: 30%;
+  border-bottom-right-radius: 30%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.display-info p{
+  padding: 3%;
+}
+
+@media (min-width: 768px) {
+  .navInterno {
+    padding: 0 40px;
+  }
+
+  .boxMenu,
+  .boxReserva {
+    width: 180px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .contMenuBtns {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
