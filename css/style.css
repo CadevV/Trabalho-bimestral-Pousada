@@ -312,7 +312,18 @@ section {
 }
 
 .subtitulo {
-  font-size: 0.9rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffb400;
+  margin-top: 4%;
+}
+
+.subtitulo1{
+  font-size: 1.5rem;
+  color: #ffb400;
+
 }
 
 .contSobre div {
@@ -344,7 +355,7 @@ section {
   font-size: 1.3rem;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin-top: -5% ;
   width: 90%;
   min-height: 100vh;
   gap: 40px;
@@ -411,6 +422,7 @@ section {
   align-items: center;
   text-align: center;
   min-height: 100vh;
+  margin-top: -10%;
 }
 
 .btnsDestaque {
@@ -594,6 +606,7 @@ section {
   min-height: 100vh;
   padding: 80px 20px;
   color: #314622;
+  margin-bottom: -2%;
 }
 
 .containerFeedback .subtitulo {

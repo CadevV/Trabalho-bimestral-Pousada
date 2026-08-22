@@ -224,6 +224,7 @@ body::-webkit-scrollbar {
   align-items: center;
   gap: 5px;
   background: transparent;
+  margin: 1%;
 }
 
 .btnPesquisa span {
@@ -390,6 +391,51 @@ body::-webkit-scrollbar {
 .familia.off,
 .casal.off {
   display: none;
+}
+
+.rodape{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #143525;
+  padding: 5%;
+}
+
+.coluna-rodape{
+  width: 35%;
+  border-right: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.coluna-rodape p{
+  color: #ffffff;
+  margin: 15%;
+}
+
+.coluna-rodape a{
+  background-color: #726231;
+  border: 1px solid #726231;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 2%;
+  text-decoration: none;
+  margin-bottom: 5%;
+}
+
+.coluna-rodape a:hover{
+  transition: 1s;
+  background-color: #cfa836;
+  border: 2px solid #cfa836;
+}
+
+.menu-rodape{
+  margin: 1%;
+  background-color: #143525;
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
