@@ -99,24 +99,6 @@ body::-webkit-scrollbar {
   border-radius: 5px;
 }
 
-.btnReserva {
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btnReserva:hover {
-  background: white;
-  color: black;
-}
-
 .contMenu {
   position: fixed;
   top: 0;
@@ -383,59 +365,100 @@ body::-webkit-scrollbar {
   color: #ffb400;
   font-size: 1.1rem;
 }
-.casal,
-.familia {
-  display: flex;
-}
 
 .familia.off,
 .casal.off {
   display: none;
 }
 
-.rodape{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+.rodape {
   background-color: #143525;
-  padding: 5%;
+  border-top: 3px solid #cfa836;
+  padding: 40px 20px 20px;
 }
 
-.coluna-rodape{
-  width: 35%;
-  border-right: 1px solid #ffffff;
+.rodapeTopo {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.coluna-rodape p{
+.rodapeMarca h2 {
   color: #ffffff;
-  margin: 15%;
+  font-size: 1.4rem;
 }
 
-.coluna-rodape a{
-  background-color: #726231;
-  border: 1px solid #726231;
-  border-radius: 10px;
+.rodapeMarca p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-top: 8px;
+  max-width: 280px;
+}
+
+.rodapeColuna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.rodapeColuna h3 {
+  color: #cfa836;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu-rodape {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.menu-rodape:hover {
+  color: #cfa836;
+}
+
+.rodapeRedes {
+  display: flex;
+  gap: 12px;
+}
+
+.rodapeRedes .btnRedes {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
   color: #ffffff;
-  padding: 2%;
-  text-decoration: none;
-  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.coluna-rodape a:hover{
-  transition: 1s;
-  background-color: #cfa836;
-  border: 2px solid #cfa836;
+.rodapeRedes .btnRedes:hover {
+  background: #cfa836;
+  border-color: #cfa836;
+  color: #143525;
 }
 
-.menu-rodape{
-  margin: 1%;
-  background-color: #143525;
-  text-decoration: none;
+.rodapeBase {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.rodapeBase p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
 }
 
 @media (min-width: 768px) {
@@ -471,5 +494,20 @@ body::-webkit-scrollbar {
 
   .boxQuarto {
     width: 40%;
+  }
+
+  .rodapeTopo {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .rodapeMarca {
+    max-width: 280px;
+  }
+
+  .rodapeColuna {
+    align-items: flex-start;
   }
 }

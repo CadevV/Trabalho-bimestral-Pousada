@@ -12,6 +12,14 @@ const btnRightCard = document.querySelector('.btnNextDestaque')
 const navInterno = document.querySelector('.navInterno')
 const limitePixels = 600;
 
+const totalCards = document.querySelectorAll('.boxDestaque').length
+
+function calcularIndiceMaximo() {
+    const larguraContainer = document.querySelector('.containerDestaque').offsetWidth
+    const cartoesVisiveis = Math.round(larguraContainer / 370)
+    return totalCards - cartoesVisiveis
+}
+
 let indiceCarrosel = 0
 
 btnRedes.forEach(element => {
@@ -34,7 +42,7 @@ btnMenuClose.addEventListener('click', ()=>{
 
 btnRightCard.addEventListener('click', () => {
 
-    if(indiceCarrosel < 2){
+    if(indiceCarrosel < calcularIndiceMaximo()){
         indiceCarrosel++
     } else {
         indiceCarrosel = 0
@@ -50,7 +58,7 @@ btnLeftCard.addEventListener('click', () => {
     if(indiceCarrosel > 0){
         indiceCarrosel--
     } else {
-        indiceCarrosel = 2
+        indiceCarrosel = calcularIndiceMaximo()
     }
 
     carroselDesta.style.transform =
@@ -73,4 +81,3 @@ window.addEventListener('scroll', ()=>{
         navInterno.classList.remove('mudancaCor')
     }
 })
-
