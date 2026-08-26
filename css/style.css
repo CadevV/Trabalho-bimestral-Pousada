@@ -248,6 +248,12 @@ body::-webkit-scrollbar {
   color: #ffb400;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 section {
   min-width: 100%;
   padding: 50px;
@@ -362,12 +368,10 @@ section {
 }
 
 .containerInfos {
-  display: flex;
-  flex-direction: column;
+  display: flex;  
   font-size: 1.3rem;
   align-items: center;
   justify-content: center;
-  margin-top: -5%;
   width: 90%;
   min-height: 80vh;
   gap: 40px;
