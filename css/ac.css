@@ -173,6 +173,13 @@ body::-webkit-scrollbar {
   color: #726231;
 }
 
+.display-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .boxNav {
   display: flex;
   flex-direction: column;
@@ -183,30 +190,32 @@ body::-webkit-scrollbar {
 .navegacao {
   width: 100%;
   height: auto;
-  padding: 20px;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   border: 1px solid black;
   border-radius: 10px;
 }
 
 .navegacao h2 {
   color: #cfa836;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .btnPesquisa {
   border: 1px solid #143525;
   border-radius: 5px;
   color: #143525;
-  padding: 10px;
+  padding: 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 20px;
   background: transparent;
-  margin: 1%;
+  width: 20%;
+  font-size: 1.1rem;
 }
 
 .btnPesquisa span {
@@ -488,8 +497,8 @@ body::-webkit-scrollbar {
   }
 
   .navegacao {
-    width: 40%;
-    height: 40vh;
+    width: 80%;
+    height: 10vh;
   }
 
   .boxQuarto {
