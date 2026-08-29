@@ -1,3 +1,11 @@
+:root {
+  --corPrimaria: #0f5c66;
+  --corPrimariaEscura: #0c4a52;
+  --corDourada: #e0a94a;
+  --corTexto: #8a7654;
+  --corErro: #c1440e;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -120,7 +128,7 @@ body::-webkit-scrollbar {
 
 .btnReserva:hover {
   background: white;
-  color: black;
+  color: var(--corPrimaria);
 }
 
 .contMenu {
@@ -132,7 +140,7 @@ body::-webkit-scrollbar {
   min-height: 100vh;
   background: rgba(255, 251, 234, 0.7);
   padding: 20px;
-  color: #726231;
+  color: var(--corTexto);
   font-size: 2.5rem;
   transition: transform 0.3s ease-in-out;
   z-index: 999;
@@ -150,11 +158,11 @@ body::-webkit-scrollbar {
 }
 
 .btnMenuClose:hover {
-  color: #ce2c03;
+  color: var(--corErro);
 }
 
 .btnRedes:hover {
-  color: #143525;
+  color: var(--corPrimaria);
 }
 
 .contMenu ul {
@@ -169,14 +177,14 @@ body::-webkit-scrollbar {
 .contMenu a {
   display: inline-block;
   font-size: 2rem;
-  color: #143525;
+  color: var(--corPrimaria);
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
 }
 
 .contMenu a:hover {
   text-decoration: underline;
-  color: #cfa836;
+  color: var(--corDourada);
   transform: translateX(50px);
 }
 
@@ -184,8 +192,8 @@ body::-webkit-scrollbar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid black;
-  background: black;
+  border: 1px solid var(--corPrimaria);
+  background: var(--corPrimaria);
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -216,7 +224,7 @@ body::-webkit-scrollbar {
 }
 
 .heroTexto h1 span {
-  color: #ffb400;
+  color: var(--corDourada);
 }
 
 .heroTexto p {
@@ -245,7 +253,7 @@ body::-webkit-scrollbar {
 }
 
 .btnRoll a:hover {
-  color: #ffb400;
+  color: var(--corDourada);
 }
 
 main{
@@ -259,7 +267,7 @@ section {
 }
 
 .sobre {
-  background: #314622;
+  background: var(--corPrimariaEscura);
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -333,14 +341,14 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #ffb400;
+  color: var(--corDourada);
   margin-top: 4%;
 }
 
 .subtitulo1 {
   font-size: 1.3rem;
   text-align: center;
-  color: #ffb400;
+  color: var(--corDourada);
 }
 
 .contSobre div {
@@ -355,7 +363,7 @@ section {
 }
 
 .linkSobre a {
-  color: #ffb400;
+  color: var(--corDourada);
   cursor: pointer;
   text-decoration: none;
   border-bottom: 1px solid;
@@ -398,11 +406,11 @@ section {
   list-style: none;
   display: flex;
   gap: 15px;
-  color: #cfa836;
+  color: var(--corDourada);
 }
 
 .boxContInfo ul li span {
-  color: black;
+  color: var(--corPrimaria);
 }
 
 .boxContInfo p {
@@ -422,7 +430,7 @@ section {
 
 .linkInfo a {
   text-decoration: none;
-  color: #726231;
+  color: var(--corTexto);
   transition: 0.7s ease-in-out;
 }
 
@@ -480,7 +488,7 @@ section {
 }
 
 .boxDestaque {
-  border: 1px solid black;
+  border: 1px solid var(--corPrimaria);
   border-radius: 10px;
   width: 350px;
   height: 60vh;
@@ -492,7 +500,7 @@ section {
 }
 
 .boxDestaque picture {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--corPrimaria);
   width: 100%;
 }
 
@@ -526,7 +534,7 @@ section {
 .containerFaq {
   display: flex;
   flex-direction: column;
-  background: #314622;
+  background: var(--corPrimariaEscura);
   width: 100%;
   min-height: 75vh;
   color: white;
@@ -542,7 +550,7 @@ section {
 }
 
 .subtitulo-faq {
-  color: #cfa836;
+  color: var(--corDourada);
 }
 
 .contFaq h2 {
@@ -623,11 +631,11 @@ section {
   width: 100%;
   min-height: 70vh;
   padding: 20px 20px 20px 20px;
-  color: #314622;
+  color: var(--corPrimariaEscura);
 }
 
 .containerFeedback .subtitulo {
-  color: #726231;
+  color: var(--corTexto);
 }
 
 .listaFeedback {
@@ -639,7 +647,7 @@ section {
 }
 
 .estrelasFeedback {
-  color: #cfa836;
+  color: var(--corDourada);
   font-size: 0.9rem;
 }
 
@@ -651,14 +659,14 @@ section {
 
 .nomeFeedback {
   font-size: 0.9rem;
-  color: #726231;
+  color: var(--corTexto);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .rodape {
-  background-color: #143525;
-  border-top: 3px solid #cfa836;
+  background-color: var(--corPrimaria);
+  border-top: 3px solid var(--corDourada);
   padding: 40px 20px 20px;
 }
 
@@ -692,7 +700,7 @@ section {
 }
 
 .rodapeColuna h3 {
-  color: #cfa836;
+  color: var(--corDourada);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -706,7 +714,7 @@ section {
 }
 
 .menu-rodape:hover {
-  color: #cfa836;
+  color: var(--corDourada);
 }
 
 .rodapeRedes {
@@ -729,9 +737,9 @@ section {
 }
 
 .rodapeRedes .btnRedes:hover {
-  background: #cfa836;
-  border-color: #cfa836;
-  color: #143525;
+  background: var(--corDourada);
+  border-color: var(--corDourada);
+  color: var(--corPrimaria);
 }
 
 .rodapeBase {

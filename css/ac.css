@@ -1,3 +1,11 @@
+:root {
+  --corPrimaria: #0f5c66;
+  --corPrimariaEscura: #0c4a52;
+  --corDourada: #e0a94a;
+  --corTexto: #8a7654;
+  --corErro: #c1440e;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -108,7 +116,7 @@ body::-webkit-scrollbar {
   padding: 20px;
   transform: translateY(-100%);
   background: rgba(255, 251, 234, 0.7);
-  color: #726231;
+  color: var(--corTexto);
   font-size: 2.5rem;
   transition: transform 0.3s ease-in-out;
   z-index: 999;
@@ -126,11 +134,11 @@ body::-webkit-scrollbar {
 }
 
 .btnMenuClose:hover {
-  color: #ce2c03;
+  color: var(--corErro);
 }
 
 .btnRedes:hover {
-  color: #143525;
+  color: var(--corPrimaria);
 }
 
 .contMenu ul {
@@ -146,13 +154,13 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   font-size: 2rem;
-  color: #143525;
+  color: var(--corPrimaria);
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
 }
 
 .contMenu a:hover {
-  color: #cfa836;
+  color: var(--corDourada);
   text-decoration: underline;
   transform: translateX(50px);
 }
@@ -166,11 +174,11 @@ body::-webkit-scrollbar {
 }
 
 .titulo h1 {
-  color: #143525;
+  color: var(--corPrimaria);
 }
 
 .titulo p {
-  color: #726231;
+  color: var(--corTexto);
 }
 
 .display-nav{
@@ -190,32 +198,33 @@ body::-webkit-scrollbar {
 .navegacao {
   width: 100%;
   height: auto;
-  padding: 10px;
+  padding: 15px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  gap: 12px;
+  border: 1px solid var(--corPrimaria);
   border-radius: 10px;
 }
 
 .navegacao h2 {
-  color: #cfa836;
+  color: var(--corDourada);
   font-size: 22px;
 }
 
 .btnPesquisa {
-  border: 1px solid #143525;
+  border: 1px solid var(--corPrimaria);
   border-radius: 5px;
-  color: #143525;
-  padding: 5px;
+  color: var(--corPrimaria);
+  padding: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   background: transparent;
-  width: 20%;
-  font-size: 1.1rem;
+  width: 100%;
+  font-size: 1rem;
 }
 
 .btnPesquisa span {
@@ -225,18 +234,18 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #143525;
+  background: var(--corPrimaria);
   color: white;
 }
 
 .btnPesquisa:hover {
-  border: 1px solid #cfa836;
-  color: #cfa836;
+  border: 1px solid var(--corDourada);
+  color: var(--corDourada);
 }
 
 .btnPesquisa.active {
-  border: 2px solid #cfa836;
-  color: #cfa836;
+  border: 2px solid var(--corDourada);
+  color: var(--corDourada);
 }
 
 .quartos {
@@ -252,7 +261,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid var(--corPrimaria);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -275,7 +284,7 @@ body::-webkit-scrollbar {
 .btnInfo {
   margin: 10px;
   padding: 10px 20px;
-  background: #143525;
+  background: var(--corPrimaria);
   border: none;
   border-radius: 5px;
   color: white;
@@ -284,7 +293,7 @@ body::-webkit-scrollbar {
 }
 
 .btnInfo:hover {
-  background: #cfa836;
+  background: var(--corDourada);
 }
 
 .modalQuarto {
@@ -322,7 +331,7 @@ body::-webkit-scrollbar {
 }
 
 .modalCont div button {
-  background-color: #143525;
+  background-color: var(--corPrimaria);
   color: #ffffff;
   padding: 12px 24px;
   font-size: 16px;
@@ -348,7 +357,7 @@ body::-webkit-scrollbar {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: #314622;
+  color: var(--corPrimariaEscura);
 }
 
 .modalImg {
@@ -360,18 +369,18 @@ body::-webkit-scrollbar {
 
 .modalTitulo {
   font-size: 1.3rem;
-  color: #314622;
+  color: var(--corPrimariaEscura);
 }
 
 .modalDescricao {
   font-size: 0.95rem;
-  color: #726231;
+  color: var(--corTexto);
   line-height: 1.4;
 }
 
 .modalPreco {
   font-weight: bold;
-  color: #ffb400;
+  color: var(--corDourada);
   font-size: 1.1rem;
 }
 
@@ -381,8 +390,8 @@ body::-webkit-scrollbar {
 }
 
 .rodape {
-  background-color: #143525;
-  border-top: 3px solid #cfa836;
+  background-color: var(--corPrimaria);
+  border-top: 3px solid var(--corDourada);
   padding: 40px 20px 20px;
 }
 
@@ -416,7 +425,7 @@ body::-webkit-scrollbar {
 }
 
 .rodapeColuna h3 {
-  color: #cfa836;
+  color: var(--corDourada);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -430,7 +439,7 @@ body::-webkit-scrollbar {
 }
 
 .menu-rodape:hover {
-  color: #cfa836;
+  color: var(--corDourada);
 }
 
 .rodapeRedes {
@@ -453,9 +462,9 @@ body::-webkit-scrollbar {
 }
 
 .rodapeRedes .btnRedes:hover {
-  background: #cfa836;
-  border-color: #cfa836;
-  color: #143525;
+  background: var(--corDourada);
+  border-color: var(--corDourada);
+  color: var(--corPrimaria);
 }
 
 .rodapeBase {
@@ -499,6 +508,13 @@ body::-webkit-scrollbar {
   .navegacao {
     width: 80%;
     height: 10vh;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .btnPesquisa {
+    width: 20%;
+    font-size: 1.1rem;
   }
 
   .boxQuarto {
