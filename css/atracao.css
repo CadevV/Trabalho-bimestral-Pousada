@@ -191,7 +191,7 @@ body::-webkit-scrollbar {
 .passeiosEditorial {
   display: flex;
   flex-direction: column;
-  padding: 2% 5%;
+  padding: 4% 5%;
 }
 
 .linhaPasseio {
@@ -236,7 +236,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2% 0;
+  margin: 5% 0;
 }
 
 .regiaoBannerOverlay {
@@ -267,7 +267,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 2% 5% 5%;
+  padding: 4% 5% 8%;
 }
 
 .programaItem {
