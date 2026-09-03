@@ -306,6 +306,14 @@ body::-webkit-scrollbar {
   font-size: 0.9rem;
 }
 
+.programaTexto{
+  display: none;
+}
+
+.programaTexto.active{
+  display: block;
+}
+
 .rodape {
   background-color: var(--corPrimaria);
   border-top: 3px solid var(--corDourada);
