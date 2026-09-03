@@ -4,6 +4,7 @@
   --corDourada: #e0a94a;
   --corTexto: #8a7654;
   --corErro: #c1440e;
+  --corFundo: #fffaeb;
 }
 
 * {
@@ -19,20 +20,25 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #fffaeb;
   min-height: 100vh;
   overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--corFundo);
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
+button {
+  font-family: inherit;
+}
+
 .headerMain {
   position: relative;
   width: 100%;
   height: 50vh;
+  min-height: 350px;
   background-image: url(../images/backatra.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,127 +53,149 @@ body::-webkit-scrollbar {
 }
 
 .navInterno {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 0 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 1s;
 }
 
 .boxMenu {
-  width: 150px;
   display: flex;
   justify-content: center;
+  width: 150px;
 }
 
 .picLogo {
-  width: 150px;
   display: flex;
   justify-content: center;
-  border-radius: 10px;
+  width: 150px;
 }
 
 .logo {
   width: 90px;
+  height: auto;
   margin: 3%;
-}
-
-.mudancaCor {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-}
-
-.mudancaCor img {
-  width: 70px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
-  transition: 0.3s;
+  object-fit: contain;
 }
 
 .btnMenu {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding: 10px;
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
 .btnMenu span {
+  display: block;
   width: 28px;
   height: 3px;
   background: white;
   border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btnMenu:hover span {
+  background: var(--corDourada);
 }
 
 .contMenu {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 100vh;
   padding: 20px;
-  transform: translateY(-100%);
-  background: rgba(255, 251, 234, 0.7);
+  background: rgba(255, 251, 234, 0.97);
   color: var(--corTexto);
-  font-size: 2.5rem;
+  transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
-  z-index: 999;
 }
 
 .contMenu.active {
   transform: translateY(0);
 }
 
-.contMenuBtns button {
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.btnMenuClose:hover {
-  color: var(--corErro);
-}
-
-.btnRedes:hover {
-  color: var(--corPrimaria);
-}
-
 .contMenu ul {
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  min-height: 80vh;
   list-style: none;
+}
+
+.rotuloMenu {
+  color: var(--corDourada);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .contMenu a {
   display: flex;
-  flex-direction: column;
-  font-size: 2rem;
   color: var(--corPrimaria);
+  font-size: 2rem;
   text-decoration: none;
-  transition: transform 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 .contMenu a:hover {
   color: var(--corDourada);
-  text-decoration: underline;
-  transform: translateX(50px);
+  transform: translateX(20px);
+}
+
+.contMenuBtns {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contMenuBtns button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--corPrimaria);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contMenuBtns .btnRedes:hover {
+  color: var(--corDourada);
+  transform: translateY(-3px);
+}
+
+.btnMenuClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.btnMenuClose:hover {
+  color: var(--corErro) !important;
 }
 
 .titulo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 8% 5% 4%;
+  justify-content: center;
   gap: 8px;
+  padding: 8% 5% 4%;
+  text-align: center;
 }
 
 .titulo h1 {
@@ -176,8 +204,9 @@ body::-webkit-scrollbar {
 }
 
 .titulo p {
+  max-width: 500px;
   color: var(--corTexto);
-  max-width: 320px;
+  line-height: 1.5;
 }
 
 .subtitulo {
@@ -185,12 +214,16 @@ body::-webkit-scrollbar {
   justify-content: center;
   color: var(--corDourada);
   font-size: 1.1rem;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
 .passeiosEditorial {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 4% 5%;
 }
 
@@ -206,50 +239,55 @@ body::-webkit-scrollbar {
   border-bottom: none;
 }
 
+.linhaPasseioVideo,
+.linhaPasseioTexto {
+  width: 100%;
+}
+
 .linhaPasseioVideo video {
-  width: 90%;
-  height: auto;
+  display: block;
+  width: 100%;
+  max-height: 350px;
   object-fit: cover;
   border-radius: 10px;
   background: var(--corPrimaria);
 }
 
 .linhaPasseioTexto h3 {
+  margin-bottom: 8px;
   color: var(--corPrimaria);
   font-size: 1.4rem;
-  margin-bottom: 8px;
 }
 
 .linhaPasseioTexto p {
   color: var(--corTexto);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .regiaoBanner {
-  position: relative;
-  width: 100%;
-  min-height: 45vh;
-  background-image: url(../images/fotoLençol1.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  min-height: 45vh;
   margin: 5% 0;
+  background-image: url(../images/fotoLençol1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .regiaoBannerOverlay {
-  width: 100%;
-  min-height: 45vh;
-  background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 10% 6%;
+  width: 100%;
+  min-height: 45vh;
   gap: 8px;
+  padding: 10% 6%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 .regiaoBannerOverlay h2 {
@@ -258,16 +296,23 @@ body::-webkit-scrollbar {
 }
 
 .regiaoBannerOverlay p {
+  max-width: 600px;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 480px;
   line-height: 1.6;
 }
 
 .programaLista {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 15px;
   padding: 4% 5% 8%;
+}
+
+.programaGrupo {
+  border-bottom: 1px solid rgba(15, 92, 102, 0.1);
 }
 
 .programaItem {
@@ -275,18 +320,18 @@ body::-webkit-scrollbar {
   align-items: center;
   gap: 16px;
   padding: 15px 0;
-  border-bottom: 1px solid rgba(15, 92, 102, 0.1);
-}
-
-.programaItem:last-child {
-  border-bottom: none;
 }
 
 .programaItem img {
   width: 50px;
   height: 50px;
-  object-fit: contain;
   flex-shrink: 0;
+  object-fit: contain;
+}
+
+.programaInfo {
+  flex: 1;
+  min-width: 0;
 }
 
 .programaItem h3 {
@@ -296,9 +341,9 @@ body::-webkit-scrollbar {
 
 .programaData {
   display: inline-block;
+  margin: 2px 0;
   color: var(--corDourada);
   font-size: 0.85rem;
-  margin: 2px 0;
 }
 
 .programaItem p {
@@ -306,19 +351,52 @@ body::-webkit-scrollbar {
   font-size: 0.9rem;
 }
 
-.programaTexto{
-  display: none;
+.bntprograma {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: 1px solid rgba(15, 92, 102, 0.25);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--corPrimaria);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.programaTexto.active{
-  display: block;
+.bntprograma:hover {
+  background: var(--corPrimaria);
+  color: white;
+  transform: translateX(3px);
+}
+
+.programaTexto {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.programaTexto p {
+  min-height: 0;
+  overflow: hidden;
+  color: var(--corTexto);
+  line-height: 1.5;
+}
+
+.programaTexto.active {
+  grid-template-rows: 1fr;
+  padding: 0 54px 15px 66px;
+  opacity: 1;
 }
 
 .rodape {
+  margin-top: 5%;
+  padding: 40px 20px 20px;
   background-color: var(--corPrimaria);
   border-top: 3px solid var(--corDourada);
-  padding: 40px 20px 20px;
-  margin-top: 5%;
 }
 
 .rodapeTopo {
@@ -326,9 +404,9 @@ body::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  text-align: center;
   max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .rodapeMarca h2 {
@@ -337,10 +415,11 @@ body::-webkit-scrollbar {
 }
 
 .rodapeMarca p {
+  max-width: 280px;
+  margin-top: 8px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
-  margin-top: 8px;
-  max-width: 280px;
+  line-height: 1.5;
 }
 
 .rodapeColuna {
@@ -353,14 +432,14 @@ body::-webkit-scrollbar {
 .rodapeColuna h3 {
   color: var(--corDourada);
   font-size: 0.9rem;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .menu-rodape {
   color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
   font-size: 0.95rem;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -374,15 +453,15 @@ body::-webkit-scrollbar {
 }
 
 .rodapeRedes .btnRedes {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: transparent;
-  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: transparent;
+  color: #ffffff;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -391,12 +470,13 @@ body::-webkit-scrollbar {
   background: var(--corDourada);
   border-color: var(--corDourada);
   color: var(--corPrimaria);
+  transform: translateY(-3px);
 }
 
 .rodapeBase {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
   margin-top: 30px;
   padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
 }
 
@@ -405,7 +485,7 @@ body::-webkit-scrollbar {
   font-size: 0.8rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .navInterno {
     padding: 0 40px;
   }
@@ -424,12 +504,15 @@ body::-webkit-scrollbar {
     right: 20px;
   }
 
+  .titulo {
+    padding-top: 6%;
+  }
+
   .titulo h1 {
     font-size: 2.5rem;
   }
 
   .titulo p {
-    max-width: 500px;
     font-size: 1rem;
   }
 
@@ -452,14 +535,18 @@ body::-webkit-scrollbar {
     height: 280px;
   }
 
+  .linhaPasseioTexto {
+    padding: 0 10px;
+  }
+
   .regiaoBannerOverlay h2 {
     font-size: 2.2rem;
   }
 
   .rodapeTopo {
     flex-direction: row;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: space-between;
     text-align: left;
   }
 
