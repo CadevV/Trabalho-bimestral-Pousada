@@ -38,7 +38,6 @@ button {
   position: relative;
   width: 100%;
   height: 50vh;
-  min-height: 350px;
   background-image: url(../images/backatra.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,139 +52,119 @@ button {
 }
 
 .navInterno {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1s;
 }
 
-.boxMenu {
+.boxMenu,
+.boxReserva {
+  width: auto;
   display: flex;
   justify-content: center;
   width: 150px;
 }
 
 .picLogo {
+  width: 150px;
   display: flex;
   justify-content: center;
-  width: 150px;
+  border-radius: 10px;
 }
 
 .logo {
   width: 90px;
-  height: auto;
   margin: 3%;
-  object-fit: contain;
+}
+
+.mudancaCor {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.mudancaCor img {
+  width: 70px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 .btnMenu {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 10px;
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
 .btnMenu span {
-  display: block;
   width: 28px;
   height: 3px;
   background: white;
   border-radius: 5px;
-  transition: 0.3s;
-}
-
-.btnMenu:hover span {
-  background: var(--corDourada);
 }
 
 .contMenu {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   min-height: 100vh;
   padding: 20px;
-  background: rgba(255, 251, 234, 0.97);
-  color: var(--corTexto);
   transform: translateY(-100%);
+  background: rgba(255, 251, 234, 0.7);
+  color: var(--corTexto);
+  font-size: 2.5rem;
   transition: transform 0.3s ease-in-out;
+  z-index: 999;
 }
 
 .contMenu.active {
   transform: translateY(0);
 }
 
+.contMenuBtns button {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.btnMenuClose:hover {
+  color: var(--corErro);
+}
+
+.btnRedes:hover {
+  color: var(--corPrimaria);
+}
+
 .contMenu ul {
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  min-height: 80vh;
   list-style: none;
-}
-
-.rotuloMenu {
-  color: var(--corDourada);
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .contMenu a {
   display: flex;
-  color: var(--corPrimaria);
+  flex-direction: column;
   font-size: 2rem;
+  color: var(--corPrimaria);
   text-decoration: none;
-  transition: 0.3s;
+  transition: transform 0.3s ease-in-out;
 }
 
 .contMenu a:hover {
   color: var(--corDourada);
-  transform: translateX(20px);
-}
-
-.contMenuBtns {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.contMenuBtns button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background: transparent;
-  border: none;
-  color: var(--corPrimaria);
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.contMenuBtns .btnRedes:hover {
-  color: var(--corDourada);
-  transform: translateY(-3px);
-}
-
-.btnMenuClose {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.btnMenuClose:hover {
-  color: var(--corErro) !important;
+  text-decoration: underline;
+  transform: translateX(50px);
 }
 
 .titulo {
