@@ -315,19 +315,22 @@ body::-webkit-scrollbar {
 
 .modalCont {
   background: #fffaeb;
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
   border-radius: 12px;
   padding: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .modalCont div {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .modalCont div button {
@@ -362,7 +365,7 @@ body::-webkit-scrollbar {
 
 .modalImg {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
