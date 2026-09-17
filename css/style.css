@@ -602,7 +602,7 @@ section {
   transition: transform 0.3s ease-in-out;
 }
 
-.faqIcone.activo {
+.faqIcone.isActive {
   transform: rotate(180deg);
 }
 
@@ -616,7 +616,7 @@ section {
   gap: 10px;
 }
 
-.faqResposta.activo {
+.faqResposta.isActive {
   max-height: 500px;
   width: 100%;
 }

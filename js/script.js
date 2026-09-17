@@ -68,9 +68,9 @@ btnLeftCard.addEventListener('click', () => {
 
 faqPerguntas.forEach((question, index) => {
     question.addEventListener('click', () =>{
-        faqResposta[index].classList.toggle('activo')
+        faqResposta[index].classList.toggle('isActive')
 
-        faqIcone[index].classList.toggle('activo')
+        faqIcone[index].classList.toggle('isActive')
     })
 });
 

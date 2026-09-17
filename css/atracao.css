@@ -597,6 +597,10 @@ main{
     width: 50%;
   }
 
+  .atracaoItem > .atracaoTexto:only-child {
+    width: 100%;
+  }
+
   .regiaoOverlay h2 {
     font-size: 2.2rem;
   }
