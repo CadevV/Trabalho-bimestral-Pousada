@@ -264,7 +264,7 @@ main{
 
 .atracoesLista {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -608,6 +608,7 @@ main{
   }
 
   .atracoesLista{
+    grid-template-columns: repeat(2, 1fr);
     max-width: none;
   }
 
