@@ -39,14 +39,14 @@ body::-webkit-scrollbar {
   background-position: center;
 }
 
-.overlay {
+.headerOverlay {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.45);
   color: white;
 }
 
-.navInterno {
+.navMain {
   width: 100%;
   padding: 0 15px;
   display: flex;
@@ -55,31 +55,31 @@ body::-webkit-scrollbar {
   transition: 1s;
 }
 
-.boxMenu {
+.navMenuBox {
   width: 150px;
   display: flex;
   justify-content: center;
 }
 
-.picLogo {
+.navLogo {
   width: 150px;
   display: flex;
   justify-content: center;
   border-radius: 10px;
 }
 
-.logo {
+.navLogoImg {
   width: 90px;
   margin: 3%;
 }
 
-.mudancaCor {
+.navScrolled {
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
   transition: 0.3s;
 }
 
-.mudancaCor img {
+.navScrolled img {
   width: 70px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
@@ -102,7 +102,7 @@ body::-webkit-scrollbar {
   border-radius: 5px;
 }
 
-.contMenu {
+.navMenu {
   position: fixed;
   top: 0;
   left: 0;
@@ -117,26 +117,26 @@ body::-webkit-scrollbar {
   z-index: 999;
 }
 
-.contMenu.active {
+.navMenu.isActive {
   transform: translateY(0);
 }
 
-.contMenuBtns button {
+.navBtns button {
   background: transparent;
   border: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-.btnMenuClose:hover {
+.btnMenuFechar:hover {
   color: var(--corErro);
 }
 
-.btnRedes:hover {
+.btnRedeSocial:hover {
   color: var(--corPrimaria);
 }
 
-.contMenu ul {
+.navMenu ul {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -145,7 +145,7 @@ body::-webkit-scrollbar {
   list-style: none;
 }
 
-.contMenu a {
+.navMenu a {
   display: flex;
   flex-direction: column;
   font-size: 2rem;
@@ -154,7 +154,7 @@ body::-webkit-scrollbar {
   transition: transform 0.3s ease-in-out;
 }
 
-.contMenu a:hover {
+.navMenu a:hover {
   color: var(--corDourada);
   text-decoration: underline;
   transform: translateX(50px);
@@ -169,13 +169,13 @@ h1{
   margin: 2%;
 }
 
-.contForm{
+.contatoFormSecao{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.boxForm{
+.contatoFormBox{
   width: 90%;
   display:flex;
   justify-content: left;
@@ -185,7 +185,7 @@ h1{
   gap: 15%;
 }
 
-.boxForm img{
+.contatoFormBox img{
   background-color: white;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -198,7 +198,7 @@ h2{
   font-size: 2rem;
 }
 
-.form{
+.contatoForm{
   display: flex;
   justify-content: center;
   align-items: start;
@@ -206,18 +206,18 @@ h2{
   gap: 5px;
 }
 
-.form label{
+.contatoForm label{
   margin: 3%;
   font-size: 1.3rem;
   color: #0c4a52;
 }
 
-.form input{
+.contatoForm input{
   font-size: 1.2rem;
   padding: 10px;
 }
 
-.login{
+.contatoFormAcoes{
   margin: 2%;
   display: flex;
   justify-content: center;
@@ -225,7 +225,7 @@ h2{
   gap: 10px;
 }
 
-.form button{
+.contatoForm button{
   margin: 1%;
   padding: 5px;
   background-color: #0c4a52;

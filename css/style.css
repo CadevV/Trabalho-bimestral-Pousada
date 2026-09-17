@@ -46,7 +46,7 @@ body::-webkit-scrollbar {
   object-fit: cover;
 }
 
-.overlay {
+.headerOverlay {
   position: relative;
   max-width: 100%;
   height: 100%;
@@ -54,7 +54,7 @@ body::-webkit-scrollbar {
   color: white;
 }
 
-.navInterno {
+.navMain {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,33 +64,33 @@ body::-webkit-scrollbar {
   transition: 1s;
 }
 
-.boxMenu,
-.boxReserva {
+.navMenuBox,
+.reservaBox {
   width: auto;
   display: flex;
   justify-content: center;
   width: 150px;
 }
 
-.picLogo {
+.navLogo {
   display: flex;
   justify-content: center;
   border-radius: 10px;
   width: 150px;
 }
 
-.logo {
+.navLogoImg {
   width: 90px;
   margin: 3%;
 }
 
-.mudancaCor {
+.navScrolled {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   transition: 0.3s;
 }
 
-.mudancaCor img {
+.navScrolled img {
   width: 70px;
   transition: 0.3s;
   background-color: rgba(255, 255, 255, 0.7);
@@ -131,7 +131,7 @@ body::-webkit-scrollbar {
   color: var(--corPrimaria);
 }
 
-.contMenu {
+.navMenu {
   position: fixed;
   top: 0;
   left: 0;
@@ -146,26 +146,26 @@ body::-webkit-scrollbar {
   z-index: 999;
 }
 
-.contMenu.active {
+.navMenu.isActive {
   transform: translateX(0);
 }
 
-.contMenuBtns button {
+.navBtns button {
   background: transparent;
   border: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-.btnMenuClose:hover {
+.btnMenuFechar:hover {
   color: var(--corErro);
 }
 
-.btnRedes:hover {
+.btnRedeSocial:hover {
   color: var(--corPrimaria);
 }
 
-.contMenu ul {
+.navMenu ul {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -174,7 +174,7 @@ body::-webkit-scrollbar {
   list-style: none;
 }
 
-.contMenu a {
+.navMenu a {
   display: inline-block;
   font-size: 2rem;
   color: var(--corPrimaria);
@@ -182,13 +182,13 @@ body::-webkit-scrollbar {
   transition: transform 0.3s ease-in-out;
 }
 
-.contMenu a:hover {
+.navMenu a:hover {
   text-decoration: underline;
   color: var(--corDourada);
   transform: translateX(50px);
 }
 
-.voltarTopo {
+.btnVoltarTopo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -204,7 +204,7 @@ body::-webkit-scrollbar {
   font-size: 1.2rem;
 }
 
-.voltarTopo a {
+.btnVoltarTopo a {
   color: white;
 }
 
@@ -233,7 +233,7 @@ body::-webkit-scrollbar {
   padding: 0 15px;
 }
 
-.btnRoll {
+.btnRolar {
   padding: 10px 20px;
   cursor: pointer;
   background: transparent;
@@ -245,14 +245,14 @@ body::-webkit-scrollbar {
   width: auto;
 }
 
-.btnRoll a {
+.btnRolar a {
   color: white;
   cursor: pointer;
   text-decoration: none;
   transition: 1s;
 }
 
-.btnRoll a:hover {
+.btnRolar a:hover {
   color: var(--corDourada);
 }
 
@@ -266,7 +266,7 @@ section {
   padding: 50px;
 }
 
-.sobre {
+.sobreSecao {
   background: var(--corPrimariaEscura);
   width: 100%;
   min-height: 100vh;
@@ -279,7 +279,7 @@ section {
   position: relative;
 }
 
-.picSobre {
+.sobreImagem {
   display: none;
   position: absolute;
   width: 20%;
@@ -289,40 +289,40 @@ section {
   z-index: 0;
 }
 
-.picSobre img {
+.sobreImagem img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.picSobre::after {
+.sobreImagem::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
 }
 
-.pic1 {
+.sobreImagemPrincipal {
   top: 10%;
   left: 4%;
   transform: rotate(15deg);
 }
 
-.pic2 {
+.sobreImagemSecundaria {
   top: 40%;
   left: 75%;
   transform: rotate(-10deg);
 }
 
-.fundoPreto {
+.sobreFundo {
   background: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.contSobre {
+.sobreTexto {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -345,24 +345,24 @@ section {
   margin-top: 4%;
 }
 
-.subtitulo1 {
+.subtituloSecundario {
   font-size: 1.3rem;
   text-align: center;
   color: var(--corDourada);
 }
 
-.contSobre div {
+.sobreTexto div {
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
   color: white;
 }
 
-.linkSobre {
+.sobreLink {
   z-index: 1;
 }
 
-.linkSobre a {
+.sobreLink a {
   color: var(--corDourada);
   cursor: pointer;
   text-decoration: none;
@@ -370,11 +370,11 @@ section {
   transition: 1s;
 }
 
-.linkSobre a:hover {
+.sobreLink a:hover {
   color: #fff;
 }
 
-.containerInfos {
+.infosContainer {
   display: flex;  
   font-size: 1.3rem;
   flex-direction: column;
@@ -385,7 +385,7 @@ section {
   gap: 40px;
 }
 
-.boxContInfo {
+.infoBox {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -394,7 +394,7 @@ section {
   margin: auto;
 }
 
-.boxContInfo ul {
+.infoBox ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -402,44 +402,44 @@ section {
   gap: 10px;
 }
 
-.boxContInfo ul li {
+.infoBox ul li {
   list-style: none;
   display: flex;
   gap: 15px;
   color: var(--corDourada);
 }
 
-.boxContInfo ul li span {
+.infoBox ul li span {
   color: var(--corPrimaria);
 }
 
-.boxContInfo p {
+.infoBox p {
   font-size: 1rem;
 }
 
-.containerInfos picture {
+.infosContainer picture {
   width: 100%;
   height: 250px;
 }
 
-.containerInfos picture img {
+.infosContainer picture img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
 
-.linkInfo a {
+.infoLink a {
   text-decoration: none;
   color: var(--corTexto);
   transition: 0.7s ease-in-out;
 }
 
-.linkInfo a:hover {
+.infoLink a:hover {
   text-decoration: underline;
   color: #000;
 }
 
-.secaoDestaque {
+.destaquesSecao {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -449,26 +449,26 @@ section {
   margin-top: -5%;
 }
 
-.btnsDestaque {
+.destaquesBtns {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.boxBtnsDestaque {
+.destaquesControles {
   display: flex;
 }
 
-.containerDestaque {
+.destaquesContainer {
   display: flex;
   align-items: center;
   width: 350px;
   overflow: hidden;
 }
 
-.btnPrevDestaque,
-.btnNextDestaque {
+.btnDestaqueAnterior,
+.btnDestaqueProximo {
   z-index: 10;
   width: 45px;
   height: 45px;
@@ -479,7 +479,7 @@ section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.carroselDestaque {
+.destaquesCarrossel {
   display: flex;
   gap: 20px;
   flex-shrink: 0;
@@ -487,7 +487,7 @@ section {
   transition: transform 0.5s ease-in-out;
 }
 
-.boxDestaque {
+.destaqueItem {
   border: 1px solid var(--corPrimaria);
   border-radius: 10px;
   width: 350px;
@@ -499,12 +499,12 @@ section {
   background: white;
 }
 
-.boxDestaque picture {
+.destaqueItem picture {
   border-bottom: 1px solid var(--corPrimaria);
   width: 100%;
 }
 
-.boxDestaque picture img {
+.destaqueItem picture img {
   display: block;
   width: 100%;
   height: 200px;
@@ -513,7 +513,7 @@ section {
   border: 1px solid;
 }
 
-.contDestaque {
+.destaqueTexto {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -523,7 +523,7 @@ section {
   gap: 5px;
 }
 
-.contDestaque ul {
+.destaqueTexto ul {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -531,7 +531,7 @@ section {
   list-style: none;
 }
 
-.containerFaq {
+.faqContainer {
   display: flex;
   flex-direction: column;
   background: var(--corPrimariaEscura);
@@ -545,26 +545,26 @@ section {
   gap: 50px;
 }
 
-.contFaq {
+.faqConteudo {
   flex: 1;
 }
 
-.subtitulo-faq {
+.faqSubtitulo {
   color: var(--corDourada);
 }
 
-.contFaq h2 {
+.faqConteudo h2 {
   width: 90%;
 }
 
-.contFaq img {
+.faqConteudo img {
   display: none;
   width: 90%;
   margin: 2%;
   border-radius: 10px;
 }
 
-.questionFaq {
+.faqLista {
   flex: 1;
   display: flex;
   align-items: center;
@@ -574,7 +574,7 @@ section {
   width: 100%;
 }
 
-.questions {
+.faqPergunta {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -583,7 +583,7 @@ section {
   font-size: 1rem;
 }
 
-.linhaFaq {
+.faqLinha {
   display: block;
   width: 100%;
   height: 1px;
@@ -591,22 +591,22 @@ section {
   border-radius: 5px;
 }
 
-.questions h2 {
+.faqPergunta h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.iconeFaq {
+.faqIcone {
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
 
-.iconeFaq.activo {
+.faqIcone.activo {
   transform: rotate(180deg);
 }
 
-.respostaFaq {
+.faqResposta {
   max-height: 0;
   overflow: hidden;
   width: 100%;
@@ -616,12 +616,12 @@ section {
   gap: 10px;
 }
 
-.respostaFaq.activo {
+.faqResposta.activo {
   max-height: 500px;
   width: 100%;
 }
 
-.containerFeedback {
+.feedbackContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -634,11 +634,11 @@ section {
   color: var(--corPrimariaEscura);
 }
 
-.containerFeedback .subtitulo {
+.feedbackContainer .subtitulo {
   color: var(--corTexto);
 }
 
-.listaFeedback {
+.feedbackLista {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -646,31 +646,31 @@ section {
   gap: 20px;
 }
 
-.estrelasFeedback {
+.feedbackEstrelas {
   color: var(--corDourada);
   font-size: 0.9rem;
 }
 
-.boxFeedback p {
+.feedbackItem p {
   font-size: 1.15rem;
   line-height: 1.5;
   color: #333;
 }
 
-.nomeFeedback {
+.feedbackNome {
   font-size: 0.9rem;
   color: var(--corTexto);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.rodape {
+.footer {
   background-color: var(--corPrimaria);
   border-top: 3px solid var(--corDourada);
   padding: 40px 20px 20px;
 }
 
-.rodapeTopo {
+.footerTop {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -680,49 +680,49 @@ section {
   margin: 0 auto;
 }
 
-.rodapeMarca h2 {
+.footerMarca h2 {
   color: #ffffff;
   font-size: 1.4rem;
 }
 
-.rodapeMarca p {
+.footerMarca p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
   margin-top: 8px;
   max-width: 280px;
 }
 
-.rodapeColuna {
+.footerColuna {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
 }
 
-.rodapeColuna h3 {
+.footerColuna h3 {
   color: var(--corDourada);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.menu-rodape {
+.footerLink {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-size: 0.95rem;
   transition: 0.3s;
 }
 
-.menu-rodape:hover {
+.footerLink:hover {
   color: var(--corDourada);
 }
 
-.rodapeRedes {
+.footerRedes {
   display: flex;
   gap: 12px;
 }
 
-.rodapeRedes .btnRedes {
+.footerRedes .btnRedeSocial {
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -736,50 +736,50 @@ section {
   transition: 0.3s;
 }
 
-.rodapeRedes .btnRedes:hover {
+.footerRedes .btnRedeSocial:hover {
   background: var(--corDourada);
   border-color: var(--corDourada);
   color: var(--corPrimaria);
 }
 
-.rodapeBase {
+.footerBase {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   margin-top: 30px;
   padding-top: 15px;
   text-align: center;
 }
 
-.rodapeBase p {
+.footerBase p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem;
 }
 
 @media (min-width: 768px) {
-  .navInterno {
+  .navMain {
     padding: 0px 40px;
   }
 
-  .boxMenu,
-  .boxReserva {
+  .navMenuBox,
+  .reservaBox {
     width: 180px;
   }
 
-  .contMenu {
+  .navMenu {
     transform: translateY(-100%);
   }
 
-  .contMenu.active {
+  .navMenu.isActive {
     transform: translateY(0);
   }
 
 
-  .contMenuBtns {
+  .navBtns {
     position: absolute;
     top: 20px;
     right: 20px;
   }
 
-  .logo {
+  .navLogoImg {
     width: 150px;
   }
 
@@ -791,67 +791,67 @@ section {
     font-size: 1.2rem;
   }
 
-  .btnRoll {
+  .btnRolar {
     width: 20%;
   }
 
-  .picSobre {
+  .sobreImagem {
     display: block;
   }
 
-  .contSobre {
+  .sobreTexto {
     width: 70%;
   }
 
-  .containerInfos {
+  .infosContainer {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .boxContInfo {
+  .infoBox {
     width: 45%;
   }
 
-  .containerInfos picture {
+  .infosContainer picture {
     width: 45%;
     height: 70%;
   }
 
-  .containerFaq {
+  .faqContainer {
     flex-direction: row;
     justify-content: space-between;
     padding: 40px 40px;
   }
 
-  .questionFaq {
+  .faqLista {
     margin-top: 7%;
   }
 
-  .contFaq h2 {
+  .faqConteudo h2 {
     width: 90%;
   }
 
-  .contFaq img {
+  .faqConteudo img {
     display: block;
   }
 
-  .rodapeTopo {
+  .footerTop {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     text-align: left;
   }
 
-  .rodapeMarca {
+  .footerMarca {
     max-width: 280px;
   }
 
-  .rodapeColuna {
+  .footerColuna {
     align-items: flex-start;
   }
 }
 @media (min-width: 1200px) {
-  .containerDestaque {
+  .destaquesContainer {
     width: 1090px;
   }
 }

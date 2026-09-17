@@ -24,7 +24,7 @@ body {
   background: #fffaeb;
 }
 
-body.modalOpen {
+body.quartoModalAberto {
   overflow: hidden;
 }
 
@@ -42,14 +42,14 @@ body::-webkit-scrollbar {
   background-position: center;
 }
 
-.overlay {
+.headerOverlay {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.45);
   color: white;
 }
 
-.navInterno {
+.navMain {
   width: 100%;
   padding: 0 15px;
   display: flex;
@@ -58,33 +58,33 @@ body::-webkit-scrollbar {
   transition: 1s;
 }
 
-.boxMenu,
-.boxReserva {
+.navMenuBox,
+.reservaBox {
   width: auto;
   display: flex;
   justify-content: center;
   width: 150px;
 }
 
-.picLogo {
+.navLogo {
   width: 150px;
   display: flex;
   justify-content: center;
   border-radius: 10px;
 }
 
-.logo {
+.navLogoImg {
   width: 90px;
   margin: 3%;
 }
 
-.mudancaCor {
+.navScrolled {
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
   transition: 0.3s;
 }
 
-.mudancaCor img {
+.navScrolled img {
   width: 70px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
@@ -107,7 +107,7 @@ body::-webkit-scrollbar {
   border-radius: 5px;
 }
 
-.contMenu {
+.navMenu {
   position: fixed;
   top: 0;
   left: 0;
@@ -122,26 +122,26 @@ body::-webkit-scrollbar {
   z-index: 999;
 }
 
-.contMenu.active {
+.navMenu.isActive {
   transform: translateY(0);
 }
 
-.contMenuBtns button {
+.navBtns button {
   background: transparent;
   border: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-.btnMenuClose:hover {
+.btnMenuFechar:hover {
   color: var(--corErro);
 }
 
-.btnRedes:hover {
+.btnRedeSocial:hover {
   color: var(--corPrimaria);
 }
 
-.contMenu ul {
+.navMenu ul {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -150,7 +150,7 @@ body::-webkit-scrollbar {
   list-style: none;
 }
 
-.contMenu a {
+.navMenu a {
   display: flex;
   flex-direction: column;
   font-size: 2rem;
@@ -159,13 +159,13 @@ body::-webkit-scrollbar {
   transition: transform 0.3s ease-in-out;
 }
 
-.contMenu a:hover {
+.navMenu a:hover {
   color: var(--corDourada);
   text-decoration: underline;
   transform: translateX(50px);
 }
 
-.titulo {
+.secaoTitulo {
   margin: 2%;
   display: flex;
   flex-direction: column;
@@ -173,29 +173,29 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
-.titulo h1 {
+.secaoTitulo h1 {
   color: var(--corPrimaria);
 }
 
-.titulo p {
+.secaoTitulo p {
   color: var(--corTexto);
 }
 
-.display-nav{
+.navAcomodacoes{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.boxNav {
+.quartosSecao {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin: 1%;
 }
 
-.navegacao {
+.acomodacoesNav {
   width: 100%;
   height: auto;
   padding: 15px;
@@ -208,12 +208,12 @@ body::-webkit-scrollbar {
   border-radius: 10px;
 }
 
-.navegacao h2 {
+.acomodacoesNav h2 {
   color: var(--corDourada);
   font-size: 22px;
 }
 
-.btnPesquisa {
+.btnFiltroQuarto {
   border: 1px solid var(--corPrimaria);
   border-radius: 5px;
   color: var(--corPrimaria);
@@ -227,7 +227,7 @@ body::-webkit-scrollbar {
   font-size: 1rem;
 }
 
-.btnPesquisa span {
+.btnFiltroQuarto span {
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -238,17 +238,17 @@ body::-webkit-scrollbar {
   color: white;
 }
 
-.btnPesquisa:hover {
+.btnFiltroQuarto:hover {
   border: 1px solid var(--corDourada);
   color: var(--corDourada);
 }
 
-.btnPesquisa.active {
+.btnFiltroQuarto.isActive {
   border: 2px solid var(--corDourada);
   color: var(--corDourada);
 }
 
-.quartos {
+.quartosLista {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -256,7 +256,7 @@ body::-webkit-scrollbar {
   justify-content: center;
 }
 
-.boxQuarto {
+.quartoBox {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -266,22 +266,22 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
-.boxQuarto img {
+.quartoBox img {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
 
-.boxQuarto h3 {
+.quartoBox h3 {
   margin-top: 10px;
 }
 
-.boxQuarto p {
+.quartoBox p {
   padding: 10px;
   text-align: center;
 }
 
-.btnInfo {
+.btnQuartoInfo {
   margin: 10px;
   padding: 10px 20px;
   background: var(--corPrimaria);
@@ -292,11 +292,11 @@ body::-webkit-scrollbar {
   transition: 0.3s;
 }
 
-.btnInfo:hover {
+.btnQuartoInfo:hover {
   background: var(--corDourada);
 }
 
-.modalQuarto {
+.quartoModal {
   display: none;
   position: fixed;
   top: 0;
@@ -309,11 +309,11 @@ body::-webkit-scrollbar {
   z-index: 1000;
 }
 
-.modalQuarto.active {
+.quartoModal.isActive {
   display: flex;
 }
 
-.modalCont {
+.quartoModalConteudo {
   background: #fffaeb;
   width: 100%;
   height: auto;
@@ -326,14 +326,14 @@ body::-webkit-scrollbar {
   gap: 20px;
 }
 
-.modalCont div {
+.quartoModalConteudo div {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   gap: 10px;
 }
 
-.modalCont div button {
+.quartoModalConteudo div button {
   background-color: var(--corPrimaria);
   color: #ffffff;
   padding: 12px 24px;
@@ -347,12 +347,12 @@ body::-webkit-scrollbar {
     box-shadow 0.2s ease;
 }
 
-.modalCont div button:hover {
+.quartoModalConteudo div button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.btnCloseModal {
+.btnQuartoModalFechar {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -363,42 +363,42 @@ body::-webkit-scrollbar {
   color: var(--corPrimariaEscura);
 }
 
-.modalImg {
+.quartoModalImagem {
   width: 100%;
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.modalTitulo {
+.quartoModalTitulo {
   font-size: 1.3rem;
   color: var(--corPrimariaEscura);
 }
 
-.modalDescricao {
+.quartoModalDescricao {
   font-size: 0.95rem;
   color: var(--corTexto);
   line-height: 1.4;
 }
 
-.modalPreco {
+.quartoModalPreco {
   font-weight: bold;
   color: var(--corDourada);
   font-size: 1.1rem;
 }
 
-.familia.off,
-.casal.off {
+.quartoFamilia.isHidden,
+.quartoCasal.isHidden {
   display: none;
 }
 
-.rodape {
+.footer {
   background-color: var(--corPrimaria);
   border-top: 3px solid var(--corDourada);
   padding: 40px 20px 20px;
 }
 
-.rodapeTopo {
+.footerTop {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -408,49 +408,49 @@ body::-webkit-scrollbar {
   margin: 0 auto;
 }
 
-.rodapeMarca h2 {
+.footerMarca h2 {
   color: #ffffff;
   font-size: 1.4rem;
 }
 
-.rodapeMarca p {
+.footerMarca p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
   margin-top: 8px;
   max-width: 280px;
 }
 
-.rodapeColuna {
+.footerColuna {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
 }
 
-.rodapeColuna h3 {
+.footerColuna h3 {
   color: var(--corDourada);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.menu-rodape {
+.footerLink {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-size: 0.95rem;
   transition: 0.3s;
 }
 
-.menu-rodape:hover {
+.footerLink:hover {
   color: var(--corDourada);
 }
 
-.rodapeRedes {
+.footerRedes {
   display: flex;
   gap: 12px;
 }
 
-.rodapeRedes .btnRedes {
+.footerRedes .btnRedeSocial {
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -464,78 +464,78 @@ body::-webkit-scrollbar {
   transition: 0.3s;
 }
 
-.rodapeRedes .btnRedes:hover {
+.footerRedes .btnRedeSocial:hover {
   background: var(--corDourada);
   border-color: var(--corDourada);
   color: var(--corPrimaria);
 }
 
-.rodapeBase {
+.footerBase {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   margin-top: 30px;
   padding-top: 15px;
   text-align: center;
 }
 
-.rodapeBase p {
+.footerBase p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem;
 }
 
 @media (min-width: 768px) {
-  .navInterno {
+  .navMain {
     padding: 0 40px;
   }
 
-  .boxMenu,
-  .boxReserva {
+  .navMenuBox,
+  .reservaBox {
     width: 180px;
   }
 
-  .logo {
+  .navLogoImg {
     width: 150px;
   }
 
-  .contMenuBtns {
+  .navBtns {
     position: absolute;
     top: 20px;
     right: 20px;
   }
 
-  .boxNav {
+  .quartosSecao {
     flex-direction: row;
     justify-content: space-between;
     gap: 50px;
   }
 
-  .navegacao {
+  .acomodacoesNav {
     width: 80%;
     height: 10vh;
     flex-direction: row;
     justify-content: space-around;
   }
 
-  .btnPesquisa {
+  .btnFiltroQuarto {
     width: 20%;
     font-size: 1.1rem;
   }
 
-  .boxQuarto {
+  .quartoBox {
     width: 40%;
   }
 
-  .rodapeTopo {
+  .footerTop {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     text-align: left;
   }
 
-  .rodapeMarca {
+  .footerMarca {
     max-width: 280px;
   }
 
-  .rodapeColuna {
+  .footerColuna {
     align-items: flex-start;
   }
 }

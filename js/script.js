@@ -1,28 +1,28 @@
 const btnMenu = document.querySelector('.btnMenu')
 const btnReserva = document.querySelector('.btnReserva')
-const btnMenuClose = document.querySelector('.btnMenuClose')
-const contMenu = document.querySelector('.contMenu')
-const btnRedes = document.querySelectorAll('.btnRedes')
-const questionsFaq = document.querySelectorAll('.questions')
-const respostaFaq = document.querySelectorAll('.respostaFaq')
-const iconeFaq = document.querySelectorAll('.iconeFaq')
-const carroselDesta = document.querySelector('.carroselDestaque')
-const btnLeftCard = document.querySelector('.btnPrevDestaque')
-const btnRightCard = document.querySelector('.btnNextDestaque')
-const navInterno = document.querySelector('.navInterno')
+const btnMenuFechar = document.querySelector('.btnMenuFechar')
+const navMenu = document.querySelector('.navMenu')
+const btnRedeSocial = document.querySelectorAll('.btnRedeSocial')
+const faqPerguntas = document.querySelectorAll('.faqPergunta')
+const faqResposta = document.querySelectorAll('.faqResposta')
+const faqIcone = document.querySelectorAll('.faqIcone')
+const carroselDesta = document.querySelector('.destaquesCarrossel')
+const btnLeftCard = document.querySelector('.btnDestaqueAnterior')
+const btnRightCard = document.querySelector('.btnDestaqueProximo')
+const navMain = document.querySelector('.navMain')
 const limitePixels = 600;
 
-const totalCards = document.querySelectorAll('.boxDestaque').length
+const totalCards = document.querySelectorAll('.destaqueItem').length
 
 function calcularIndiceMaximo() {
-    const larguraContainer = document.querySelector('.containerDestaque').offsetWidth
+    const larguraContainer = document.querySelector('.destaquesContainer').offsetWidth
     const cartoesVisiveis = Math.round(larguraContainer / 370)
     return totalCards - cartoesVisiveis
 }
 
 let indiceCarrosel = 0
 
-btnRedes.forEach(element => {
+btnRedeSocial.forEach(element => {
     element.addEventListener('click', () => {
         window.location.href = element.dataset.url
     })
@@ -33,11 +33,11 @@ btnReserva.addEventListener('click', ()=>{
 })
 
 btnMenu.addEventListener('click', ()=>{
-    contMenu.classList.add('active')
+    navMenu.classList.add('isActive')
 })
 
-btnMenuClose.addEventListener('click', ()=>{
-    contMenu.classList.remove('active')
+btnMenuFechar.addEventListener('click', ()=>{
+    navMenu.classList.remove('isActive')
 })
 
 btnRightCard.addEventListener('click', () => {
@@ -66,18 +66,18 @@ btnLeftCard.addEventListener('click', () => {
 
 })
 
-questionsFaq.forEach((question, index) => {
+faqPerguntas.forEach((question, index) => {
     question.addEventListener('click', () =>{
-        respostaFaq[index].classList.toggle('activo')
+        faqResposta[index].classList.toggle('activo')
 
-        iconeFaq[index].classList.toggle('activo')
+        faqIcone[index].classList.toggle('activo')
     })
 });
 
 window.addEventListener('scroll', ()=>{
     if (window.scrollY > limitePixels){
-        navInterno.classList.add('mudancaCor')
+        navMain.classList.add('navScrolled')
     }else{
-        navInterno.classList.remove('mudancaCor')
+        navMain.classList.remove('navScrolled')
     }
 })

@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/fc.css".css">
+    <link rel="stylesheet" href="css/fc.css">
 </head>
 <body>
     <header class="headerMain" id="inicio">
-      <div class="overlay">
-        <nav class="navInterno">
-          <div class="boxMenu">
+      <div class="headerOverlay">
+        <nav class="navMain">
+          <div class="navMenuBox">
             <button class="btnMenu">
               <span></span>
               <span></span>
               <span></span>
             </button>
 
-            <div class="contMenu">
+            <div class="navMenu">
               <ul>
                 <li>
-                  <span class="rotuloMenu">Principais</span>
+                  <span class="navRotulo">Principais</span>
                 </li>
 
                 <li>
@@ -36,40 +36,39 @@
                 </li>
 
                 <li>
-                  <a href="#">Fale conosco</a>
-                </li>
+                  <a href="faleConosco.html">Fale conosco</a></li>
               </ul>
 
-              <div class="contMenuBtns">
+              <div class="navBtns">
                 <button
-                  class="btnRedes"
+                  class="btnRedeSocial"
                   data-url="https://github.com/CadevV/Trabalho-bimestral-Pousada"
                 >
                   <i class="fa-brands fa-github"></i>
                 </button>
 
-                <button class="btnRedes" data-url="https://www.instagram.com/">
+                <button class="btnRedeSocial" data-url="https://www.instagram.com/">
                   <i class="fa-brands fa-instagram"></i>
                 </button>
 
                 <button
-                  class="btnRedes"
+                  class="btnRedeSocial"
                   data-url="https://www.facebook.com/?locale=pt_BR"
                 >
                   <i class="fa-brands fa-facebook"></i>
                 </button>
 
-                <button class="btnMenuClose" aria-label="Fechar menu">
+                <button class="btnMenuFechar" aria-label="Fechar menu">
                   <i class="fa-solid fa-xmark"></i>
                 </button>
               </div>
             </div>
           </div>
 
-          <picture class="picLogo">
+          <picture class="navLogo">
             <img
               src="images/Posada_por_do_Sol.png"
-              class="logo"
+              class="navLogoImg"
               alt="Logo da Pousada Por do Sol"
             />
           </picture>
@@ -79,10 +78,10 @@
 
     <main>
       <h1>Fale conosco!</h1>
-      <section class="contForm">
-        <div class="boxForm">
+      <section class="contatoFormSecao">
+        <div class="contatoFormBox">
           <img src="images/Posada_por_do_Sol.png" alt="">
-          <form action="" method="post" class="form">
+          <contatoForm action="" method="post" class="contatoForm">
 
             <label for="">Nome</label>
             <input type="text">
@@ -97,13 +96,13 @@
             <input type="number">
 
               <label for="">Login</label>
-            <div class="login">
-              <input type="radio"> Já fiz meu login.
-              <input type="radio"> Não fiz o login.
+            <div class="contatoFormAcoes">
+              <input type="radio"> Já fiz meu contatoFormAcoes.
+              <input type="radio"> Não fiz o contatoFormAcoes.
             </div>
 
             <button type="submit">Enviar</button>
-          </form>
+          </contatoForm>
         </div>
       </section>
     </main>

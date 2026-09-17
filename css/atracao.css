@@ -44,14 +44,14 @@ button {
   background-position: center;
 }
 
-.overlay {
+.headerOverlay {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.45);
   color: white;
 }
 
-.navInterno {
+.navMain {
   width: 100%;
   padding: 0 15px;
   display: flex;
@@ -60,33 +60,33 @@ button {
   transition: 1s;
 }
 
-.boxMenu,
-.boxReserva {
+.navMenuBox,
+.reservaBox {
   width: auto;
   display: flex;
   justify-content: center;
   width: 150px;
 }
 
-.picLogo {
+.navLogo {
   width: 150px;
   display: flex;
   justify-content: center;
   border-radius: 10px;
 }
 
-.logo {
+.navLogoImg {
   width: 90px;
   margin: 3%;
 }
 
-.mudancaCor {
+.navScrolled {
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
   transition: 0.3s;
 }
 
-.mudancaCor img {
+.navScrolled img {
   width: 70px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
@@ -109,7 +109,7 @@ button {
   border-radius: 5px;
 }
 
-.contMenu {
+.navMenu {
   position: fixed;
   top: 0;
   left: 0;
@@ -124,26 +124,26 @@ button {
   z-index: 999;
 }
 
-.contMenu.active {
+.navMenu.isActive {
   transform: translateY(0);
 }
 
-.contMenuBtns button {
+.navBtns button {
   background: transparent;
   border: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-.btnMenuClose:hover {
+.btnMenuFechar:hover {
   color: var(--corErro);
 }
 
-.btnRedes:hover {
+.btnRedeSocial:hover {
   color: var(--corPrimaria);
 }
 
-.contMenu ul {
+.navMenu ul {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -152,7 +152,7 @@ button {
   list-style: none;
 }
 
-.contMenu a {
+.navMenu a {
   display: flex;
   flex-direction: column;
   font-size: 2rem;
@@ -161,7 +161,7 @@ button {
   transition: transform 0.3s ease-in-out;
 }
 
-.contMenu a:hover {
+.navMenu a:hover {
   color: var(--corDourada);
   text-decoration: underline;
   transform: translateX(50px);
@@ -174,7 +174,7 @@ main{
   gap: 20px;
 }
 
-.passeiosEditorial {
+.passeiosLista {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -183,7 +183,7 @@ main{
   margin: 0 auto;
 }
 
-.titulo {
+.secaoTitulo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -192,12 +192,18 @@ main{
   text-align: center;
 }
 
-.titulo h1 {
+.secaoTitulo h1 {
   color: var(--corPrimaria);
   font-size: 2rem;
 }
 
-.titulo p {
+.secaoTitulo h2,
+.programacaoLista > h2 {
+  color: var(--corPrimaria);
+  font-size: 1.6rem;
+}
+
+.secaoTitulo p {
   max-width: 500px;
   color: var(--corTexto);
   line-height: 1.5;
@@ -212,23 +218,25 @@ main{
   letter-spacing: 1px;
 }
 
-.linhaPasseio {
+.passeioItem {
   display: flex;
   flex-direction: column;
+  margin: auto;
+  width: 90%;
   gap: 20px;
   border-bottom: 1px solid rgba(15, 92, 102, 0.1);
 }
 
-.linhaPasseio:last-child {
+.passeioItem:last-child {
   border-bottom: none;
 }
 
-.linhaPasseioVideo,
-.linhaPasseioTexto {
+.passeioVideoBox,
+.passeioTexto {
   width: 100%;
 }
 
-.linhaPasseioVideo video {
+.passeioVideoBox video {
   display: block;
   width: 100%;
   max-height: 350px;
@@ -237,28 +245,67 @@ main{
   background: var(--corPrimaria);
 }
 
-.linhaPasseioTexto h3 {
+.passeioTexto h3 {
   margin-bottom: 8px;
   color: var(--corPrimaria);
   font-size: 1.4rem;
 }
 
-.linhaPasseioTexto p {
+.passeioTexto p {
   color: var(--corTexto);
   line-height: 1.6;
 }
 
-.atracaoInterna{
+.atracoesInternasSecao {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
-.contPicina{
+.atracoesLista {
+  display: grid;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+.atracaoItem {
   display: flex;
-  justify-content: space-around;
+  gap: 20px;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid rgba(15, 92, 102, 0.12);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.45);
 }
 
-.regiaoBanner {
+.atracaoTexto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.atracaoTexto h3 {
+  color: var(--corPrimaria);
+  font-size: 1.3rem;
+}
+
+.atracaoTexto p {
+  color: var(--corTexto);
+  line-height: 1.6;
+}
+
+.atracaoImagem img {
+  display: block;
+  width: 100%;
+  max-height: 260px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.regiaoDestaque {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,7 +317,7 @@ main{
   background-position: center;
 }
 
-.regiaoBannerOverlay {
+.regiaoOverlay {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -283,18 +330,18 @@ main{
   text-align: center;
 }
 
-.regiaoBannerOverlay h2 {
+.regiaoOverlay h2 {
   color: #ffffff;
   font-size: 1.7rem;
 }
 
-.regiaoBannerOverlay p {
+.regiaoOverlay p {
   max-width: 600px;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
 }
 
-.programaLista {
+.programacaoLista {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -303,47 +350,51 @@ main{
   gap: 15px;
 }
 
-.programaGrupo {
+.programacaoLista > h2 {
+  text-align: center;
+}
+
+.programacaoGrupo {
   border-bottom: 1px solid rgba(15, 92, 102, 0.1);
 }
 
-.programaItem {
+.programacaoItem {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 15px 0;
 }
 
-.programaItem img {
+.programacaoItem img {
   width: 50px;
   height: 50px;
   flex-shrink: 0;
   object-fit: contain;
 }
 
-.programaInfo {
+.programacaoInfo {
   flex: 1;
   min-width: 0;
 }
 
-.programaItem h3 {
+.programacaoItem h3 {
   color: var(--corPrimaria);
   font-size: 1.05rem;
 }
 
-.programaData {
+.programacaoData {
   display: inline-block;
   margin: 2px 0;
   color: var(--corDourada);
   font-size: 0.85rem;
 }
 
-.programaItem p {
+.programacaoItem p {
   color: var(--corTexto);
   font-size: 0.9rem;
 }
 
-.bntprograma {
+.btnPrograma {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -358,40 +409,40 @@ main{
   transition: 0.3s;
 }
 
-.bntprograma:hover {
+.btnPrograma:hover {
   background: var(--corPrimaria);
   color: white;
   transform: translateX(3px);
 }
 
-.programaTexto {
+.programacaoTexto {
   display: grid;
   grid-template-rows: 0fr;
   opacity: 0;
   transition: 0.3s ease;
 }
 
-.programaTexto p {
+.programacaoTexto p {
   min-height: 0;
   overflow: hidden;
   color: var(--corTexto);
   line-height: 1.5;
 }
 
-.programaTexto.active {
+.programacaoTexto.isActive {
   grid-template-rows: 1fr;
   padding: 0 54px 15px 66px;
   opacity: 1;
 }
 
-.rodape {
+.footer {
   margin-top: 5%;
   padding: 40px 20px 20px;
   background-color: var(--corPrimaria);
   border-top: 3px solid var(--corDourada);
 }
 
-.rodapeTopo {
+.footerTop {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -401,12 +452,12 @@ main{
   text-align: center;
 }
 
-.rodapeMarca h2 {
+.footerMarca h2 {
   color: #ffffff;
   font-size: 1.4rem;
 }
 
-.rodapeMarca p {
+.footerMarca p {
   max-width: 280px;
   margin-top: 8px;
   color: rgba(255, 255, 255, 0.7);
@@ -414,37 +465,37 @@ main{
   line-height: 1.5;
 }
 
-.rodapeColuna {
+.footerColuna {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
 }
 
-.rodapeColuna h3 {
+.footerColuna h3 {
   color: var(--corDourada);
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-.menu-rodape {
+.footerLink {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.95rem;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.menu-rodape:hover {
+.footerLink:hover {
   color: var(--corDourada);
 }
 
-.rodapeRedes {
+.footerRedes {
   display: flex;
   gap: 12px;
 }
 
-.rodapeRedes .btnRedes {
+.footerRedes .btnRedeSocial {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -458,95 +509,110 @@ main{
   transition: 0.3s;
 }
 
-.rodapeRedes .btnRedes:hover {
+.footerRedes .btnRedeSocial:hover {
   background: var(--corDourada);
   border-color: var(--corDourada);
   color: var(--corPrimaria);
   transform: translateY(-3px);
 }
 
-.rodapeBase {
+.footerBase {
   margin-top: 30px;
   padding-top: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
 }
 
-.rodapeBase p {
+.footerBase p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem;
 }
 
 @media (min-width: 769px) {
-  .navInterno {
+  .navMain {
     padding: 0 40px;
   }
 
-  .boxMenu {
+  .navMenuBox {
     width: 180px;
   }
 
-  .logo {
+  .navLogoImg {
     width: 150px;
   }
 
-  .contMenuBtns {
+  .navBtns {
     position: absolute;
     top: 20px;
     right: 20px;
   }
 
-  .titulo {
+  .secaoTitulo {
     padding-top: 6%;
   }
 
-  .titulo h1 {
+  .secaoTitulo h1 {
     font-size: 2.5rem;
   }
 
-  .titulo p {
+  .secaoTitulo h2,
+  .programacaoLista > h2 {
+    font-size: 2rem;
+  }
+
+  .secaoTitulo p {
     font-size: 1rem;
   }
 
-  .linhaPasseio {
+  .passeioItem {
     flex-direction: row;
     align-items: center;
     gap: 50px;
   }
 
-  .linhaPasseio:nth-child(even) {
+  .passeioItem:nth-child(even) {
     flex-direction: row-reverse;
   }
 
-  .linhaPasseioVideo,
-  .linhaPasseioTexto {
+  .passeioVideoBox,
+  .passeioTexto {
     width: 50%;
   }
 
-  .linhaPasseioVideo video {
+  .passeioVideoBox video {
     height: 350px;
   }
 
-  .linhaPasseioTexto {
+  .passeioTexto {
     padding: 0 10px;
   }
 
-  .regiaoBannerOverlay h2 {
+  .atracaoItem {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .atracaoTexto,
+  .atracaoImagem {
+    width: 50%;
+  }
+
+  .regiaoOverlay h2 {
     font-size: 2.2rem;
   }
 
-  .rodapeTopo {
+  .footerTop {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     text-align: left;
   }
 
-  .rodapeMarca {
+  .footerMarca {
     max-width: 280px;
   }
 
-  .rodapeColuna {
+  .footerColuna {
     align-items: flex-start;
   }
 }

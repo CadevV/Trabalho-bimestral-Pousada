@@ -105,84 +105,84 @@ const quartosModal = [
 ];
 
 const btnMenu = document.querySelector('.btnMenu')
-const btnMenuClose = document.querySelector('.btnMenuClose')
-const contMenu = document.querySelector('.contMenu')
-const btnRedes = document.querySelectorAll('.btnRedes')
-const btnOpenModal = document.querySelectorAll(".btnInfo");
-const btnCloseModal = document.querySelector(".btnCloseModal");
-const modalAc = document.querySelector(".modalQuarto");
-const numTotal = document.querySelector(".numTotal");
-const numCasal = document.querySelector(".numCasal");
-const numFamilia = document.querySelector(".numFamilia");
-const quartosFamilia = document.querySelectorAll(".familia");
-const quartosCasal = document.querySelectorAll(".casal");
+const btnMenuFechar = document.querySelector('.btnMenuFechar')
+const navMenu = document.querySelector('.navMenu')
+const btnRedeSocial = document.querySelectorAll('.btnRedeSocial')
+const btnOpenModal = document.querySelectorAll(".btnQuartoInfo");
+const btnQuartoModalFechar = document.querySelector(".btnQuartoModalFechar");
+const modalAc = document.querySelector(".quartoModal");
+const filtroTotalNumero = document.querySelector(".filtroTotalNumero");
+const filtroCasalNumero = document.querySelector(".filtroCasalNumero");
+const filtroFamiliaNumero = document.querySelector(".filtroFamiliaNumero");
+const quartosFamilia = document.querySelectorAll(".quartoFamilia");
+const quartosCasal = document.querySelectorAll(".quartoCasal");
 const btnTotal = document.getElementById("btnTotal");
 const btnCasal = document.getElementById("btnCasal");
 const btnFamilia = document.getElementById("btnFamilia");
-const modalImg = document.querySelector(".modalImg");
-const modalTitulo = document.querySelector(".modalTitulo");
-const modalDescricao = document.querySelector(".modalDescricao");
-const modalPreco = document.querySelector(".modalPreco");
+const quartoModalImagem = document.querySelector(".quartoModalImagem");
+const quartoModalTitulo = document.querySelector(".quartoModalTitulo");
+const quartoModalDescricao = document.querySelector(".quartoModalDescricao");
+const quartoModalPreco = document.querySelector(".quartoModalPreco");
 
 function atualizarQuartos() {
-  numTotal.textContent = quartosFamilia.length + quartosCasal.length;
-  numCasal.textContent = quartosCasal.length;
-  numFamilia.textContent = quartosFamilia.length;
+  filtroTotalNumero.textContent = quartosFamilia.length + quartosCasal.length;
+  filtroCasalNumero.textContent = quartosCasal.length;
+  filtroFamiliaNumero.textContent = quartosFamilia.length;
 }
 
-btnRedes.forEach(element => {
+btnRedeSocial.forEach(element => {
     element.addEventListener('click', () => {
         window.location.href = element.dataset.url
     })
 })
 
 btnMenu.addEventListener('click', ()=>{
-    contMenu.classList.add('active')
+    navMenu.classList.add('isActive')
 })
 
-btnMenuClose.addEventListener('click', ()=>{
-    contMenu.classList.remove('active')
+btnMenuFechar.addEventListener('click', ()=>{
+    navMenu.classList.remove('isActive')
 })
 
 btnTotal.addEventListener("click", () => {
-  btnCasal.classList.remove("active");
-  btnFamilia.classList.remove("active");
-  btnTotal.classList.add("active");
+  btnCasal.classList.remove("isActive");
+  btnFamilia.classList.remove("isActive");
+  btnTotal.classList.add("isActive");
 
   quartosFamilia.forEach((element) => {
-    element.classList.remove("off");
+    element.classList.remove("isHidden");
   });
 
   quartosCasal.forEach((element) => {
-    element.classList.remove("off");
+    element.classList.remove("isHidden");
   });
 });
 
 btnCasal.addEventListener("click", () => {
-  btnCasal.classList.add("active");
-  btnFamilia.classList.remove("active");
-  btnTotal.classList.remove("active");
+  btnCasal.classList.add("isActive");
+  btnFamilia.classList.remove("isActive");
+  btnTotal.classList.remove("isActive");
 
   quartosFamilia.forEach((element) => {
-    element.classList.add("off");
+    element.classList.add("isHidden");
   });
 
   quartosCasal.forEach((element) => {
-    element.classList.remove("off");
+    element.classList.remove("isHidden");
   });
 });
 
 btnFamilia.addEventListener("click", () => {
-  btnCasal.classList.remove("active");
-  btnFamilia.classList.add("active");
-  btnTotal.classList.remove("active");
+  btnCasal.classList.remove("isActive");
+  btnFamilia.classList.add("isActive");
+  btnTotal.classList.remove("isActive");
 
   quartosFamilia.forEach((element) => {
-    element.classList.remove("off");
+    element.classList.remove("isHidden");
   });
 
   quartosCasal.forEach((element) => {
-    element.classList.add("off");
+    element.classList.add("isHidden");
   });
 });
 
@@ -191,20 +191,20 @@ btnOpenModal.forEach((botao) => {
     const id = botao.dataset.id;
     const quarto = quartosModal.find((q) => q.dataId === id);
 
-    modalImg.src = quarto.img;
-    modalImg.alt = quarto.nome;
-    modalTitulo.textContent = quarto.nome;
-    modalDescricao.textContent = quarto.descricao;
-    modalPreco.textContent = "R$ " + quarto.preco + " / noite";
+    quartoModalImagem.src = quarto.img;
+    quartoModalImagem.alt = quarto.nome;
+    quartoModalTitulo.textContent = quarto.nome;
+    quartoModalDescricao.textContent = quarto.descricao;
+    quartoModalPreco.textContent = "R$ " + quarto.preco + " / noite";
 
-    modalAc.classList.add("active");
-    document.body.classList.add("modalOpen");
+    modalAc.classList.add("isActive");
+    document.body.classList.add("quartoModalAberto");
   });
 });
 
-btnCloseModal.addEventListener("click", () => {
-  modalAc.classList.remove("active");
-  document.body.classList.remove("modalOpen");
+btnQuartoModalFechar.addEventListener("click", () => {
+  modalAc.classList.remove("isActive");
+  document.body.classList.remove("quartoModalAberto");
 });
 
 atualizarQuartos();

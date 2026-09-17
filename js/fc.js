@@ -1,17 +1,17 @@
 const btnMenu = document.querySelector('.btnMenu')
-const btnMenuClose = document.querySelector('.btnMenuClose')
-const contMenu = document.querySelector('.contMenu')
-const btnRedes = document.querySelectorAll('.btnRedes')
+const btnMenuFechar = document.querySelector('.btnMenuFechar')
+const navMenu = document.querySelector('.navMenu')
+const btnRedeSocial = document.querySelectorAll('.btnRedeSocial')
 
 btnMenu.addEventListener('click', ()=>{
-    contMenu.classList.add('active')
+    navMenu.classList.add('isActive')
 })
 
-btnMenuClose.addEventListener('click', ()=>{
-    contMenu.classList.remove('active')
+btnMenuFechar.addEventListener('click', ()=>{
+    navMenu.classList.remove('isActive')
 })
 
-btnRedes.forEach(element => {
+btnRedeSocial.forEach(element => {
     element.addEventListener('click', () => {
         window.location.href = element.dataset.url
     })

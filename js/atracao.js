@@ -1,26 +1,26 @@
 const btnMenu = document.querySelector(".btnMenu");
-const btnMenuClose = document.querySelector(".btnMenuClose");
-const contMenu = document.querySelector(".contMenu");
-const btnRedes = document.querySelectorAll(".btnRedes");
-const bntprograma = document.querySelectorAll(".bntprograma");
-const textoPrograma = document.querySelectorAll(".programaTexto");
+const btnMenuFechar = document.querySelector(".btnMenuFechar");
+const navMenu = document.querySelector(".navMenu");
+const btnRedeSocial = document.querySelectorAll(".btnRedeSocial");
+const btnPrograma = document.querySelectorAll(".btnPrograma");
+const textoPrograma = document.querySelectorAll(".programacaoTexto");
 
 btnMenu.addEventListener("click", () => {
-  contMenu.classList.add("active");
+  navMenu.classList.add("isActive");
 });
 
-btnMenuClose.addEventListener("click", () => {
-  contMenu.classList.remove("active");
+btnMenuFechar.addEventListener("click", () => {
+  navMenu.classList.remove("isActive");
 });
 
-btnRedes.forEach((element) => {
+btnRedeSocial.forEach((element) => {
   element.addEventListener("click", () => {
     window.location.href = element.dataset.url;
   });
 });
 
-bntprograma.forEach((element, index) => {
+btnPrograma.forEach((element, index) => {
   element.addEventListener("click", () => {
-    textoPrograma[index].classList.toggle("active");
+    textoPrograma[index].classList.toggle("isActive");
   });
 });
