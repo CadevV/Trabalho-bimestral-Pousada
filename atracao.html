@@ -24,53 +24,47 @@
             </button>
 
             <div class="navMenu">
-              <ul>
-                <li>
-                  <span class="navRotulo">Principais</span>
-                </li>
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-                <li>
-                  <a href="acomodacoes.html">Acomodações</a>
-                </li>
-                <li>
-                  <a href="atracao.html">Atrações</a>
-                </li>
-                <li>
-                  <a href="faleConosco.html">Fale conosco</a>
-                </li>
-              </ul>
+              <div class="navMenuConteudo">
+                <ul class="navLinks">
+                  <li><span class="navRotulo">Principais</span></li>
+                  <li><a href="index.html"><span class="navNumero">01</span>Home</a></li>
+                  <li><a href="acomodacoes.html"><span class="navNumero">02</span>Acomodações</a></li>
+                  <li><a href="atracao.html"><span class="navNumero">03</span>Atrações</a></li>
+                  <li><a href="faleConosco.html"><span class="navNumero">04</span>Fale conosco</a></li>
+                </ul>
 
-              <div class="navBtns">
-                <button
-                  class="btnRedeSocial"
-                  data-url="https://github.com/CadevV/Trabalho-bimestral-Pousada"
-                  aria-label="GitHub"
-                >
-                  <i class="fa-brands fa-github"></i>
-                </button>
-
-                <button
-                  class="btnRedeSocial"
-                  data-url="https://www.instagram.com/"
-                  aria-label="Instagram"
-                >
-                  <i class="fa-brands fa-instagram"></i>
-                </button>
-
-                <button
-                  class="btnRedeSocial"
-                  data-url="https://www.facebook.com/?locale=pt_BR"
-                  aria-label="Facebook"
-                >
-                  <i class="fa-brands fa-facebook"></i>
-                </button>
-
-                <button class="btnMenuFechar" aria-label="Fechar menu">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
+                <ul class="navBtns">
+                  <li><span class="navRotulo">Pousada</span></li>
+                  <li>
+                    <button type="button" class="btnRedeSocial" data-url="https://www.instagram.com/">
+                      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                      <span>Instagram</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btnRedeSocial" data-url="https://www.facebook.com/?locale=pt_BR">
+                      <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                      <span>Facebook</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btnRedeSocial" data-url="https://github.com/CadevV/Trabalho-bimestral-Pousada">
+                      <i class="fa-brands fa-github" aria-hidden="true"></i>
+                      <span>GitHub</span>
+                    </button>
+                  </li>
+                  <li class="navFrase">Conforto, natureza<br />e experiências únicas.</li>
+                </ul>
               </div>
+
+              <div class="navAssinatura">
+                <span>Pousada Pôr do Sol</span>
+                <span>Lençóis Maranhenses</span>
+              </div>
+
+              <button type="button" class="btnMenuFechar" aria-label="Fechar menu">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+              </button>
             </div>
           </div>
 
@@ -86,6 +80,99 @@
     </header>
 
     <main>
+      <section class="atracoesExternasSecao">
+        <div class="secaoTitulo">
+          <h2>Atrações externas</h2>
+          <p>
+            Conheça vilarejos, paisagens e pontos turísticos nos arredores dos
+            Lençóis Maranhenses.
+          </p>
+        </div>
+
+        <div class="atracoesExternasLista">
+          <article class="atracaoExternaItem">
+            <div class="atracaoExternaTexto">
+              <span>Vila costeira</span>
+              <h3>Atins</h3>
+              <p>
+                Vilarejo de pescadores entre as dunas, a praia e o Rio
+                Preguiças, conhecido pela tranquilidade e pela gastronomia
+                local.
+              </p>
+            </div>
+
+            <figure class="atracaoExternaImagem">
+              <img src="images/atracao-atins.jpg" alt="Paisagem de Atins" />
+              <figcaption>
+                <a href="https://commons.wikimedia.org/wiki/File:Atins.jpg" target="_blank" rel="noopener noreferrer">
+                  Foto: JKB fotos / Wikimedia Commons
+                </a>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="atracaoExternaItem">
+            <div class="atracaoExternaTexto">
+              <span>Vista panorâmica</span>
+              <h3>Farol de Mandacaru</h3>
+              <p>
+                Principal atração do povoado de Mandacaru, o farol oferece uma
+                vista ampla do Rio Preguiças e da paisagem dos Lençóis.
+              </p>
+            </div>
+
+            <figure class="atracaoExternaImagem">
+              <img src="images/atracao-mandacaru.jpg" alt="Farol de Mandacaru" />
+              <figcaption>
+                <a href="https://commons.wikimedia.org/wiki/File:Mandacaru.jpg" target="_blank" rel="noopener noreferrer">
+                  Foto: Bronsky707 / Wikimedia Commons
+                </a>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="atracaoExternaItem">
+            <div class="atracaoExternaTexto">
+              <span>Dunas e lagoas</span>
+              <h3>Pequenos Lençóis</h3>
+              <p>
+                Área de dunas e lagoas próxima ao Rio Preguiças, com paisagens
+                naturais que complementam a visita aos Grandes Lençóis.
+              </p>
+            </div>
+
+            <figure class="atracaoExternaImagem">
+              <img src="images/atracao-pequenos-lencois.jpg" alt="Dunas dos Pequenos Lençóis" />
+              <figcaption>
+                <a href="https://commons.wikimedia.org/wiki/File:Pequenos_len%C3%A7%C3%B3is_maranhenses_-_christof_assing_(10).jpg" target="_blank" rel="noopener noreferrer">
+                  Foto: Christof Assing / Wikimedia Commons
+                </a>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="atracaoExternaItem">
+            <div class="atracaoExternaTexto">
+              <span>Paisagem ribeirinha</span>
+              <h3>Rio Preguiças</h3>
+              <p>
+                Rio navegável que atravessa Barreirinhas e conduz a comunidades
+                ribeirinhas, manguezais, buritizais e ao encontro com o mar.
+              </p>
+            </div>
+
+            <figure class="atracaoExternaImagem">
+              <img src="images/atracao-rio-preguicas.jpg" alt="Rio Preguiças em Barreirinhas" />
+              <figcaption>
+                <a href="https://commons.wikimedia.org/wiki/File:Rio_Pregui%C3%A7as_no_Barreirinhas_2.jpg" target="_blank" rel="noopener noreferrer">
+                  Foto: Johan Fredriksson / Wikimedia Commons
+                </a>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+
       <section class="atracoesInternasSecao">
         <div class="secaoTitulo">
           <h2>Atrações internas</h2>

@@ -5,63 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/fc.css">
+    <script
+      src="https://kit.fontawesome.com/8bf2916310.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
     <header class="headerMain" id="inicio">
       <div class="headerOverlay">
         <nav class="navMain">
           <div class="navMenuBox">
-            <button class="btnMenu">
+            <button class="btnMenu" aria-label="Abrir menu">
               <span></span>
               <span></span>
               <span></span>
             </button>
 
             <div class="navMenu">
-              <ul>
-                <li>
-                  <span class="navRotulo">Principais</span>
-                </li>
+              <div class="navMenuConteudo">
+                <ul class="navLinks">
+                  <li><span class="navRotulo">Principais</span></li>
+                  <li><a href="index.html"><span class="navNumero">01</span>Home</a></li>
+                  <li><a href="acomodacoes.html"><span class="navNumero">02</span>Acomodações</a></li>
+                  <li><a href="atracao.html"><span class="navNumero">03</span>Atrações</a></li>
+                  <li><a href="faleConosco.html"><span class="navNumero">04</span>Fale conosco</a></li>
+                </ul>
 
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                  <a href="acomodacoes.html">Acomodações</a>
-                </li>
-
-                <li>
-                  <a href="atracao.html">Atrações</a>
-                </li>
-
-                <li>
-                  <a href="faleConosco.html">Fale conosco</a></li>
-              </ul>
-
-              <div class="navBtns">
-                <button
-                  class="btnRedeSocial"
-                  data-url="https://github.com/CadevV/Trabalho-bimestral-Pousada"
-                >
-                  <i class="fa-brands fa-github"></i>
-                </button>
-
-                <button class="btnRedeSocial" data-url="https://www.instagram.com/">
-                  <i class="fa-brands fa-instagram"></i>
-                </button>
-
-                <button
-                  class="btnRedeSocial"
-                  data-url="https://www.facebook.com/?locale=pt_BR"
-                >
-                  <i class="fa-brands fa-facebook"></i>
-                </button>
-
-                <button class="btnMenuFechar" aria-label="Fechar menu">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
+                <ul class="navBtns">
+                  <li><span class="navRotulo">Pousada</span></li>
+                  <li>
+                    <button type="button" class="btnRedeSocial" data-url="https://www.instagram.com/">
+                      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                      <span>Instagram</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btnRedeSocial" data-url="https://www.facebook.com/?locale=pt_BR">
+                      <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                      <span>Facebook</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btnRedeSocial" data-url="https://github.com/CadevV/Trabalho-bimestral-Pousada">
+                      <i class="fa-brands fa-github" aria-hidden="true"></i>
+                      <span>GitHub</span>
+                    </button>
+                  </li>
+                  <li class="navFrase">Conforto, natureza<br />e experiências únicas.</li>
+                </ul>
               </div>
+
+              <div class="navAssinatura">
+                <span>Pousada Pôr do Sol</span>
+                <span>Lençóis Maranhenses</span>
+              </div>
+
+              <button type="button" class="btnMenuFechar" aria-label="Fechar menu">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+              </button>
             </div>
           </div>
 
