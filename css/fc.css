@@ -286,74 +286,69 @@ body::-webkit-scrollbar {
   }
 }
 
-h1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.9rem;
-  color: #0c4a52;
-  margin: 2%;
-}
-
 .contatoFormSecao{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contatoFormBox{
-  width: 90%;
-  display:flex;
-  justify-content: left;
-  align-items: center;
+.contatoForm{
+  width: 35%;
   border: 1px solid #0c4a52;
   border-radius: 10px;
-  gap: 15%;
-}
-
-.contatoFormBox img{
-  background-color: white;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  width: 50%;
-  height: 100%;
-}
-
-h2{
-  color: #e0a94a;
-  font-size: 2rem;
-}
-
-.contatoForm{
   display: flex;
-  justify-content: center;
-  align-items: start;
+  align-items: left;
   flex-direction: column;
-  gap: 5px;
-}
-
-.contatoForm label{
-  margin: 3%;
-  font-size: 1.3rem;
-  color: #0c4a52;
-}
-
-.contatoForm input{
-  font-size: 1.2rem;
+  gap: 10px;
   padding: 10px;
 }
 
-.contatoFormAcoes{
-  margin: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.unico{
+  color: #0c4a52;
+  margin: 1%;
+  font-size: 1.1rem;
 }
 
-.contatoForm button{
-  margin: 1%;
+.unico input{
+  width: 100%;
   padding: 5px;
+  border: 1px solid #0c4a52;
+  border-radius: 5px;
+}
+
+.duplo{
+  color: #0c4a52;
+  margin: 1%;
+  font-size: 1.1rem;
+}
+
+.duplo input{
+  width: 40%;
+  border: 1px solid #0c4a52;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button{
+  color: #fffaeb;
   background-color: #0c4a52;
   border-radius: 5px;
+}
+
+.unicoCom{
+  color: #0c4a52;
+  margin: 1%;
+  font-size: 1.1rem;
+}
+
+.unicoCom input{
+  width: 100%;
+  border: 1px solid #0c4a52;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button:hover{
+  transition: 0.5s;
+  font-size: 1.2rem;
 }

@@ -142,11 +142,12 @@ body::-webkit-scrollbar {
   height: 100vh;
   padding: 80px 24px 28px;
   transform: translateX(-100%);
-  background: rgba(255, 251, 234, 0.96);
+  background: rgba(255, 251, 234, 0.76);
   color: var(--corTexto);
   transition: transform 0.4s ease-in-out;
   overflow-y: auto;
   z-index: 999;
+  backdrop-filter: blur(10px);
 }
 
 .navMenu.isActive {
@@ -165,6 +166,11 @@ body::-webkit-scrollbar {
   flex-direction: column;
   gap: 14px;
   list-style: none;
+}
+
+.navimg{
+  background-color: #fcfcfc;
+  border-radius: 10px;
 }
 
 .navRotulo {
@@ -853,13 +859,18 @@ section {
     width: 180px;
   }
 
+  .navMenu{
+    width: 35%;
+    overflow: hidden;
+  }
+
   .navMenuConteudo {
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     width: 90%;
     max-width: 1450px;
     margin: auto 0 auto 5vw;
-    gap: 0;
+    gap: 90px;
   }
 
   .navMenuConteudo > ul {
@@ -868,14 +879,12 @@ section {
 
   .navLinks {
     flex: 1.6;
-    padding-right: clamp(40px, 6vw, 110px);
-    border-right: 1px solid rgba(224, 169, 74, 0.55);
   }
 
   .navBtns {
     min-height: 380px;
     flex: 1;
-    padding-left: clamp(40px, 6vw, 110px);
+    flex-direction: row;
   }
 
   .navFrase {

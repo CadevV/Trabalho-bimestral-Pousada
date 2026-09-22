@@ -801,13 +801,18 @@ main{
     width: 150px;
   }
 
+  .navMenu{
+    width: 35%;
+    overflow: hidden;
+  }
+
   .navMenuConteudo {
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     width: 90%;
     max-width: 1450px;
     margin: auto 0 auto 5vw;
-    gap: 0;
+    gap: 90px;
   }
 
   .navMenuConteudo > ul {
@@ -816,14 +821,12 @@ main{
 
   .navLinks {
     flex: 1.6;
-    padding-right: clamp(40px, 6vw, 110px);
-    border-right: 1px solid rgba(224, 169, 74, 0.55);
   }
 
   .navBtns {
     min-height: 380px;
     flex: 1;
-    padding-left: clamp(40px, 6vw, 110px);
+    flex-direction: row;
   }
 
   .navFrase {
