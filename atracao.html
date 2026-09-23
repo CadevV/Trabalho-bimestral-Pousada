@@ -76,11 +76,13 @@
             />
           </picture>
         </nav>
+
       </div>
     </header>
 
     <main>
-      <section class="atracoesExternasSecao">
+      <h1 class="tituloAcessivel">Atrações da Pousada Pôr do Sol</h1>
+      <section class="atracoesExternasSecao" id="atracoesExternas">
         <div class="secaoTitulo">
           <h2>Atrações externas</h2>
           <p>
@@ -103,11 +105,6 @@
 
             <figure class="atracaoExternaImagem">
               <img src="images/atracao-atins.jpg" alt="Paisagem de Atins" />
-              <figcaption>
-                <a href="https://commons.wikimedia.org/wiki/File:Atins.jpg" target="_blank" rel="noopener noreferrer">
-                  Foto: JKB fotos / Wikimedia Commons
-                </a>
-              </figcaption>
             </figure>
           </article>
 
@@ -123,11 +120,6 @@
 
             <figure class="atracaoExternaImagem">
               <img src="images/atracao-mandacaru.jpg" alt="Farol de Mandacaru" />
-              <figcaption>
-                <a href="https://commons.wikimedia.org/wiki/File:Mandacaru.jpg" target="_blank" rel="noopener noreferrer">
-                  Foto: Bronsky707 / Wikimedia Commons
-                </a>
-              </figcaption>
             </figure>
           </article>
 
@@ -143,11 +135,6 @@
 
             <figure class="atracaoExternaImagem">
               <img src="images/atracao-pequenos-lencois.jpg" alt="Dunas dos Pequenos Lençóis" />
-              <figcaption>
-                <a href="https://commons.wikimedia.org/wiki/File:Pequenos_len%C3%A7%C3%B3is_maranhenses_-_christof_assing_(10).jpg" target="_blank" rel="noopener noreferrer">
-                  Foto: Christof Assing / Wikimedia Commons
-                </a>
-              </figcaption>
             </figure>
           </article>
 
@@ -163,11 +150,6 @@
 
             <figure class="atracaoExternaImagem">
               <img src="images/atracao-rio-preguicas.jpg" alt="Rio Preguiças em Barreirinhas" />
-              <figcaption>
-                <a href="https://commons.wikimedia.org/wiki/File:Rio_Pregui%C3%A7as_no_Barreirinhas_2.jpg" target="_blank" rel="noopener noreferrer">
-                  Foto: Johan Fredriksson / Wikimedia Commons
-                </a>
-              </figcaption>
             </figure>
           </article>
         </div>
@@ -305,6 +287,71 @@
         </div>
       </section>
 
+      <section class="experienciasSecao">
+        <div class="secaoTitulo">
+          <span class="subtitulo">PARA CADA MOMENTO</span>
+          <h2>Experiências durante a estadia</h2>
+          <p>
+            Combine natureza, descanso e sabores regionais no seu próprio
+            ritmo.
+          </p>
+        </div>
+
+        <div class="experienciasLista">
+          <article class="experienciaItem">
+            <img
+              src="images/experiencia-piscina.jpg"
+              alt="Piscina ao ar livre ao entardecer"
+              loading="lazy"
+            />
+            <div class="experienciaTexto">
+              <span>DESCANSO</span>
+              <h3>Pausa à beira da piscina</h3>
+              <p>Um intervalo tranquilo entre um passeio e outro.</p>
+            </div>
+          </article>
+
+          <article class="experienciaItem">
+            <img
+              src="images/experiencia-restaurante.jpg"
+              alt="Refeição de frutos do mar servida à mesa"
+              loading="lazy"
+            />
+            <div class="experienciaTexto">
+              <span>SABORES</span>
+              <h3>Cozinha que acolhe</h3>
+              <p>Refeições para aproveitar sem pressa durante a estadia.</p>
+            </div>
+          </article>
+
+          <article class="experienciaItem">
+            <img
+              src="images/experiencia-sauna.jpg"
+              alt="Interior de uma sauna com bancos de madeira"
+              loading="lazy"
+            />
+            <div class="experienciaTexto">
+              <span>BEM-ESTAR</span>
+              <h3>Tempo para relaxar</h3>
+              <p>Conforto para recuperar as energias ao final do dia.</p>
+            </div>
+          </article>
+
+          <article class="experienciaItem">
+            <img
+              src="images/experiencia-lencois.jpg"
+              alt="Dunas e lagoa dos Lençóis Maranhenses"
+              loading="lazy"
+            />
+            <div class="experienciaTexto">
+              <span>NATUREZA</span>
+              <h3>Paisagens para guardar</h3>
+              <p>Cenários únicos que fazem parte de cada roteiro pela região.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="regiaoDestaque">
         <div class="regiaoOverlay">
           <span class="subtitulo">SOBRE A REGIÃO</span>
@@ -330,11 +377,19 @@
           <div class="passeioVideoBox">
             <video
               src="videos/15393682_1920_1080_30fps.mp4"
+              poster="images/passeio-buggy-mobile.jpg"
               controls
               muted
               loop
               playsinline
+              preload="none"
             ></video>
+            <img
+              class="passeioImagemMobile"
+              src="images/passeio-buggy-mobile.jpg"
+              alt="Veículo de passeio nas dunas dos Lençóis Maranhenses"
+              loading="lazy"
+            />
           </div>
 
           <div class="passeioTexto">
@@ -350,11 +405,19 @@
           <div class="passeioVideoBox">
             <video
               src="videos/aviao.mp4"
+              poster="images/passeio-sobrevoo-mobile.jpg"
               controls
               muted
               loop
               playsinline
+              preload="none"
             ></video>
+            <img
+              class="passeioImagemMobile"
+              src="images/passeio-sobrevoo-mobile.jpg"
+              alt="Dunas dos Lençóis Maranhenses vistas do alto"
+              loading="lazy"
+            />
           </div>
 
           <div class="passeioTexto">
@@ -370,11 +433,19 @@
           <div class="passeioVideoBox">
             <video
               src="videos/backgroundVideo.mp4"
+              poster="images/passeio-historico-mobile.jpg"
               controls
               muted
               loop
               playsinline
+              preload="none"
             ></video>
+            <img
+              class="passeioImagemMobile"
+              src="images/passeio-historico-mobile.jpg"
+              alt="Cabana tradicional de pescadores na região dos Lençóis"
+              loading="lazy"
+            />
           </div>
 
           <div class="passeioTexto">
@@ -390,11 +461,19 @@
           <div class="passeioVideoBox">
             <video
               src="videos/2728086-hd_1920_1080_30fps.mp4"
+              poster="images/passeio-lagoa-azul-mobile.jpg"
               controls
               muted
               loop
               playsinline
+              preload="none"
             ></video>
+            <img
+              class="passeioImagemMobile"
+              src="images/passeio-lagoa-azul-mobile.jpg"
+              alt="Lagoa Azul entre as dunas dos Lençóis Maranhenses"
+              loading="lazy"
+            />
           </div>
 
           <div class="passeioTexto">
@@ -485,6 +564,7 @@
           </div>
         </div>
       </section>
+
     </main>
 
     <footer class="footer">
