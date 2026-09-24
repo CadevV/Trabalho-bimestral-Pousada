@@ -1,0 +1,661 @@
+:root {
+  --corPrimaria: #0f5c66;
+  --corPrimariaEscura: #0c4a52;
+  --corDourada: #e0a94a;
+  --corTexto: #8a7654;
+  --corErro: #c1440e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fffaeb;
+}
+
+body.quartoModalAberto {
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.headerMain {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-image: url(../images/suite.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.headerOverlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+}
+
+.navMain {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1s;
+}
+
+.navMenuBox,
+.reservaBox {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+}
+
+.navLogo {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.navLogoImg {
+  width: 90px;
+  margin: 3%;
+}
+
+.navScrolled {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.navScrolled img {
+  width: 70px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btnMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btnMenu span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+}
+
+.navMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  height: 100vh;
+  padding: 80px 24px 28px;
+  transform: translateX(-100%);
+  background: rgba(255, 251, 234, 0.96);
+  color: var(--corTexto);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.navMenu.isActive {
+  transform: translateX(0);
+}
+
+.navMenuConteudo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 36px;
+}
+
+.navMenu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  list-style: none;
+}
+
+.navRotulo {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--corDourada);
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.navBtns button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: transparent;
+  color: var(--corPrimaria);
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navLinks a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: clamp(14px, 2vw, 28px);
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  color: var(--corPrimaria);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--corDourada);
+  transition: width 0.3s ease;
+}
+
+.navNumero {
+  min-width: 24px;
+  color: var(--corTexto);
+  font-size: 0.75rem;
+  opacity: 0.65;
+  transition: 0.3s;
+}
+
+.navFrase {
+  margin-top: 20px;
+  color: var(--corTexto);
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+.navLinks a:hover,
+.navBtns button:hover {
+  color: var(--corDourada);
+  transform: translateX(10px);
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.navLinks a:hover .navNumero {
+  color: var(--corDourada);
+  opacity: 1;
+}
+
+.navAssinatura {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  color: var(--corTexto);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  opacity: 0.65;
+}
+
+.btnMenuFechar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--corPrimaria);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--corPrimaria);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnMenuFechar:hover {
+  border-color: var(--corErro);
+  color: var(--corErro);
+  transform: rotate(90deg);
+}
+
+.secaoTitulo {
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.secaoTitulo h1 {
+  color: var(--corPrimaria);
+}
+
+.secaoTitulo p {
+  color: var(--corTexto);
+}
+
+.navAcomodacoes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.quartosSecao {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 1%;
+}
+
+.acomodacoesNav {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--corPrimaria);
+  border-radius: 10px;
+}
+
+.acomodacoesNav h2 {
+  color: var(--corDourada);
+  font-size: 22px;
+}
+
+.btnFiltroQuarto {
+  border: 1px solid var(--corPrimaria);
+  border-radius: 5px;
+  color: var(--corPrimaria);
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.btnFiltroQuarto span {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--corPrimaria);
+  color: white;
+}
+
+.btnFiltroQuarto:hover {
+  border: 1px solid var(--corDourada);
+  color: var(--corDourada);
+}
+
+.btnFiltroQuarto.isActive {
+  border: 2px solid var(--corDourada);
+  color: var(--corDourada);
+}
+
+.quartosLista {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 15px;
+  justify-content: center;
+}
+
+.quartoBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--corPrimaria);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.quartoBox img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.quartoBox h3 {
+  margin-top: 10px;
+}
+
+.quartoBox p {
+  padding: 10px;
+  text-align: center;
+}
+
+.btnQuartoInfo {
+  margin: 10px;
+  padding: 10px 20px;
+  background: var(--corPrimaria);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnQuartoInfo:hover {
+  background: var(--corDourada);
+}
+
+.quartoModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.quartoModal.isActive {
+  display: flex;
+}
+
+.quartoModalConteudo {
+  background: #fffaeb;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quartoModalConteudo div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quartoModalConteudo div button {
+  background-color: var(--corPrimaria);
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.quartoModalConteudo div button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btnQuartoModalFechar {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--corPrimariaEscura);
+}
+
+.quartoModalImagem {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.quartoModalTitulo {
+  font-size: 1.3rem;
+  color: var(--corPrimariaEscura);
+}
+
+.quartoModalDescricao {
+  font-size: 0.95rem;
+  color: var(--corTexto);
+  line-height: 1.4;
+}
+
+.quartoModalPreco {
+  font-weight: bold;
+  color: var(--corDourada);
+  font-size: 1.1rem;
+}
+
+.quartoFamilia.isHidden,
+.quartoCasal.isHidden {
+  display: none;
+}
+
+.footer {
+  background-color: var(--corPrimaria);
+  border-top: 3px solid var(--corDourada);
+  padding: 40px 20px 20px;
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footerMarca h2 {
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.footerMarca p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-top: 8px;
+  max-width: 280px;
+}
+
+.footerColuna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footerColuna h3 {
+  color: var(--corDourada);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footerLink {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.footerLink:hover {
+  color: var(--corDourada);
+}
+
+.footerRedes {
+  display: flex;
+  gap: 12px;
+}
+
+.footerRedes .btnRedeSocial {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footerRedes .btnRedeSocial:hover {
+  background: var(--corDourada);
+  border-color: var(--corDourada);
+  color: var(--corPrimaria);
+}
+
+.footerBase {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footerBase p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .navMain {
+    padding: 0 40px;
+  }
+
+  .navMenuBox,
+  .reservaBox {
+    width: 180px;
+  }
+
+  .navLogoImg {
+    width: 150px;
+  }
+  .navMenu{
+    width: 35%;
+    overflow: hidden;
+  }
+
+  .navMenuConteudo {
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+    max-width: 1450px;
+    margin: auto 0 auto 5vw;
+    gap: 90px;
+  }
+
+  .navMenuConteudo > ul {
+    width: auto;
+  }
+
+  .navLinks {
+    flex: 1.6;
+  }
+
+  .navBtns {
+    min-height: 380px;
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .navFrase {
+    margin-top: auto;
+  }
+
+  .navAssinatura {
+    position: absolute;
+    bottom: 28px;
+    left: 5vw;
+    margin-top: 0;
+  }
+
+  .quartosSecao {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .acomodacoesNav {
+    width: 80%;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .btnFiltroQuarto {
+    width: 20%;
+    font-size: 1.1rem;
+  }
+
+  .quartoBox {
+    width: 40%;
+  }
+
+  .footerTop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footerMarca {
+    max-width: 280px;
+  }
+
+  .footerColuna {
+    align-items: flex-start;
+  }
+}
