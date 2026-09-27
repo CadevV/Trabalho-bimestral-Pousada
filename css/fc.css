@@ -33,16 +33,17 @@ body::-webkit-scrollbar {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(../images/backatra.jpg);
+  background-image: url(../images/atracao-pequenos-lencois.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .headerOverlay {
-  width: 100%;
+  position: relative;
+  background: rgba(0, 100, 100, 9);
+  width: 52%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
   color: white;
 }
 
@@ -290,10 +291,14 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: absolute;
+  gap: 200px;
+  top: 10%;
+  right: 5%;
 }
 
 .contatoForm{
-  width: 35%;
+  width: 70%;
   border: 1px solid #0c4a52;
   border-radius: 10px;
   display: flex;
@@ -301,6 +306,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+  backdrop-filter: blur(10px);
 }
 
 .contatoForm h1{
@@ -309,7 +315,7 @@ body::-webkit-scrollbar {
 }
 
 .unico{
-  color: var(--corErro);
+  color: var(--corPrimaria);
   margin: 1%;
   font-size: 1.1rem;
 }
@@ -323,7 +329,7 @@ body::-webkit-scrollbar {
 }
 
 .duplo{
-  color: var(--corErro);
+  color: var(--corPrimaria);
   margin: 1%;
   font-size: 1.1rem;
 }
@@ -338,7 +344,7 @@ body::-webkit-scrollbar {
 
 #comentario{
   width: 100%;
-  height: 10vh;
+  height: 15vh;
   padding: 5px;
   resize: none;
   border-radius: 5px;
@@ -348,10 +354,11 @@ button{
   color: #fffaeb;
   background-color: #0c4a52;
   border-radius: 5px;
+  border: 1px solid #0c4a52;
 }
 
 .unicoCom{
-  color: var(--corErro);
+  color: var(--corPrimaria);
   margin: 1%;
   font-size: 1.1rem;
 }
@@ -369,6 +376,7 @@ button:hover{
 }
 
 .escolhaForm{
+  width: 50%;
   border: 1px solid var(--corPrimariaEscura);
   padding: 20px;
   display: flex;
@@ -377,7 +385,7 @@ button:hover{
   flex-direction: column;
   border-radius: 10px;
   gap: 25px;
-  backdrop-filter: blur(10px);
+  color: #fffaeb;
 }
 
 .escolhaForm h2{
@@ -389,4 +397,11 @@ button:hover{
  display: flex;
  flex-direction: row;
  gap: 10px;
+}
+
+.unicoEscolha{
+  width: 100%;
+  font-size: 1.1rem;
+  color: var(--corPrimaria);
+  border-radius: 5px;
 }

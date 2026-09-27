@@ -74,38 +74,61 @@
             />
           </picture>
         </nav>
+      </div>
+
         <section class="contatoFormSecao">
-          <div>
             <form action="" method="post" class="escolhaForm">
               <h2>Escolha sobre o que deseja falar</h2>
-            <div class="escolhaDecisao">
-              <input type="checkbox"> <span>Atrações</span>
-              <input type="checkbox"> <span>Acomodações</span>
-              <input type="checkbox"> <span>Home</span>
-              <input type="checkbox"> <span>Outro</span>
-            </div>
-            <button type="submit">Selecionar</button>
+
+                <div class="escolhaDecisao">
+                  <input type="checkbox"> <span>Atrações</span>
+                  <input type="checkbox"> <span>Acomodações</span>
+                  <input type="checkbox"> <span>Home</span>
+                  <input type="checkbox"> <span>Outro</span>
+                </div>
+
+              <h2>Escolha uma nova experiência:</h2>
+              
+              <div>
+                <select name="" id="" class="unicoEscolha">
+                  <option value="">Acomodações</a></option>
+                  <option value="">Atrações</option>
+                  <option value="">Alugar</option>
+                </select>
+                
+              </div>
+              <button type="submit">Selecionar</button>
             </form>
-          </div>
 
           <form action="" method="post" class="contatoForm">
             <h1>Fale conosco!</h1>
+
             <div class="unico">
-              <label for="">Nome</label>
-              <input type="text" placeholder="Seu nome aqui">
+              <label for="">Primeiro nome</label>
+              <input type="text" placeholder="Ex: Carlos">
+            </div>
+
+            <div class="unico">
+              <label for="">Segundo nome</label>
+              <input type="text" placeholder="Ex: Silva">
             </div>
 
             <div class="unico">
               <label for="">Email</label>
-              <input type="email" placeholder="seuEmail@gmail.com">
+              <input type="email" placeholder="Ex: Email@gmail.com">
+            </div>
+
+            <div class="unico">
+              <label for="">Data de nascimento</label>
+              <input type="date">
             </div>
 
             <div class="duplo">
               <label for="">Telefone</label>
-              <input type="tel" placeholder="99999-9999">
+              <input type="tel" placeholder="Ex: 99999-9999">
 
               <label for="">CPF</label>
-              <input type="number" placeholder="111.111.111-11">
+              <input type="number" placeholder="Ex: 111.111.111-11">
             </div>
 
             <div class="unicoCom">
@@ -115,15 +138,10 @@
 
             <button type="submit">Enviar</button>
           </form>
-        </div>
       </section>
-      </div>
     </header>
 
-    <main>
-
-    </main>
-    
     <script src="js/fc.js"></script>
+
 </body>
 </html>
