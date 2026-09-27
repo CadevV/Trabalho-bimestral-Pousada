@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
 .headerMain {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   background-image: url(../images/backatra.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,7 +42,7 @@ body::-webkit-scrollbar {
 .headerOverlay {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
 }
 
@@ -258,6 +258,10 @@ body::-webkit-scrollbar {
     gap: 0;
   }
 
+  .navMenuConteudo > ul {
+    width: auto;
+  }
+
   .navLinks {
     flex: 1.6;
     padding-right: clamp(40px, 6vw, 110px);
@@ -284,7 +288,7 @@ body::-webkit-scrollbar {
 
 .contatoFormSecao{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -299,30 +303,45 @@ body::-webkit-scrollbar {
   padding: 10px;
 }
 
+.contatoForm h1{
+  color: var(--corDourada);
+  font-size: 2.2rem;
+}
+
 .unico{
-  color: #0c4a52;
+  color: var(--corErro);
   margin: 1%;
   font-size: 1.1rem;
 }
 
 .unico input{
   width: 100%;
+  height: 5vh;
   padding: 5px;
   border: 1px solid #0c4a52;
   border-radius: 5px;
 }
 
 .duplo{
-  color: #0c4a52;
+  color: var(--corErro);
   margin: 1%;
   font-size: 1.1rem;
 }
 
 .duplo input{
   width: 40%;
+  height: 5vh;
   border: 1px solid #0c4a52;
   border-radius: 5px;
   padding: 5px;
+}
+
+#comentario{
+  width: 100%;
+  height: 10vh;
+  padding: 5px;
+  resize: none;
+  border-radius: 5px;
 }
 
 button{
@@ -332,7 +351,7 @@ button{
 }
 
 .unicoCom{
-  color: #0c4a52;
+  color: var(--corErro);
   margin: 1%;
   font-size: 1.1rem;
 }
@@ -349,112 +368,25 @@ button:hover{
   font-size: 1.2rem;
 }
 
-.footer {
-  margin-top: 40px;
-  padding: 40px 20px 20px;
-  background-color: var(--corPrimaria);
-  border-top: 3px solid var(--corDourada);
-}
-
-.footerTop {
+.escolhaForm{
+  border: 1px solid var(--corPrimariaEscura);
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.footerMarca h2 {
-  color: #ffffff;
-  font-size: 1.4rem;
-}
-
-.footerMarca p {
-  max-width: 280px;
-  margin-top: 8px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.footerColuna {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.footerColuna h3 {
-  color: var(--corDourada);
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.footerLink {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footerLink:hover {
-  color: var(--corDourada);
-}
-
-.footerRedes {
-  display: flex;
-  gap: 12px;
-}
-
-.footerRedes .btnRedeSocial {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  background: transparent;
-  color: #ffffff;
-  cursor: pointer;
-  transition: 0.3s;
+  align-items: right;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 25px;
+  backdrop-filter: blur(10px);
 }
 
-.footerRedes .btnRedeSocial:hover {
-  background: var(--corDourada);
-  border-color: var(--corDourada);
-  color: var(--corPrimaria);
-  transform: translateY(-3px);
+.escolhaForm h2{
+  color: var(--corDourada);
+  font-size: 2.2rem;
 }
 
-.footerBase {
-  margin-top: 30px;
-  padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  text-align: center;
-}
-
-.footerBase p {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8rem;
-}
-
-@media (min-width: 769px) {
-  .footerTop {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  .footerMarca {
-    max-width: 280px;
-  }
-
-  .footerColuna {
-    align-items: flex-start;
-  }
+.escolhaDecisao{
+ display: flex;
+ flex-direction: row;
+ gap: 10px;
 }

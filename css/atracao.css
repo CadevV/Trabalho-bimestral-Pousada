@@ -370,6 +370,19 @@ main {
   padding: 36px 5% 20px;
 }
 
+.atracaoExternaItem:hover{
+  border: 2px solid var(--corPrimariaEscura);
+}
+
+.atracaoExternaItem img:hover{
+  transition: 0.5s;
+  width: 110%;
+}
+
+.atracaoItem:hover{
+  border: 2px solid var(--corPrimariaEscura);
+}
+
 .experienciasLista {
   display: flex;
   flex-wrap: wrap;
@@ -392,6 +405,11 @@ main {
   width: 100%;
   height: 220px;
   object-fit: cover;
+}
+
+.experienciaItem img:hover{
+  transition: 0.4s;
+  width: 110%;
 }
 
 .experienciaTexto {

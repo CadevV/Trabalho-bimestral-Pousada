@@ -60,6 +60,7 @@ body::-webkit-scrollbar {
 
 .navMenuBox,
 .reservaBox {
+  width: auto;
   display: flex;
   justify-content: center;
   width: 150px;
@@ -594,6 +595,10 @@ body::-webkit-scrollbar {
     max-width: 1450px;
     margin: auto 0 auto 5vw;
     gap: 90px;
+  }
+
+  .navMenuConteudo > ul {
+    width: auto;
   }
 
   .navLinks {
