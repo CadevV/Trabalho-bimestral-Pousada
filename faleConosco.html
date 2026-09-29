@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pousada Pôr do Sol | Fale Conosco</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/fc.css">
+
     <script
       src="https://kit.fontawesome.com/8bf2916310.js"
       crossorigin="anonymous"
@@ -12,136 +18,185 @@
 </head>
 <body>
     <header class="headerMain" id="inicio">
-      <div class="headerOverlay">
         <nav class="navMain">
-          <div class="navMenuBox">
-            <button class="btnMenu" aria-label="Abrir menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+            <div class="navMenuBox">
+                <button class="btnMenu" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-            <div class="navMenu">
-              <div class="navMenuConteudo">
-                <ul class="navLinks">
-                  <li><span class="navRotulo">Principais</span></li>
-                  <li><a href="index.html"><span class="navNumero">01</span>Home</a></li>
-                  <li><a href="acomodacoes.html"><span class="navNumero">02</span>Acomodações</a></li>
-                  <li><a href="atracao.html"><span class="navNumero">03</span>Atrações</a></li>
-                  <li><a href="faleConosco.html"><span class="navNumero">04</span>Fale conosco</a></li>
-                </ul>
+                <div class="navMenu">
+                    <div class="navMenuConteudo">
+                        <ul class="navLinks">
+                            <li><span class="navRotulo">Principais</span></li>
+                            <li><a href="index.html"><span class="navNumero">01</span>Home</a></li>
+                            <li><a href="acomodacoes.html"><span class="navNumero">02</span>Acomodações</a></li>
+                            <li><a href="atracao.html"><span class="navNumero">03</span>Atrações</a></li>
+                            <li><a href="faleConosco.html"><span class="navNumero">04</span>Fale conosco</a></li>
+                        </ul>
 
-                <ul class="navBtns">
-                  <li><span class="navRotulo">Pousada</span></li>
-                  <li>
-                    <button type="button" class="btnRedeSocial" data-url="https://www.instagram.com/">
-                      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                      <span>Instagram</span>
+                        <ul class="navBtns">
+                            <li><span class="navRotulo">Pousada</span></li>
+                            <li>
+                                <button type="button" class="btnRedeSocial" data-url="https://www.instagram.com/">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                    <span>Instagram</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btnRedeSocial" data-url="https://www.facebook.com/?locale=pt_BR">
+                                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                                    <span>Facebook</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btnRedeSocial" data-url="https://github.com/CadevV/Trabalho-bimestral-Pousada">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                    <span>GitHub</span>
+                                </button>
+                            </li>
+                            <li class="navFrase">Conforto, natureza<br>e experiências únicas.</li>
+                        </ul>
+                    </div>
+
+                    <div class="navAssinatura">
+                        <span>Pousada Pôr do Sol</span>
+                        <span>Lençóis Maranhenses</span>
+                    </div>
+
+                    <button type="button" class="btnMenuFechar" aria-label="Fechar menu">
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                     </button>
-                  </li>
-                  <li>
-                    <button type="button" class="btnRedeSocial" data-url="https://www.facebook.com/?locale=pt_BR">
-                      <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                      <span>Facebook</span>
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" class="btnRedeSocial" data-url="https://github.com/CadevV/Trabalho-bimestral-Pousada">
-                      <i class="fa-brands fa-github" aria-hidden="true"></i>
-                      <span>GitHub</span>
-                    </button>
-                  </li>
-                  <li class="navFrase">Conforto, natureza<br />e experiências únicas.</li>
-                </ul>
-              </div>
-
-              <div class="navAssinatura">
-                <span>Pousada Pôr do Sol</span>
-                <span>Lençóis Maranhenses</span>
-              </div>
-
-              <button type="button" class="btnMenuFechar" aria-label="Fechar menu">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-              </button>
-            </div>
-          </div>
-
-          <picture class="navLogo">
-            <img
-              src="images/Posada_por_do_Sol.png"
-              class="navLogoImg"
-              alt="Logo da Pousada Por do Sol"
-            />
-          </picture>
-        </nav>
-      </div>
-
-        <section class="contatoFormSecao">
-            <form action="" method="post" class="escolhaForm">
-              <h2>Escolha sobre o que deseja falar</h2>
-
-                <div class="escolhaDecisao">
-                  <input type="checkbox"> <span>Atrações</span>
-                  <input type="checkbox"> <span>Acomodações</span>
-                  <input type="checkbox"> <span>Home</span>
-                  <input type="checkbox"> <span>Outro</span>
                 </div>
-
-              <h2>Escolha uma nova experiência:</h2>
-              
-              <div>
-                <select name="" id="" class="unicoEscolha">
-                  <option value="">Acomodações</a></option>
-                  <option value="">Atrações</option>
-                  <option value="">Alugar</option>
-                </select>
-                
-              </div>
-              <button type="submit">Selecionar</button>
-            </form>
-
-          <form action="" method="post" class="contatoForm">
-            <h1>Fale conosco!</h1>
-
-            <div class="unico">
-              <label for="">Primeiro nome</label>
-              <input type="text" placeholder="Ex: Carlos">
             </div>
 
-            <div class="unico">
-              <label for="">Segundo nome</label>
-              <input type="text" placeholder="Ex: Silva">
-            </div>
-
-            <div class="unico">
-              <label for="">Email</label>
-              <input type="email" placeholder="Ex: Email@gmail.com">
-            </div>
-
-            <div class="unico">
-              <label for="">Data de nascimento</label>
-              <input type="date">
-            </div>
-
-            <div class="duplo">
-              <label for="">Telefone</label>
-              <input type="tel" placeholder="Ex: 99999-9999">
-
-              <label for="">CPF</label>
-              <input type="number" placeholder="Ex: 111.111.111-11">
-            </div>
-
-            <div class="unicoCom">
-              <label for="">Comentario:</label>
-              <textarea name="" id="comentario" placeholder="Escreva seu comentario aqui"></textarea>
-            </div>
-
-            <button type="submit">Enviar</button>
-          </form>
-      </section>
+            <picture class="navLogo">
+                <img
+                  src="images/Posada_por_do_Sol.png"
+                  class="navLogoImg"
+                  alt="Logo da Pousada Pôr do Sol"
+                >
+            </picture>
+        </nav>
     </header>
 
-    <script src="js/fc.js"></script>
+    <main class="mainContato">
+        <section class="contatoFormSecao">
+            <section class="infoContato">
+                <div class="introContato">
+                    <span class="tituloPequeno">Fale com a gente</span>
+                    <h1>Como podemos ajudar?</h1>
+                    <p>Marque os assuntos que deseja conversar e escolha o que mais combina com sua próxima experiência.</p>
+                </div>
 
+                <form class="escolhaForm">
+                    <div class="tituloEscolha">
+                        <h2>O que você quer saber?</h2>
+                        <p>Você pode marcar mais de uma opção.</p>
+                    </div>
+
+                    <div class="escolhaDecisao">
+                        <label class="opcaoContato">
+                            <input type="checkbox" name="assunto" value="atracoes">
+                            <span class="checkContato">
+                                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            </span>
+                            <span>Atrações</span>
+                        </label>
+
+                        <label class="opcaoContato">
+                            <input type="checkbox" name="assunto" value="acomodacoes">
+                            <span class="checkContato">
+                                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            </span>
+                            <span>Acomodações</span>
+                        </label>
+
+                        <label class="opcaoContato">
+                            <input type="checkbox" name="assunto" value="home">
+                            <span class="checkContato">
+                                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            </span>
+                            <span>Informações da pousada</span>
+                        </label>
+
+                        <label class="opcaoContato">
+                            <input type="checkbox" name="assunto" value="outro">
+                            <span class="checkContato">
+                                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            </span>
+                            <span>Outro</span>
+                        </label>
+                    </div>
+
+                    <div class="campoEscolha">
+                        <label for="experienciaContato">Experiência de interesse</label>
+                        <select id="experienciaContato" name="experiencia">
+                            <option value="">Selecione uma opção</option>
+                            <option value="acomodacoes">Acomodações</option>
+                            <option value="atracoes">Atrações</option>
+                            <option value="reserva">Reserva</option>
+                        </select>
+                    </div>
+                </form>
+            </section>
+
+            <section class="contForm">
+                <form action="" method="post" class="contatoForm" autocomplete="off">
+                    <div class="tituloForm">
+                        <span class="tituloPequeno">Contato</span>
+                        <h2>Fale conosco!</h2>
+                        <p>Preencha os dados abaixo e escreva sua mensagem.</p>
+                    </div>
+
+                    <div class="linhaForm">
+                        <div class="campoContato">
+                            <label for="nomeContato">Primeiro nome</label>
+                            <input type="text" id="nomeContato" name="nome" placeholder="Ex: Carlos" required>
+                        </div>
+
+                        <div class="campoContato">
+                            <label for="sobrenomeContato">Segundo nome</label>
+                            <input type="text" id="sobrenomeContato" name="sobrenome" placeholder="Ex: Silva" required>
+                        </div>
+                    </div>
+
+                    <div class="campoContato">
+                        <label for="emailContato">E-mail</label>
+                        <input type="email" id="emailContato" name="email" placeholder="Ex: email@gmail.com" required>
+                    </div>
+
+                    <div class="linhaForm">
+                        <div class="campoContato">
+                            <label for="telefoneContato">Telefone</label>
+                            <input type="tel" id="telefoneContato" name="telefone" placeholder="Ex: (98) 99999-9999">
+                        </div>
+
+                        <div class="campoContato">
+                            <label for="dataNascimentoContato">Data de nascimento</label>
+                            <input type="date" id="dataNascimentoContato" name="dataNascimento">
+                        </div>
+                    </div>
+
+                    <div class="campoContato">
+                        <label for="cpfContato">CPF</label>
+                        <input type="text" id="cpfContato" name="cpf" inputmode="numeric" maxlength="14" placeholder="Ex: 111.111.111-11">
+                    </div>
+
+                    <div class="campoContato">
+                        <label for="comentario">Mensagem</label>
+                        <textarea id="comentario" name="comentario" maxlength="600" placeholder="Escreva sua mensagem aqui" required></textarea>
+                    </div>
+
+                    <button type="submit" id="btnEnviarContato">Enviar mensagem</button>
+
+                    <div class="feedbackContato" aria-live="polite"></div>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <script src="js/fc.js"></script>
 </body>
 </html>
