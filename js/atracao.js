@@ -5,6 +5,7 @@ const btnRedeSocial = document.querySelectorAll(".btnRedeSocial");
 const btnPrograma = document.querySelectorAll(".btnPrograma");
 const textoPrograma = document.querySelectorAll(".programacaoTexto");
 
+
 btnMenu.addEventListener("click", () => {
   navMenu.classList.add("isActive");
 });
