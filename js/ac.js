@@ -2,7 +2,7 @@ const quartosModal = [
   {
     dataId: "1",
     nome: "Quarto de Casal Econômico",
-    img: "images/quartoCasal.jfif",
+    img: "images/quarto-casal-economico.webp",
     descricao:
       "Opção mais em conta pra casais, com o essencial pra uma estadia confortável.",
     preco: 250,
@@ -10,7 +10,7 @@ const quartosModal = [
   {
     dataId: "2",
     nome: "Quarto Família com Varanda",
-    img: "images/quartoFamilia.webp",
+    img: "images/quarto-familia-varanda.webp",
     descricao:
       "Varanda privativa com vista pro jardim, ótimo pra relaxar em família.",
     preco: 450,
@@ -18,14 +18,14 @@ const quartosModal = [
   {
     dataId: "3",
     nome: "Quarto de Casal Vista Pôr do Sol",
-    img: "images/quartoSuite.webp",
+    img: "images/quarto-casal-por-do-sol.webp",
     descricao: "Posição privilegiada pra ver o pôr do sol direto da cama.",
     preco: 380,
   },
   {
     dataId: "4",
     nome: "Quarto Família Térreo",
-    img: "images/quartoFamilia.webp",
+    img: "images/quarto-familia-terreo.webp",
     descricao:
       "Acesso fácil sem escadas, ideal pra famílias com crianças pequenas ou idosos.",
     preco: 400,
@@ -33,63 +33,63 @@ const quartosModal = [
   {
     dataId: "5",
     nome: "Quarto de Casal Standard",
-    img: "images/quartoCasal.jfif",
+    img: "images/quarto-casal-standard.webp",
     descricao: "Conforto e privacidade pra dois, com cama de casal e varanda.",
     preco: 300,
   },
   {
     dataId: "6",
     nome: "Quarto de Casal Vista Lagoa",
-    img: "images/quartoCasal.jfif",
+    img: "images/quarto-casal-vista-lagoa.webp",
     descricao: "Mesmo conforto do standard, com vista privilegiada pra lagoa.",
     preco: 340,
   },
   {
     dataId: "7",
     nome: "Suíte de Casal Luxo",
-    img: "images/quartoSuite.webp",
+    img: "images/suite-casal-luxo.webp",
     descricao: "Banheira, varanda duplex e vista para as dunas ao amanhecer.",
     preco: 600,
   },
   {
     dataId: "8",
     nome: "Quarto de Casal Romântico",
-    img: "images/quartoCasal.jfif",
+    img: "images/quarto-casal-romantico.webp",
     descricao: "Ambiente intimista, perfeito pra lua de mel ou aniversário.",
     preco: 420,
   },
   {
     dataId: "9",
     nome: "Suíte de Casal Vista Dunas",
-    img: "images/quartoSuite.webp",
+    img: "images/suite-casal-vista-dunas.webp",
     descricao: "Janelas amplas de frente pras dunas, ideal ao nascer do sol.",
     preco: 650,
   },
   {
     dataId: "10",
     nome: "Quarto Família Standard",
-    img: "images/quartoFamilia.webp",
+    img: "images/quarto-familia-standard.webp",
     descricao: "Espaço amplo com duas camas de casal, perfeito pra famílias.",
     preco: 480,
   },
   {
     dataId: "11",
     nome: "Quarto Família Premium",
-    img: "images/quartoFamilia.webp",
+    img: "images/quarto-familia-premium.webp",
     descricao: "Área de estar extra e frigobar, pra quem viaja em grupo maior.",
     preco: 580,
   },
   {
     dataId: "12",
     nome: "Quarto Família Vista Dunas",
-    img: "images/quartoFamilia.webp",
+    img: "images/quarto-familia-vista-dunas.webp",
     descricao: "Mesmo espaço do standard, com janelas voltadas pras dunas.",
     preco: 520,
   },
   {
     dataId: "13",
     nome: "Quarto Família Econômico",
-    img: "images/quartoCompartilhado.webp",
+    img: "images/quarto-familia-economico.webp",
     descricao:
       "Opção mais em conta, com o essencial pra receber toda a família.",
     preco: 350,
@@ -97,7 +97,7 @@ const quartosModal = [
   {
     dataId: "14",
     nome: "Quarto Família Ampliado",
-    img: "images/quartoCompartilhado.webp",
+    img: "images/quarto-familia-ampliado.webp",
     descricao:
       "Camas extras disponíveis, ideal pra grupos maiores de parentes.",
     preco: 550,
