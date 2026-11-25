@@ -123,11 +123,16 @@ const quartoModalImagem = document.querySelector(".quartoModalImagem");
 const quartoModalTitulo = document.querySelector(".quartoModalTitulo");
 const quartoModalDescricao = document.querySelector(".quartoModalDescricao");
 const quartoModalPreco = document.querySelector(".quartoModalPreco");
+const btnAlugar = document.getElementById("btnAlugar")
 
 function atualizarQuartos() {
   filtroTotalNumero.textContent = quartosFamilia.length + quartosCasal.length;
   filtroCasalNumero.textContent = quartosCasal.length;
   filtroFamiliaNumero.textContent = quartosFamilia.length;
+}
+
+function redirecionar(){
+  window.location.href = "./faleConosco.html"
 }
 
 btnRedeSocial.forEach(element => {
@@ -206,5 +211,7 @@ btnQuartoModalFechar.addEventListener("click", () => {
   modalAc.classList.remove("isActive");
   document.body.classList.remove("quartoModalAberto");
 });
+
+btnAlugar.addEventListener('click', redirecionar)
 
 atualizarQuartos();

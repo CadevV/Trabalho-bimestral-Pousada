@@ -232,7 +232,6 @@ body::-webkit-scrollbar{
     border: 1px solid var(--borda);
     box-shadow: 0 20px 45px rgba(12, 74, 82, .14);
     background: rgba(255, 255, 255, .68);
-    backdrop-filter: blur(12px);
 }
 
 .infoContato{
@@ -416,6 +415,7 @@ body::-webkit-scrollbar{
 }
 
 .campoContato input,
+.campoContato select,
 .campoContato textarea{
     width: 100%;
     padding: 12px;
@@ -429,6 +429,7 @@ body::-webkit-scrollbar{
 }
 
 .campoContato input:focus,
+.campoContato select:focus,
 .campoContato textarea:focus{
     border-color: var(--corDourada);
     box-shadow: 0 0 0 3px rgba(224,169,74,.12);
@@ -450,7 +451,12 @@ body::-webkit-scrollbar{
     justify-content: space-between;
 }
 
-.btnEnviarContato, .btnHistorico{
+#duvida .btns{
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btnEnviarContato, .btnHistorico, #btnOrcamento{
     align-self: flex-start;
     padding: 12px 22px;
     border: none;
@@ -464,7 +470,7 @@ body::-webkit-scrollbar{
     box-shadow: 2px 2px 0 var(--corDourada);
 }
 
-.btnEnviarContato:hover, .btnHistorico:hover{
+.btnEnviarContato:hover, .btnHistorico:hover, #btnOrcamento:hover{
     transform: translateY(2px);
     box-shadow: none;
     background: var(--corPrimaria);
@@ -481,6 +487,7 @@ body::-webkit-scrollbar{
     width: 100%;
     height: 100vh;
     backdrop-filter: blur(5px);
+    z-index: 1000;
 }
 
 .modalHistorico.active{
@@ -514,12 +521,13 @@ body::-webkit-scrollbar{
     align-items: center;
     flex-direction: column;
     width: 70%;
+    max-width: 800px;
     height: 60vh;
     background: var(--corPrimaria);
     border-radius: 10px;
     color: var(--corBranca);
     overflow: auto;
-    padding: 5px;
+    padding: 50px 5px 10px;
 }
 
 .pergunta{
@@ -567,41 +575,7 @@ body::-webkit-scrollbar{
       }
       .navMenu{
         width: 35%;
-        overflow: hidden;
-      }
-    
-      .navMenuConteudo {
-        flex-direction: column;
-        align-items: stretch;
-        width: 90%;
-        max-width: 1450px;
-        margin: auto 0 auto 5vw;
-        gap: 90px;
-      }
-    
-      .navMenuConteudo > ul {
-        width: auto;
-      }
-    
-      .navLinks {
-        flex: 1.6;
-      }
-    
-      .navBtns {
-        min-height: 380px;
-        flex: 1;
-        flex-direction: row;
-      }
-    
-      .navFrase {
-        margin-top: auto;
-      }
-    
-      .navAssinatura {
-        position: absolute;
-        bottom: 28px;
-        left: 5vw;
-        margin-top: 0;
+        min-width: 350px;
       }
     
       .quartosSecao {
@@ -684,7 +658,15 @@ body::-webkit-scrollbar{
         padding: 30px 22px;
     }
 
-    .btnEnviarContato{
+    #duvida .btns button{
+        flex: 1 1 auto;
+    }
+
+    #btnOrcamento{
         width: 100%;
+    }
+
+    .contModal{
+        width: 90%;
     }
 }

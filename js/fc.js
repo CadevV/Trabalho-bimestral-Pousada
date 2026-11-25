@@ -2,14 +2,17 @@ const btnMenu = document.querySelector('.btnMenu')
 const btnMenuFechar = document.querySelector('.btnMenuFechar')
 const navMenu = document.querySelector('.navMenu')
 const btnRedeSocial = document.querySelectorAll('.btnRedeSocial')
-const btnEnviarContato = document.querySelectorAll(".btnEnviarContato")
-const btnHistorico = document.querySelectorAll(".btnHistorico")
+const btnEnviarContato = document.querySelector(".btnEnviarContato")
+const btnHistorico = document.querySelector(".btnHistorico")
 const modalHistorico = document.querySelector(".modalHistorico")
 const contModal = document.querySelector(".contModal")
 const btnSair = document.querySelector(".bntSairM")
 const selectForm = document.getElementById("selectForm")
 const formDuvida = document.getElementById("duvida")
 const formReserva = document.getElementById("reserva")
+const dataHospedagem = document.getElementById("dataHospedagem")
+const btnOrcamento = document.getElementById("btnOrcamento")
+const resultadoReserva = document.getElementById("resultadoReserva")
 
 const envios = []
 
@@ -18,21 +21,14 @@ function logicaModal(){
 }
 
 function respostaForm(){
-    let tipo = "Contato"
-    let feedbackContato = document.querySelector("#duvida .feedbackContato")
-
-    if(selectForm.value == "reserve"){
-        tipo = "Reserva"
-        feedbackContato = document.querySelector("#reserva .feedbackContato")
-    }
-
-    const inputNome = document.getElementById("nome" + tipo)
-    const sobrenomeContato = document.getElementById("sobrenome" + tipo)
-    const emailContato = document.getElementById("email" + tipo)
-    const telefoneContato = document.getElementById("telefone" + tipo)
-    const dataNascimentoContato = document.getElementById("dataNascimento" + tipo)
-    const cpfContato = document.getElementById("cpf" + tipo)
-    const comentario = document.getElementById("comentario" + tipo)
+    const feedbackContato = document.querySelector("#duvida .feedbackContato")
+    const inputNome = document.getElementById("nomeContato")
+    const sobrenomeContato = document.getElementById("sobrenomeContato")
+    const emailContato = document.getElementById("emailContato")
+    const telefoneContato = document.getElementById("telefoneContato")
+    const dataNascimentoContato = document.getElementById("dataNascimentoContato")
+    const cpfContato = document.getElementById("cpfContato")
+    const comentario = document.getElementById("comentarioContato")
 
     const valorNome = inputNome.value 
     const valorSobrenome = sobrenomeContato.value
@@ -116,20 +112,112 @@ function alterarForm(){
     }
 }
 
+function atualizarDataHospedagem(){
+    const agora = new Date()
+    const hoje = new Date(agora.getTime() - agora.getTimezoneOffset() * 60000)
+    dataHospedagem.min = hoje.toISOString().split("T")[0]
+}
+
+function gerarOrcamento(){
+    atualizarDataHospedagem()
+    resultadoReserva.classList.remove("hidden")
+
+    const nome = document.getElementById("nomeReserva").value
+    const sobrenome = document.getElementById("sobrenomeReserva").value
+    const email = document.getElementById("emailReserva").value
+    const diarias = document.getElementById("diariasReserva").value
+    const suite = document.getElementById("suiteReserva")
+    const genero = document.querySelector(".generoReserva:checked")
+    const dataInicio = dataHospedagem.value
+    const campos = [nome, sobrenome, email.includes("@"), dataInicio, suite.value, genero, diarias]
+    let camposVazios = 0
+
+    campos.forEach(campo =>{
+        if(!campo){
+            camposVazios++
+        }
+    })
+
+    if(camposVazios > 0){
+        resultadoReserva.textContent = "Preencha os campos da reserva."
+        return
+    }
+
+    if(diarias < 1){
+        resultadoReserva.textContent = "Informe pelo menos uma diária."
+        return
+    }
+
+    if(!(diarias == Math.round(diarias))){
+        resultadoReserva.textContent = "Informe um número inteiro de diárias."
+        return
+    }
+
+    const inicio = new Date(dataInicio)
+    if(inicio < new Date(dataHospedagem.min)){
+        resultadoReserva.textContent = "Escolha a data de hoje ou uma data futura."
+        return
+    }
+
+    const fim = new Date(inicio.getTime() + diarias * 86400000)
+    if(!(fim > inicio)){
+        resultadoReserva.textContent = "Confira a data de início e o número de diárias."
+        return
+    }
+
+    const dataFinal = fim.toISOString().split("T")[0]
+    const refeicoes = document.querySelectorAll(".adicionalReserva:checked")
+    let adicionais = ""
+    let valorAdicionais = 0
+
+    refeicoes.forEach(refeicao =>{
+        if(adicionais == ""){
+            adicionais = refeicao.dataset.nome
+        } else {
+            adicionais += ", " + refeicao.dataset.nome
+        }
+        valorAdicionais += refeicao.value * diarias
+    })
+
+    if(adicionais == ""){
+        adicionais = "Nenhum"
+    }
+
+    const total = suite.value * diarias + valorAdicionais
+    const suiteEscolhida = document.querySelector("#suiteReserva option:checked")
+    const dados = [
+        "Primeiro nome: " + nome,
+        "Segundo nome: " + sobrenome,
+        "E-mail: " + email,
+        "Gênero: " + genero.value,
+        "Acomodação: " + suiteEscolhida.textContent,
+        "Início da hospedagem: " + dataInicio,
+        "Fim previsto: " + dataFinal,
+        "Número de diárias: " + diarias,
+        "Valor por diária: R$ " + suite.value + ",00",
+        "Adicionais: " + adicionais,
+        "Valor dos adicionais: R$ " + valorAdicionais + ",00",
+        "Total do orçamento: R$ " + total + ",00",
+    ]
+
+    resultadoReserva.textContent = ""
+    dados.forEach(dado =>{
+        const linha = document.createElement("p")
+        linha.textContent = dado
+        resultadoReserva.appendChild(linha)
+    })
+}
+
 selectForm.addEventListener("change", alterarForm)
 alterarForm()
 
-btnEnviarContato.forEach(botao =>{
-    botao.addEventListener("click", () =>{
-        respostaForm()
-    })
-})
+atualizarDataHospedagem()
+btnOrcamento.addEventListener("click", gerarOrcamento)
+btnEnviarContato.addEventListener("click", respostaForm)
 
-btnHistorico.forEach(botao =>{
-    botao.addEventListener('click', ()=>{
-        logicaModal()
-        historico()
-    })
+btnHistorico.addEventListener('click', ()=>{
+    logicaModal()
+    historico()
 })
 
 btnSair.addEventListener('click', logicaModal)

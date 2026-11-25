@@ -199,8 +199,8 @@
                 <form action="" method="post" class="contatoForm" autocomplete="off" novalidate>
                     <div class="tituloForm">
                         <span class="tituloPequeno">Reserva</span>
-                        <h2>Faça Uma reserva</h2>
-                        <p>Preencha os dados abaixo e marque sua estadia.</p>
+                        <h2>Orçamento de hospedagem</h2>
+                        <p>Escolha a data, a acomodação e os adicionais.</p>
                     </div>
 
                     <div class="linhaForm">
@@ -222,32 +222,57 @@
 
                     <div class="linhaForm">
                         <div class="campoContato">
-                            <label for="telefoneReserva">Telefone</label>
-                            <input type="number" id="telefoneReserva" name="telefone" placeholder="Ex: (98) 99999-9999">
+                            <label for="dataHospedagem">Data de início da hospedagem</label>
+                            <input type="date" id="dataHospedagem" name="dataHospedagem" required>
                         </div>
 
                         <div class="campoContato">
-                            <label for="dataNascimentoReserva">Data de nascimento</label>
-                            <input type="date" id="dataNascimentoReserva" name="dataNascimento">
+                            <label for="diariasReserva">Número de diárias</label>
+                            <input type="number" id="diariasReserva" name="diarias" min="1" value="1" required>
                         </div>
                     </div>
 
-                    <div class="campoContato">
-                        <label for="cpfReserva">CPF</label>
-                        <input type="number" id="cpfReserva" name="cpf" inputmode="numeric" maxlength="14" placeholder="Ex: 111.111.111-11">
+                    <div class="escolhaDecisao">
+                        <h3>Gênero</h3>
+                        <label><input type="radio" class="generoReserva" name="genero" value="Masculino" required> Masculino</label>
+                        <label><input type="radio" class="generoReserva" name="genero" value="Feminino"> Feminino</label>
+                        <label><input type="radio" class="generoReserva" name="genero" value="Outro"> Outro</label>
+                        <label><input type="radio" class="generoReserva" name="genero" value="Prefiro não dizer"> Prefiro não dizer</label>
                     </div>
 
                     <div class="campoContato">
-                        <label for="comentarioReserva">Mensagem</label>
-                        <textarea id="comentarioReserva" name="comentario" maxlength="600" placeholder="Escreva sua mensagem aqui" required></textarea>
+                        <label for="suiteReserva">Suíte ou quarto</label>
+                        <select id="suiteReserva" name="suite" required>
+                            <option value="">Selecione uma acomodação</option>
+                            <option value="250">Quarto de Casal Econômico</option>
+                            <option value="450">Quarto Família com Varanda</option>
+                            <option value="380">Quarto de Casal Vista Pôr do Sol</option>
+                            <option value="400">Quarto Família Térreo</option>
+                            <option value="300">Quarto de Casal Standard</option>
+                            <option value="340">Quarto de Casal Vista Lagoa</option>
+                            <option value="600">Suíte de Casal Luxo</option>
+                            <option value="420">Quarto de Casal Romântico</option>
+                            <option value="650">Suíte de Casal Vista Dunas</option>
+                            <option value="480">Quarto Família Standard</option>
+                            <option value="580">Quarto Família Premium</option>
+                            <option value="520">Quarto Família Vista Dunas</option>
+                            <option value="350">Quarto Família Econômico</option>
+                            <option value="550">Quarto Família Ampliado</option>
+                        </select>
+                    </div>
+
+                    <div class="escolhaDecisao">
+                        <h3>Adicionais por diária</h3>
+                        <label><input type="checkbox" class="adicionalReserva" name="adicional" value="25" data-nome="Café da manhã"> Café da manhã (R$ 25,00)</label>
+                        <label><input type="checkbox" class="adicionalReserva" name="adicional" value="45" data-nome="Almoço"> Almoço (R$ 45,00)</label>
+                        <label><input type="checkbox" class="adicionalReserva" name="adicional" value="55" data-nome="Jantar"> Jantar (R$ 55,00)</label>
                     </div>
 
                     <div class="btns">
-                        <button type="button" class="btnEnviarContato">Enviar mensagem</button>
-                        <button type ="button" class="btnHistorico">Historico</button>
+                        <button type="button" id="btnOrcamento">Gerar orçamento</button>
                     </div>
 
-                    <div class="feedbackContato" aria-live="polite"></div>
+                    <div id="resultadoReserva" class="feedbackContato hidden" aria-live="polite"></div>
                 </form>
             </section>
 
