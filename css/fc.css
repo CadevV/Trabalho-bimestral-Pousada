@@ -450,7 +450,7 @@ body::-webkit-scrollbar{
     justify-content: space-between;
 }
 
-#btnEnviarContato, .btnHistorico{
+.btnEnviarContato, .btnHistorico{
     align-self: flex-start;
     padding: 12px 22px;
     border: none;
@@ -464,7 +464,7 @@ body::-webkit-scrollbar{
     box-shadow: 2px 2px 0 var(--corDourada);
 }
 
-#btnEnviarContato:hover, .btnHistorico:hover{
+.btnEnviarContato:hover, .btnHistorico:hover{
     transform: translateY(2px);
     box-shadow: none;
     background: var(--corPrimaria);
@@ -546,6 +546,10 @@ body::-webkit-scrollbar{
 
 .feedbackContato.certo{
     color: var(--corSucesso);
+}
+
+.hidden{
+    display: none;
 }
 
 @media (min-width: 769px){
@@ -680,7 +684,7 @@ body::-webkit-scrollbar{
         padding: 30px 22px;
     }
 
-    #btnEnviarContato{
+    .btnEnviarContato{
         width: 100%;
     }
 }

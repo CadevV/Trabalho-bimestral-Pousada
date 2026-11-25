@@ -56,7 +56,6 @@
                                     <span>GitHub</span>
                                 </button>
                             </li>
-                            <li class="navFrase">Conforto, natureza<br>e experiências únicas.</li>
                         </ul>
                     </div>
 
@@ -131,18 +130,16 @@
                     </div>
 
                     <div class="campoEscolha">
-                        <label for="experienciaContato">Experiência de interesse</label>
-                        <select id="experienciaContato" name="experiencia">
-                            <option value="">Selecione uma opção</option>
-                            <option value="acomodacoes">Acomodações</option>
-                            <option value="atracoes">Atrações</option>
-                            <option value="reserva">Reserva</option>
+                        <label for="selectForm">Selecione o motivo do contato</label>
+                        <select id="selectForm" name="selectForm">
+                            <option value="duvida">Tirar dúvida</option>
+                            <option value="reserve">Reservar</option>
                         </select>
                     </div>
                 </form>
             </section>
 
-            <section class="contForm">
+            <section id="duvida" class="contForm">
                 <form action="" method="post" class="contatoForm" autocomplete="off" novalidate>
                     <div class="tituloForm">
                         <span class="tituloPequeno">Contato</span>
@@ -185,24 +182,80 @@
                     </div>
 
                     <div class="campoContato">
-                        <label for="comentario">Mensagem</label>
-                        <textarea id="comentario" name="comentario" maxlength="600" placeholder="Escreva sua mensagem aqui" required></textarea>
+                        <label for="comentarioContato">Mensagem</label>
+                        <textarea id="comentarioContato" name="comentario" maxlength="600" placeholder="Escreva sua mensagem aqui" required></textarea>
                     </div>
 
                     <div class="btns">
-                        <button type="button" id="btnEnviarContato">Enviar mensagem</button>
+                        <button type="button" class="btnEnviarContato">Enviar mensagem</button>
                         <button type ="button" class="btnHistorico">Historico</button>
-                    </div>
-
-                    <div class="modalHistorico">
-                        <div class="contModal">
-                            <button type="button" class="bntSairM"> <i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-                        </div>
                     </div>
 
                     <div class="feedbackContato" aria-live="polite"></div>
                 </form>
             </section>
+
+            <section id="reserva" class="contForm hidden">
+                <form action="" method="post" class="contatoForm" autocomplete="off" novalidate>
+                    <div class="tituloForm">
+                        <span class="tituloPequeno">Reserva</span>
+                        <h2>Faça Uma reserva</h2>
+                        <p>Preencha os dados abaixo e marque sua estadia.</p>
+                    </div>
+
+                    <div class="linhaForm">
+                        <div class="campoContato">
+                            <label for="nomeReserva">Primeiro nome</label>
+                            <input type="text" id="nomeReserva" name="nome" placeholder="Ex: Carlos" required>
+                        </div>
+
+                        <div class="campoContato">
+                            <label for="sobrenomeReserva">Segundo nome</label>
+                            <input type="text" id="sobrenomeReserva" name="sobrenome" placeholder="Ex: Silva" required>
+                        </div>
+                    </div>
+
+                    <div class="campoContato">
+                        <label for="emailReserva">E-mail</label>
+                        <input type="email" id="emailReserva" name="email" placeholder="Ex: email@gmail.com" required>
+                    </div>
+
+                    <div class="linhaForm">
+                        <div class="campoContato">
+                            <label for="telefoneReserva">Telefone</label>
+                            <input type="number" id="telefoneReserva" name="telefone" placeholder="Ex: (98) 99999-9999">
+                        </div>
+
+                        <div class="campoContato">
+                            <label for="dataNascimentoReserva">Data de nascimento</label>
+                            <input type="date" id="dataNascimentoReserva" name="dataNascimento">
+                        </div>
+                    </div>
+
+                    <div class="campoContato">
+                        <label for="cpfReserva">CPF</label>
+                        <input type="number" id="cpfReserva" name="cpf" inputmode="numeric" maxlength="14" placeholder="Ex: 111.111.111-11">
+                    </div>
+
+                    <div class="campoContato">
+                        <label for="comentarioReserva">Mensagem</label>
+                        <textarea id="comentarioReserva" name="comentario" maxlength="600" placeholder="Escreva sua mensagem aqui" required></textarea>
+                    </div>
+
+                    <div class="btns">
+                        <button type="button" class="btnEnviarContato">Enviar mensagem</button>
+                        <button type ="button" class="btnHistorico">Historico</button>
+                    </div>
+
+                    <div class="feedbackContato" aria-live="polite"></div>
+                </form>
+            </section>
+
+            <div class="modalHistorico">
+                <div class="contModal">
+                    <button type="button" class="bntSairM"> <i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+                </div>
+            </div>
         </section>
     </main>
 

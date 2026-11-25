@@ -2,19 +2,14 @@ const btnMenu = document.querySelector('.btnMenu')
 const btnMenuFechar = document.querySelector('.btnMenuFechar')
 const navMenu = document.querySelector('.navMenu')
 const btnRedeSocial = document.querySelectorAll('.btnRedeSocial')
-const inputNome = document.getElementById("nomeContato")
-const sobrenomeContato = document.getElementById("sobrenomeContato")
-const emailContato = document.getElementById("emailContato")
-const telefoneContato = document.getElementById("telefoneContato")
-const dataNascimentoContato = document.getElementById("dataNascimentoContato")
-const cpfContato = document.getElementById("cpfContato")
-const comentario = document.getElementById("comentario")
-const btnEnviarContato = document.getElementById("btnEnviarContato")
-const feedbackContato = document.querySelector(".feedbackContato")
-const btnHistorico = document.querySelector('.btnHistorico')
+const btnEnviarContato = document.querySelectorAll(".btnEnviarContato")
+const btnHistorico = document.querySelectorAll(".btnHistorico")
 const modalHistorico = document.querySelector(".modalHistorico")
 const contModal = document.querySelector(".contModal")
 const btnSair = document.querySelector(".bntSairM")
+const selectForm = document.getElementById("selectForm")
+const formDuvida = document.getElementById("duvida")
+const formReserva = document.getElementById("reserva")
 
 const envios = []
 
@@ -23,6 +18,22 @@ function logicaModal(){
 }
 
 function respostaForm(){
+    let tipo = "Contato"
+    let feedbackContato = document.querySelector("#duvida .feedbackContato")
+
+    if(selectForm.value == "reserve"){
+        tipo = "Reserva"
+        feedbackContato = document.querySelector("#reserva .feedbackContato")
+    }
+
+    const inputNome = document.getElementById("nome" + tipo)
+    const sobrenomeContato = document.getElementById("sobrenome" + tipo)
+    const emailContato = document.getElementById("email" + tipo)
+    const telefoneContato = document.getElementById("telefone" + tipo)
+    const dataNascimentoContato = document.getElementById("dataNascimento" + tipo)
+    const cpfContato = document.getElementById("cpf" + tipo)
+    const comentario = document.getElementById("comentario" + tipo)
+
     const valorNome = inputNome.value 
     const valorSobrenome = sobrenomeContato.value
     const valorEmail = emailContato.value
@@ -93,13 +104,32 @@ function historico(){
     })
 }
 
-btnEnviarContato.addEventListener("click", () =>{
-    respostaForm()
+function alterarForm(){
+    const page = selectForm.value
+
+    if(page == "duvida"){
+        formDuvida.classList.remove("hidden")
+        formReserva.classList.add("hidden")
+    } else {
+        formDuvida.classList.add("hidden")
+        formReserva.classList.remove("hidden")
+    }
+}
+
+selectForm.addEventListener("change", alterarForm)
+alterarForm()
+
+btnEnviarContato.forEach(botao =>{
+    botao.addEventListener("click", () =>{
+        respostaForm()
+    })
 })
 
-btnHistorico.addEventListener('click', ()=>{
-    logicaModal()
-    historico()
+btnHistorico.forEach(botao =>{
+    botao.addEventListener('click', ()=>{
+        logicaModal()
+        historico()
+    })
 })
 
 btnSair.addEventListener('click', logicaModal)
