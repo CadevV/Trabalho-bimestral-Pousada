@@ -39,7 +39,13 @@ function respostaForm(){
 
     const valorMensagem = comentario.value
 
-    if(!valorEmail.includes("@")){
+    if(!valorNome || !valorCpf || !valorDataNas || !valorTel || !valorSobrenome) {
+        feedbackContato.textContent = "Preencha os campos"
+        return
+    }
+
+    if(!valorEmail.includes("@") || !valorEmail.includes(".com")){
+        feedbackContato.textContent = "Erro no email"
         return
     }
 
@@ -82,6 +88,8 @@ function respostaForm(){
 }
 
 function historico(){
+    contModal.innerHTML = ""
+
     envios.forEach(el =>{
         const novo = document.createElement("div")
         novo.classList.add("pergunta")

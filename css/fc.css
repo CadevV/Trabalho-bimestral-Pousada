@@ -449,6 +449,7 @@ body::-webkit-scrollbar{
 .btns{
     display: flex;
     justify-content: space-between;
+    gap: 5px;
 }
 
 #duvida .btns{
@@ -456,7 +457,7 @@ body::-webkit-scrollbar{
     gap: 12px;
 }
 
-.btnEnviarContato, .btnHistorico, #btnOrcamento{
+.btnEnviarContato, .btnHistorico, #btnOrcamento, .bntEnviar{
     align-self: flex-start;
     padding: 12px 22px;
     border: none;
@@ -470,7 +471,7 @@ body::-webkit-scrollbar{
     box-shadow: 2px 2px 0 var(--corDourada);
 }
 
-.btnEnviarContato:hover, .btnHistorico:hover, #btnOrcamento:hover{
+.btnEnviarContato:hover, .btnHistorico:hover, #btnOrcamento:hover, .bntEnviar:hover{
     transform: translateY(2px);
     box-shadow: none;
     background: var(--corPrimaria);
@@ -514,13 +515,13 @@ body::-webkit-scrollbar{
     transform: rotate(90deg);
 }
 
-.contModal{
+.contModalBtn{
     position: relative;
     display: flex;
     gap: 10px;
     align-items: center;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     max-width: 800px;
     height: 60vh;
     background: var(--corPrimaria);
@@ -535,17 +536,19 @@ body::-webkit-scrollbar{
     background-color: var(--corPrimariaEscura);
     border-radius: 10px;
     box-shadow: 1px 1px 1px var(--corDourada);
-    width: 90%;
-    padding: 5px;
+    width: 95%;
+    min-height: 85%;
+    padding: 10px;
+    min-width: 90%;
 }
 
 .feedbackContato{
-    padding: 5px;
+    padding: 10px;
     border: 1px solid var(--corPrimaria);
     border-radius: 10px;
     box-shadow: 3px 3px 3px var(--corDourada);
     min-height: 20px;
-    font-size: .9rem;
+    font-size: .9.5rem;
 }
 
 .feedbackContato.erro{
